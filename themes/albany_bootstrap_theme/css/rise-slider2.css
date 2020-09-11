@@ -1,0 +1,157 @@
+/* @import "//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"; */
+
+.b-0 {
+    bottom: 0;
+}
+
+*,
+ ::after,
+ ::before {
+    box-sizing: border-box;
+}
+
+.bg-shadow {
+    background: rgba(76, 76, 76, 0);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(179, 171, 171, 0)), color-stop(49%, rgba(48, 48, 48, 0.37)), color-stop(100%, rgba(19, 19, 19, 0.8)));
+    background: linear-gradient(to bottom, rgba(179, 171, 171, 0) 0%, rgba(48, 48, 48, 0.71) 49%, rgba(19, 19, 19, 0.8) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313', GradientType=0);
+}
+
+.top-indicator {
+    right: 0;
+    top: 1rem;
+    bottom: inherit;
+    left: inherit;
+    margin-right: 1rem;
+}
+
+.overflow {
+    position: relative;
+    overflow: hidden;
+}
+
+.zoom img {
+    transition: all 0.2s linear;
+}
+
+.zoom:hover img {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.fix-width {
+    width: 300px;
+    height: 350px;
+}
+
+
+/* .slider-box {
+    float: right;
+    position: absolute;
+    right: 17%;
+    padding: 0;
+    top: 187px;
+    border: 7px solid white;
+    box-shadow: 5px 6px 7px black;
+    border-radius: 4px;
+} */
+
+.rise-flyer {
+    position: absolute;
+    right: 170px;
+    z-index: 1;
+    bottom: 59px;
+}
+
+.flyer-title {
+    text-shadow: 3px 1px 2px black;
+    color: #eeb211;
+    width: 100%;
+    font-size: 20px;
+    line-height: 23px;
+}
+
+.flyer-subtitle {
+    text-shadow: 3px 1px 2px black;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.slider-box {
+    border: 2px solid white;
+    /* box-shadow: 5px 6px 7px black; */
+    border-radius: 4px;
+}
+
+.box {
+    position: absolute !important;
+    right: 0;
+    z-index: 5;
+}
+
+.text-white {
+    color: #fff!important;
+}
+
+.font-weight-bold {
+    font-weight: 700!important;
+}
+
+.news-meta {
+    /* position: absolute;
+    bottom: 57px; */
+    line-height: 24px;
+    font-size: 22px;
+    padding: 6px 0px 0px 6px;
+}
+
+.position-absolute {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    padding: 1px 2px 7px 3px;
+}
+
+.image-wrapper {
+    height: 328px;
+    width: 226px;
+    background-repeat: no-repeat;
+}
+
+@media (max-width: 767px) {
+    .rise-flyer {
+        display: none;
+    }
+}
+
+.carousel-item {
+    position: relative;
+    display: none;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+    opacity: 0;
+}
+
+.carousel-item.active {
+    -webkit-animation: fadeinout 2s linear forwards;
+    animation: fadeinout 2s linear forwards;
+}
+
+@-webkit-keyframes fadeinout {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeinout {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

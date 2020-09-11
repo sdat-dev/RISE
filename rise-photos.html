@@ -1,0 +1,1358 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" xmlns:article="http://ogp.me/ns/article#" xmlns:book="http://ogp.me/ns/book#" xmlns:product="http://ogp.me/ns/product#" xmlns:profile="http://ogp.me/ns/profile#" xmlns:video="http://ogp.me/ns/video#" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script type="text/javascript">
+        window.NREUM || (NREUM = {}), __nr_require = function(e, n, t) {
+            function r(t) {
+                if (!n[t]) {
+                    var o = n[t] = {
+                        exports: {}
+                    };
+                    e[t][0].call(o.exports, function(n) {
+                        var o = e[t][1][n];
+                        return r(o || n)
+                    }, o, o.exports)
+                }
+                return n[t].exports
+            }
+            if ("function" == typeof __nr_require) return __nr_require;
+            for (var o = 0; o <
+                t.length; o++) r(t[o]);
+            return r
+        }({
+            1: [function(e, n, t) {
+                function r() {}
+
+                function o(e, n, t) {
+                    return function() {
+                        return i(e, [c.now()].concat(u(arguments)), n ? null : this, t), n ? void 0 : this
+                    }
+                }
+                var i = e("handle"),
+                    a = e(3),
+                    u = e(4),
+                    f = e("ee").get("tracer"),
+                    c = e("loader"),
+                    s = NREUM;
+                "undefined" == typeof window.newrelic && (newrelic = s);
+                var p = ["setPageViewName", "setCustomAttribute", "setErrorHandler", "finished", "addToTrace", "inlineHit", "addRelease"],
+                    d = "api-",
+                    l = d + "ixn-";
+                a(p, function(e, n) {
+                    s[n] = o(d + n, !0, "api")
+                }), s.addPageAction = o(d + "addPageAction", !0), s.setCurrentRouteName = o(d + "routeName", !0), n.exports = newrelic, s.interaction = function() {
+                    return (new r).get()
+                };
+                var m = r.prototype = {
+                    createTracer: function(e, n) {
+                        var t = {},
+                            r = this,
+                            o = "function" == typeof n;
+                        return i(l + "tracer", [c.now(), e, t], r),
+                            function() {
+                                if (f.emit((o ? "" : "no-") + "fn-start", [c.now(), r, o], t), o) try {
+                                    return n.apply(this, arguments)
+                                } catch (e) {
+                                    throw f.emit("fn-err", [arguments, this, e], t), e
+                                } finally {
+                                    f.emit("fn-end", [c.now()], t)
+                                }
+                            }
+                    }
+                };
+                a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","), function(e, n) {
+                    m[n] = o(l + n)
+                }), newrelic.noticeError = function(e, n) {
+                    "string" == typeof e && (e = new Error(e)), i("err", [e, c.now(), !1, n])
+                }
+            }, {}],
+            2: [function(e, n, t) {
+                function r(e, n) {
+                    if (!o) return !1;
+                    if (e !== o) return !1;
+                    if (!n) return !0;
+                    if (!i) return !1;
+                    for (var t = i.split("."), r = n.split("."), a = 0; a <
+                        r.length; a++)
+                        if (r[a] !== t[a]) return !1;
+                    return !0
+                }
+                var o = null,
+                    i = null,
+                    a = /Version\/(\S+)\s+Safari/;
+                if (navigator.userAgent) {
+                    var u = navigator.userAgent,
+                        f = u.match(a);
+                    f && u.indexOf("Chrome") === -1 && u.indexOf("Chromium") === -1 && (o = "Safari", i = f[1])
+                }
+                n.exports = {
+                    agent: o,
+                    version: i,
+                    match: r
+                }
+            }, {}],
+            3: [function(e, n, t) {
+                function r(e, n) {
+                    var t = [],
+                        r = "",
+                        i = 0;
+                    for (r in e) o.call(e, r) && (t[i] = n(r, e[r]), i += 1);
+                    return t
+                }
+                var o = Object.prototype.hasOwnProperty;
+                n.exports = r
+            }, {}],
+            4: [function(e, n, t) {
+                function r(e, n, t) {
+                    n || (n = 0), "undefined" == typeof t && (t = e ? e.length : 0);
+                    for (var r = -1, o = t - n || 0, i = Array(o <
+                            0 ? 0 : o); ++r <
+                        o;) i[r] = e[n + r];
+                    return i
+                }
+                n.exports = r
+            }, {}],
+            5: [function(e, n, t) {
+                n.exports = {
+                    exists: "undefined" != typeof window.performance && window.performance.timing && "undefined" != typeof window.performance.timing.navigationStart
+                }
+            }, {}],
+            ee: [function(e, n, t) {
+                function r() {}
+
+                function o(e) {
+                    function n(e) {
+                        return e && e instanceof r ? e : e ? f(e, u, i) : i()
+                    }
+
+                    function t(t, r, o, i) {
+                        if (!d.aborted || i) {
+                            e && e(t, r, o);
+                            for (var a = n(o), u = v(t), f = u.length, c = 0; c <
+                                f; c++) u[c].apply(a, r);
+                            var p = s[y[t]];
+                            return p && p.push([b, t, r, a]), a
+                        }
+                    }
+
+                    function l(e, n) {
+                        h[e] = v(e).concat(n)
+                    }
+
+                    function m(e, n) {
+                        var t = h[e];
+                        if (t)
+                            for (var r = 0; r <
+                                t.length; r++) t[r] === n && t.splice(r, 1)
+                    }
+
+                    function v(e) {
+                        return h[e] || []
+                    }
+
+                    function g(e) {
+                        return p[e] = p[e] || o(t)
+                    }
+
+                    function w(e, n) {
+                        c(e, function(e, t) {
+                            n = n || "feature", y[t] = n, n in s || (s[n] = [])
+                        })
+                    }
+                    var h = {},
+                        y = {},
+                        b = {
+                            on: l,
+                            addEventListener: l,
+                            removeEventListener: m,
+                            emit: t,
+                            get: g,
+                            listeners: v,
+                            context: n,
+                            buffer: w,
+                            abort: a,
+                            aborted: !1
+                        };
+                    return b
+                }
+
+                function i() {
+                    return new r
+                }
+
+                function a() {
+                    (s.api || s.feature) && (d.aborted = !0, s = d.backlog = {})
+                }
+                var u = "nr@context",
+                    f = e("gos"),
+                    c = e(3),
+                    s = {},
+                    p = {},
+                    d = n.exports = o();
+                d.backlog = s
+            }, {}],
+            gos: [function(e, n, t) {
+                function r(e, n, t) {
+                    if (o.call(e, n)) return e[n];
+                    var r = t();
+                    if (Object.defineProperty && Object.keys) try {
+                        return Object.defineProperty(e, n, {
+                            value: r,
+                            writable: !0,
+                            enumerable: !1
+                        }), r
+                    } catch (i) {}
+                    return e[n] = r, r
+                }
+                var o = Object.prototype.hasOwnProperty;
+                n.exports = r
+            }, {}],
+            handle: [function(e, n, t) {
+                function r(e, n, t, r) {
+                    o.buffer([e], r), o.emit(e, n, t)
+                }
+                var o = e("ee").get("handle");
+                n.exports = r, r.ee = o
+            }, {}],
+            id: [function(e, n, t) {
+                function r(e) {
+                    var n = typeof e;
+                    return !e || "object" !== n && "function" !== n ? -1 : e === window ? 0 : a(e, i, function() {
+                        return o++
+                    })
+                }
+                var o = 1,
+                    i = "nr@id",
+                    a = e("gos");
+                n.exports = r
+            }, {}],
+            loader: [function(e, n, t) {
+                function r() {
+                    if (!E++) {
+                        var e = x.info = NREUM.info,
+                            n = l.getElementsByTagName("script")[0];
+                        if (setTimeout(s.abort, 3e4), !(e && e.licenseKey && e.applicationID && n)) return s.abort();
+                        c(y, function(n, t) {
+                            e[n] || (e[n] = t)
+                        }), f("mark", ["onload", a() + x.offset], null, "api");
+                        var t = l.createElement("script");
+                        t.src = "https://" + e.agent, n.parentNode.insertBefore(t, n)
+                    }
+                }
+
+                function o() {
+                    "complete" === l.readyState && i()
+                }
+
+                function i() {
+                    f("mark", ["domContent", a() + x.offset], null, "api")
+                }
+
+                function a() {
+                    return O.exists && performance.now ? Math.round(performance.now()) : (u = Math.max((new Date).getTime(), u)) - x.offset
+                }
+                var u = (new Date).getTime(),
+                    f = e("handle"),
+                    c = e(3),
+                    s = e("ee"),
+                    p = e(2),
+                    d = window,
+                    l = d.document,
+                    m = "addEventListener",
+                    v = "attachEvent",
+                    g = d.XMLHttpRequest,
+                    w = g && g.prototype;
+                NREUM.o = {
+                    ST: setTimeout,
+                    SI: d.setImmediate,
+                    CT: clearTimeout,
+                    XHR: g,
+                    REQ: d.Request,
+                    EV: d.Event,
+                    PR: d.Promise,
+                    MO: d.MutationObserver
+                };
+                var h = "" + location,
+                    y = {
+                        beacon: "bam.nr-data.net",
+                        errorBeacon: "bam.nr-data.net",
+                        agent: "js-agent.newrelic.com/nr-1123.min.js"
+                    },
+                    b = g && w && w[m] && !/CriOS/.test(navigator.userAgent),
+                    x = n.exports = {
+                        offset: u,
+                        now: a,
+                        origin: h,
+                        features: {},
+                        xhrWrappable: b,
+                        userAgent: p
+                    };
+                e(1), l[m] ? (l[m]("DOMContentLoaded", i, !1), d[m]("load", r, !1)) : (l[v]("onreadystatechange", o), d[v]("onload", r)), f("mark", ["firstbyte", u], null, "api");
+                var E = 0,
+                    O = e(5)
+            }, {}]
+        }, {}, ["loader"]);
+    </script>
+    <!-- <script>
+        (function(i, s, o, g, r, a, m) {
+            i["GoogleAnalyticsObject"] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, "script", "//www.google-analytics.com/analytics.js", "ga");
+        ga("create", "UA-20759213-1", {
+            "cookieDomain": "auto"
+        });
+        ga("set", "anonymizeIp", true);
+        ga("send", "pageview");
+    </script> -->
+    <meta name="title" content="RISE 2019 Photo Gallery | University at Albany" />
+    <meta name="description" content="RISE 2019 Photo Gallery
+ 
+
+ " />
+    <meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+    <meta name="MobileOptimized" content="width" />
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/sites/default/files/favicon_0.ico" type="image/vnd.microsoft.icon" />
+    <link rel="shortlink" href="/node/986" />
+    <link rel="revision" href="/paragraphs-sidebar" />
+    <script src="sites/default/files/google_tag/google_tag.script.js?pr6ry1"></script>
+    <title>RISE 2019 Photo Gallery | University at Albany</title>
+    <style media="all">
+        @import url("core/modules/system/css/components/align.module.css?pr6ry1");
+        @import url("core/modules/system/css/components/fieldgroup.module.css?pr6ry1");
+        @import url("core/modules/system/css/components/container-inline.module.css?pr6ry1");
+        @import url("core/modules/system/css/components/clearfix.module.css?pr6ry1");
+        @import url("core/modules/system/css/components/details.module.css?pr6ry1");
+        @import url("core/modules/system/css/components/hidden.module.css?pr6ry1");
+        @import url("core/modules/system/css/components/item-list.module.css?pr6ry1");
+        @import url("core/modules/system/css/components/js.module.css?pr6ry1");
+        @import url("core/modules/system/css/components/nowrap.module.css?pr6ry1");
+        @import url("core/modules/system/css/components/position-container.module.css?pr6ry1");
+        @import url("core/modules/system/css/components/progress.module.css?pr6ry1");
+        @import url("core/modules/system/css/components/reset-appearance.module.css?pr6ry1");
+        @import url("core/modules/system/css/components/resize.module.css?pr6ry1");
+        @import url("core/modules/system/css/components/sticky-header.module.css?pr6ry1");
+        @import url("core/modules/system/css/components/system-status-counter.css?pr6ry1");
+        @import url("core/modules/system/css/components/system-status-report-counters.css?pr6ry1");
+        @import url("core/modules/system/css/components/system-status-report-general-info.css?pr6ry1");
+        @import url("core/modules/system/css/components/tablesort.module.css?pr6ry1");
+        @import url("core/modules/system/css/components/tree-child.module.css?pr6ry1");
+        @import url("core/modules/views/css/views.module.css?pr6ry1");
+        @import url("profiles/lightning/modules/contrib/video_embed_field/css/video_embed_field.responsive-video.css?pr6ry1");
+        @import url("libraries/flexslider/flexslider.css?pr6ry1");
+        @import url("modules/contrib/calendar/css/calendar.css?pr6ry1");
+        @import url("modules/contrib/calendar/css/calendar_multiday.css?pr6ry1");
+        @import url("modules/contrib/flexslider/assets/css/flexslider_img.css?pr6ry1");
+        @import url("modules/custom/kwall_site_alert/css/slick.css?pr6ry1");
+    </style>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/bootstrap/3.3.7/css/bootstrap.css" media="all" />
+    <style media="all">
+        @import url("themes/bootstrap/css/3.3.7/overrides.min.css?pr6ry1");
+        @import url("themes/albany_bootstrap_theme/css/style.css?pr6ry1");
+        @import url("themes/albany_bootstrap_theme/styleguide/assets/css/style.css?pr6ry1");
+    </style>
+    <link rel="stylesheet" href="themes/albany_bootstrap_theme/css/rise-style.css" />
+    <style media="all">
+        @import url("sites/default/files/asset_injector/css/all_pages_background-bd2de4081d49a2e6dcfab599b80af0e0.css?pr6ry1");
+        @import url("sites/default/files/asset_injector/css/bullets_top_align-05c791021ddbed47afbd8e3e871c3cb3.css?pr6ry1");
+        @import url("sites/default/files/asset_injector/css/button_link_visited_color-0fb9cd86c6c5ae6d23396189bdde950d.css?pr6ry1");
+        @import url("sites/default/files/asset_injector/css/department_directory_overrides_-2141edbe7afd088d9d7a82d039cc1a96.css?pr6ry1");
+        @import url("sites/default/files/asset_injector/css/displayorhide-631efb8b1b62b06016390765dd27ca28.css?pr6ry1");
+        @import url("sites/default/files/asset_injector/css/faculty_directory-8e4cb7742cd6421cd087a9cab0c7ab8d.css?pr6ry1");
+        @import url("sites/default/files/asset_injector/css/hide_paragraph_ids-c675307f1c90800391545be97760e9a1.css?pr6ry1");
+        @import url("sites/default/files/asset_injector/css/homepage_video_slider_extend_width-fc03cd43be39859ab71f02f0d7d2401f.css?pr6ry1");
+        @import url("sites/default/files/asset_injector/css/screen_reader_only_text_-054b849b98bd6eca3e2e992e992c1637.css?pr6ry1");
+        @import url("sites/default/files/asset_injector/css/search_results_styling-a80e8714fd8281fbc04a22239e498711.css?pr6ry1");
+        @import url("sites/default/files/asset_injector/css/sidebar_callout_purple_links-8f7465028c4af00709f3f38f33d93591.css?pr6ry1");
+        @import url("sites/default/files/asset_injector/css/table_no_hover_effect-106a9ffac8bab29473ecf1b5842efec6.css?pr6ry1");
+        @import url("sites/default/files/asset_injector/css/view_policy_block-2b7d8fe7ac27306fba5f5ea2bee52f61.css?pr6ry1");
+    </style>
+    <!--[if lte IE 8]>
+                                <script src="/core/assets/vendor/html5shiv/html5shiv.min.js?v=3.7.3"></script>
+                                <![endif]-->
+    <script async="async" src="https://admissions.albany.edu/ping">
+        /**/
+    </script>
+    <style>
+        .dropbox-folder {
+            height: 121px;
+            padding-top: 14px;
+            margin: 10px 25px 7px 17px;
+            font-size: 17px;
+            border: 1px solid #a5a2a2;
+            box-shadow: 2px 2px 2px #a7a4a4;
+            font-weight: bold;
+        }
+        /* .dropbox-info a {
+            color: #337ab7;
+            text-decoration: underline;
+        } */
+        
+        .row>label {
+            display: block;
+            text-align: center;
+            margin: 19px;
+            border: 1px solid #a5a2a2;
+            box-shadow: 2px 2px 2px #a7a4a4;
+            padding: 8px 3px 10px 0px;
+            font-size: 23px;
+        }
+        
+        label.sub-label {
+            text-decoration: underline;
+            font-size: 20px;
+            margin: 15px 0;
+        }
+    </style>
+
+</head>
+
+<body class="path-node page-node-type-page has-glyphicons path-node-986">
+    <a href="#main-content" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
+    <noscript>
+                                    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WNRD5G" height="0" width="0"></iframe>
+                                </noscript>
+    <div class="alert-region">
+        <div class="region region-alert">
+            <section id="block-sitealert" data-block-plugin-id="kwall_site_alert_block" class="block block-kwall-site-alert block-kwall-site-alert-block clearfix">
+                <div id="kwall-alerts-wrapper">
+                    <div id="kwall-alerts"></div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <header class="navbar navbar-default container-fluid" id="navbar" role="banner">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <div class="region region-navigation">
+                    <a class="logo navbar-btn pull-left" href="https://www.ncseglobal.org/" title="NCSE" rel="home">
+
+                        <img src="img/logos/NCSE.png" alt="NCSE" height="67px" />
+                    </a>
+                    <a class="logo navbar-btn rise-right" href="/" title="Home" rel="home">
+                        <img src="/sites/default/files/logo.png" alt="Home" />
+                    </a>
+                    <!-- <div class="rise-cochairText">RISE Co-Chairs Marla Pérez Lugo, Ph.D. &amp; Cecilio Ortiz Garcia, Ph.D.
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <div class="region region-mobile-navigation">
+            <div class="drawer-wrap">
+                <a class="logo navbar-btn pull-left" href="/" title="Home" rel="home">
+                    <img src="/sites/default/files/logo.png" alt="Home" />
+                </a>
+            </div>
+        </div>
+    </header>
+    <div role="main" class="main-container container-fluid js-quickedit-main-content">
+        <div class="row">
+            <div class="region region-above-content">
+                <section class="views-element-container block block-views block-views-blockabove-content-block-1 clearfix" id="block-views-block-above-content-block-1" data-block-plugin-id="views_block:above_content-block_1">
+                    <div class="form-group">
+                        <div class="view view-above-content view-id-above_content view-display-id-block_1 js-view-dom-id-cef650317e97cf184b00e538bd012dee521bcc357a6860f7528b629034bdd562">
+                            <div class="view-content">
+                                <div class="col-sm-12">
+                                    <article role="article" about="/paragraphs-sidebar" class="page above-content clearfix">
+                                        <div class="content">
+                                            <div class="field field--name-field-alternate-page-title field--type-viewfield field--label-hidden">
+                                                <div class="field__item field__item-label-hidden">
+                                                    <div class="views-element-container form-group">
+                                                        <div class="view view-duplicate-of-center-page-title view-id-duplicate_of_center_page_title view-display-id-default js-view-dom-id-d4afda0f0c4662cf00ba1f3350f8cdaf0ce125b12bfe038a85c1fbed2a20002d">
+                                                            <div class="view-content">
+                                                                <div class="views-row">
+                                                                    <div class="views-field views-field-title">
+                                                                        <h1 class="field-content">RELIVE RISE 2019</h1>
+                                                                    </div>
+                                                                    <div class="views-field views-field-field-page-subtitle">
+                                                                        <div class="field-content">
+                                                                            <p>Transforming University Engagement In Pre- and Post-Disaster Environments: Lessons from Puerto Rico</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="content-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <aside class="col-sm-4 sidebar-first" role="complementary">
+                            <div class="region region-sidebar-first">
+                                <nav role="navigation" aria-labelledby="block-megamenumainnavigation-menu" id="block-megamenumainnavigation" class="sidebar-menu-block" data-block-plugin-id="menu_block:main">
+                                    <h2 class="visually-hidden" id="block-megamenumainnavigation-menu">Mega Menu - Main navigation</h2>
+                                    <ul class="menu menu--rise-conference nav">
+                                        <li class="first">
+                                            <a href="https://www.albany.edu/rise2019/home.html" target="_self" rel="" data-drupal-link-system-path="node/47081">RISE Conference HOME</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.albany.edu/rise2019/registration.html" data-drupal-link-system-path="node/47681">REGISTRATION & SPONSORSHIP</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.albany.edu/rise2019/welcome.html" target="_self" rel="" data-drupal-link-system-path="node/47181">WELCOME</a>
+                                        </li>
+                                        <li class="">
+                                            <a href="https://www.albany.edu/rise2019/about.html" data-drupal-link-system-path="node/47671">ABOUT</a>
+                                        </li>
+
+
+                                        <li class = "expanded dropdown">
+                                            <a href="https://www.albany.edu/rise2019/agenda.html" data-toggle="" data-drupal-link-system-path="node/47681" target="#" data-target="#" aria-expanded="true">AGENDA<span class="caret"></span></a>
+                                            <ul class="dropdown-menu">
+                                                <li class="first">
+                                                    <a href="https://www.albany.edu/rise2019/preconference-networking.html" data-drupal-link-system-path="node/47136">Pre-Conference Networking</a>
+                                                </li>
+                                                <li class="fourth">
+                                                    <a href="https://www.albany.edu/rise2019/agenda-full.html" data-drupal-link-system-path="node/47136">Full Agenda (Day 1 – 3)</a>
+                                                </li>
+                                                <li class="last">
+                                                    <a href="https://rise2019.org/ppt-upload-instruction.html" data-drupal-link-system-path="node/47136">Conference Speakers (ONLY)</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.albany.edu/rise2019/honorary-committee.html" data-drupal-link-system-path="node/47356">LEADERSHIP & PARTICIPANTS</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="https://www.albany.edu/rise2019/resources.html" data-drupal-link-system-path="node/47761">CONFERENCE RESOURCES</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.albany.edu/rise2019/students.html" data-drupal-link-system-path="node/47761">STUDENTS</a>
+                                        </li>
+                                        <li>
+                                            <a href="current-efforts.html" data-drupal-link-system-path="node/47161">CURRENT EFFORTS</a>
+                                        </li>
+                                        <li class="">
+                                            <a href="https://www.albany.edu/rise2019/news-communications.html" data-drupal-link-system-path="node/47586">NEWS & COMMUNICATIONS</a>
+                                        </li>
+                                        <li class="expanded dropdown">
+                                            <a href="https://www.albany.edu/rise2019/directions-and-parking.html" class="dropdown-toggle" data-toggle="" data-drupal-link-system-path="node/47681" target="#" data-target="#" aria-expanded="false">ATTENDEE INFORMATION<span class="caret"></span></a>
+                                            <ul class="dropdown-menu">
+                                                <li class="first">
+                                                    <a href="https://www.albany.edu/rise2019/directions-and-parking.html" data-drupal-link-system-path="node/47681">Directions &amp; Parking</a>
+                                                </li>
+                                                <li class="second">
+                                                    <a href="https://www.albany.edu/rise2019/hotel-accommodations.html" target="_self" rel="" data-drupal-link-system-path="node/47171">Hotel Accommodations</a>
+                                                </li>
+                                                <li class="second">
+                                                    <a href="https://www.albany.edu/rise2019/venue.html" data-drupal-link-system-path="node/47591">Venue</a>
+                                                </li>
+                                                <li class="last">
+                                                    <a href="anti-harassment-anti-discrimination-policy.html" data-drupal-link-system-path="node/47591">Anti-Harassment & Discrimination Policy</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class = "expanded dropdown first last open2 open">
+                                                <a href="https://www.albany.edu/rise2019/relive-rise.html" id = "relive-rise" data-drupal-link-system-path="node/47356">RELIVE RISE 2019</a>
+                                                <ul class="dropdown-menu">
+                                                        <li class="first">
+                                                            <a href="https://www.albany.edu/rise2019/relive-rise.html"   data-drupal-link-system-path="node/47681">RISE 2019 Videos</a>
+                                                        </li>
+                                                        <li class="last">
+                                                            <a href="https://www.albany.edu/rise2019/rise-photos.html"  class = "is-active" data-drupal-link-system-path="node/47591">RISE 2019 Photos</a>
+                                                        </li>
+                                                    </ul>
+                                        </li>
+                                        
+                                    </ul>
+                                </nav>
+
+                            </div>
+                        </aside>
+                        <section class="col-sm-8">
+                            <div class="highlighted">
+                                <div class="region region-highlighted"></div>
+                            </div>
+                            <a id="main-content"></a>
+                            <div class="region region-content">
+                                <article role="article" about="/paragraphs-sidebar" class="page full clearfix">
+                                    <h2 style="color: #46166C; padding-bottom: 10px">RISE 2019 Photo Gallery
+                                    </h2>
+                                    <p><strong>
+                                     Checkout RISE 2019 Photo Gallery by clicking on link below:<strong></p>
+                                     <u><a href = "https://www.ualbanyphotos.com/Events/RISE-Conference/">RISE 2019 Photo Gallery</a></u>
+                                     <br>
+                                     <br>
+                                     <br>
+                                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                                <li class="nav-item active">
+                                                  <a class="nav-link active" id="day1-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true"><h4>Day 1</h4></a>
+                                                </li>
+                                                <li class="nav-item">
+                                                  <a class="nav-link" id="day2-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false"><h4>Day 2</h4></a>
+                                                </li>
+                                                <li class="nav-item">
+                                                  <a class="nav-link" id="day3-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false"><h4>Day 3</h4></a>
+                                                </li>
+                                              </ul>
+                                              <div id = "imageModal">
+                                                  <img id = "modal-content">
+                                              </div>
+                                              <div class="tab-content" id="myTabContent">
+                                                <div class="tab-pane fade active in" id="home" role="tabpanel" aria-labelledby="day1-tab">
+                                                    <div class = "image-wrapper">
+                                                        <img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8616.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8616.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8617.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8617.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8620.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8620.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8622.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8622.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8628.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8628.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8632.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8632.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8637.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8637.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8638.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8638.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8646.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8646.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8652.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8652.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8653.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8653.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8656.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8656.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8661.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8661.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8665.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8665.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8671.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8671.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8673.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8673.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8677.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8677.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8679.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8679.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8681.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8681.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8684.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8684.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8687.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8687.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8691.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8691.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8696.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8696.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8701.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8701.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8705.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8705.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8709.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8709.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8713.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8713.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8717.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8717.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8722.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8722.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8725.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8725.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8731.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8731.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8734.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8734.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8739.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8739.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8744.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8744.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8748.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8748.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8756.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8756.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8758.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8758.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8764.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8764.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8766.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8766.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8771.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8771.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8778.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8778.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8783.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8783.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8788.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8788.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8792.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8792.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8798.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8798.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8812.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8812.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8815.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8815.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8819.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8819.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8822.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8822.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8826.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8826.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8830.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8830.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8831.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8831.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8836.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8836.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8839.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8839.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8843.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8843.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8846.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8846.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8848.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8848.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8850.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8850.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8852.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8852.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8855.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8855.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8865.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8865.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8879.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8879.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8883.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8883.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8885.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8885.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8886.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8886.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8887.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8887.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8890.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8890.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8891.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8891.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8892.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8892.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8894.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8894.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8895.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8895.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8896.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8896.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8901.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8901.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8902.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8902.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8907.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8907.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8908.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8908.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8916.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8916.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8918.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8918.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8921.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8921.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8926.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8926.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8930.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8930.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8931.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8931.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8933.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8933.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8940.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8940.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8941.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8941.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8942.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8942.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8944.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8944.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8945.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8945.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8947.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8947.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8948.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8948.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8950.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8950.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8953.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8953.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8956.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8956.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8957.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8957.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8961.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8961.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8963.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8963.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8964.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8964.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8968.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8968.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8970.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8970.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8974.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8974.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8975.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8975.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8978.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8978.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8982.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8982.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8984.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8984.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8991.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8991.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8992.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8992.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A8995.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A8995.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A9001.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A9001.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A9003.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A9003.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A9004.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A9004.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A9014.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A9014.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A9017.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A9017.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A9023.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A9023.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A9025.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A9025.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A9029.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A9029.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A9031.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A9031.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A9034.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A9034.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A9037.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A9037.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A9039.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A9039.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A9043.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A9043.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A9045.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A9045.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A9050.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A9050.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A9053.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A9053.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A9057.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A9057.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A9058.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A9058.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/20191118_RISE-4T9A9061.jpg" data-src = "https://rise2019.org/img/Day1-Photos/20191118_RISE-4T9A9061.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/2019_11_18 RISE 2019_IMG_8852.jpg" data-src = "https://rise2019.org/img/Day1-Photos/2019_11_18 RISE 2019_IMG_8852.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/2019_11_18 RISE 2019_IMG_8855.jpg" data-src = "https://rise2019.org/img/Day1-Photos/2019_11_18 RISE 2019_IMG_8855.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/2019_11_18 RISE 2019_IMG_8858.jpg" data-src = "https://rise2019.org/img/Day1-Photos/2019_11_18 RISE 2019_IMG_8858.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/2019_11_18 RISE 2019_IMG_8860.jpg" data-src = "https://rise2019.org/img/Day1-Photos/2019_11_18 RISE 2019_IMG_8860.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/2019_11_18 RISE 2019_IMG_8864.jpg" data-src = "https://rise2019.org/img/Day1-Photos/2019_11_18 RISE 2019_IMG_8864.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/2019_11_18 RISE 2019_IMG_8872.jpg" data-src = "https://rise2019.org/img/Day1-Photos/2019_11_18 RISE 2019_IMG_8872.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/2019_11_18 RISE 2019_IMG_8873.jpg" data-src = "https://rise2019.org/img/Day1-Photos/2019_11_18 RISE 2019_IMG_8873.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/2019_11_18 RISE 2019_IMG_8877.jpg" data-src = "https://rise2019.org/img/Day1-Photos/2019_11_18 RISE 2019_IMG_8877.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/2019_11_18 RISE 2019_IMG_8878.jpg" data-src = "https://rise2019.org/img/Day1-Photos/2019_11_18 RISE 2019_IMG_8878.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/2019_11_18 RISE 2019_IMG_8880.jpg" data-src = "https://rise2019.org/img/Day1-Photos/2019_11_18 RISE 2019_IMG_8880.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/2019_11_18 RISE 2019_IMG_8882.jpg" data-src = "https://rise2019.org/img/Day1-Photos/2019_11_18 RISE 2019_IMG_8882.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/2019_11_18 RISE 2019_IMG_8885.jpg" data-src = "https://rise2019.org/img/Day1-Photos/2019_11_18 RISE 2019_IMG_8885.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/2019_11_18 RISE 2019_IMG_8890.jpg" data-src = "https://rise2019.org/img/Day1-Photos/2019_11_18 RISE 2019_IMG_8890.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/2019_11_18 RISE 2019_IMG_8892.jpg" data-src = "https://rise2019.org/img/Day1-Photos/2019_11_18 RISE 2019_IMG_8892.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/2019_11_18 RISE 2019_IMG_8894.jpg" data-src = "https://rise2019.org/img/Day1-Photos/2019_11_18 RISE 2019_IMG_8894.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/2019_11_18 RISE 2019_IMG_8903.jpg" data-src = "https://rise2019.org/img/Day1-Photos/2019_11_18 RISE 2019_IMG_8903.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/2019_11_18 RISE 2019_IMG_8909.jpg" data-src = "https://rise2019.org/img/Day1-Photos/2019_11_18 RISE 2019_IMG_8909.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/2019_11_18 RISE 2019_IMG_8912.jpg" data-src = "https://rise2019.org/img/Day1-Photos/2019_11_18 RISE 2019_IMG_8912.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/2019_11_18 RISE 2019_IMG_8915.jpg" data-src = "https://rise2019.org/img/Day1-Photos/2019_11_18 RISE 2019_IMG_8915.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/2019_11_18 RISE 2019_IMG_8916.jpg" data-src = "https://rise2019.org/img/Day1-Photos/2019_11_18 RISE 2019_IMG_8916.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/2019_11_18 RISE 2019_IMG_8919.jpg" data-src = "https://rise2019.org/img/Day1-Photos/2019_11_18 RISE 2019_IMG_8919.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/2019_11_18 RISE 2019_IMG_8920.jpg" data-src = "https://rise2019.org/img/Day1-Photos/2019_11_18 RISE 2019_IMG_8920.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/2019_11_18 RISE 2019_IMG_8922.jpg" data-src = "https://rise2019.org/img/Day1-Photos/2019_11_18 RISE 2019_IMG_8922.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/2019_11_18 RISE 2019_IMG_8925.jpg" data-src = "https://rise2019.org/img/Day1-Photos/2019_11_18 RISE 2019_IMG_8925.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/2019_11_18 RISE 2019_IMG_8926.jpg" data-src = "https://rise2019.org/img/Day1-Photos/2019_11_18 RISE 2019_IMG_8926.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/2019_11_18 RISE 2019_IMG_8929.jpg" data-src = "https://rise2019.org/img/Day1-Photos/2019_11_18 RISE 2019_IMG_8929.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/2019_11_18 RISE 2019_IMG_8931.jpg" data-src = "https://rise2019.org/img/Day1-Photos/2019_11_18 RISE 2019_IMG_8931.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day1-Thumbnails/2019_11_18 RISE 2019_IMG_8932.jpg" data-src = "https://rise2019.org/img/Day1-Photos/2019_11_18 RISE 2019_IMG_8932.jpg">
+
+                                                </div>
+                                            </div>
+                                                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="day2-tab">
+                                                        <div class = "image-wrapper">
+                                                            <img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191118_RISE-4T9A9068.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191118_RISE-4T9A9068.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191118_RISE-4T9A9069.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191118_RISE-4T9A9069.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191118_RISE-4T9A9080.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191118_RISE-4T9A9080.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191118_RISE-4T9A9081.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191118_RISE-4T9A9081.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191118_RISE-4T9A9083.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191118_RISE-4T9A9083.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191118_RISE-4T9A9084.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191118_RISE-4T9A9084.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191118_RISE-4T9A9089.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191118_RISE-4T9A9089.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191118_RISE-4T9A9090.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191118_RISE-4T9A9090.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191118_RISE-4T9A9094.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191118_RISE-4T9A9094.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191118_RISE-4T9A9098.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191118_RISE-4T9A9098.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191118_RISE-4T9A9101.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191118_RISE-4T9A9101.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191118_RISE-4T9A9103.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191118_RISE-4T9A9103.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191118_RISE-4T9A9106.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191118_RISE-4T9A9106.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191118_RISE-4T9A9109.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191118_RISE-4T9A9109.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191118_RISE-4T9A9112.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191118_RISE-4T9A9112.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191118_RISE-4T9A9113.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191118_RISE-4T9A9113.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191118_RISE-4T9A9114.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191118_RISE-4T9A9114.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191118_RISE-4T9A9117.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191118_RISE-4T9A9117.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191118_RISE-4T9A9119.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191118_RISE-4T9A9119.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191118_RISE-4T9A9121.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191118_RISE-4T9A9121.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191118_RISE-4T9A9123.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191118_RISE-4T9A9123.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191118_RISE-4T9A9142.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191118_RISE-4T9A9142.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191118_RISE-4T9A9144.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191118_RISE-4T9A9144.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191118_RISE-4T9A9145.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191118_RISE-4T9A9145.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191118_RISE-4T9A9150.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191118_RISE-4T9A9150.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191118_RISE-4T9A9151.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191118_RISE-4T9A9151.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191118_RISE-4T9A9155.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191118_RISE-4T9A9155.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191118_RISE-4T9A9162.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191118_RISE-4T9A9162.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191118_RISE-4T9A9164.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191118_RISE-4T9A9164.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191118_RISE-4T9A9166.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191118_RISE-4T9A9166.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191118_RISE-4T9A9168.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191118_RISE-4T9A9168.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191118_RISE-4T9A9169.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191118_RISE-4T9A9169.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191118_RISE-4T9A9170.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191118_RISE-4T9A9170.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191118_RISE-4T9A9173.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191118_RISE-4T9A9173.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191118_RISE-4T9A9178.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191118_RISE-4T9A9178.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191118_RISE-4T9A9182.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191118_RISE-4T9A9182.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191118_RISE-4T9A9183.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191118_RISE-4T9A9183.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191118_RISE-4T9A9187.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191118_RISE-4T9A9187.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191118_RISE-4T9A9189.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191118_RISE-4T9A9189.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191118_RISE-4T9A9192.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191118_RISE-4T9A9192.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191118_RISE-4T9A9193.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191118_RISE-4T9A9193.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191118_RISE-4T9A9197.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191118_RISE-4T9A9197.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191118_RISE-4T9A9198.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191118_RISE-4T9A9198.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191118_RISE-4T9A9202.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191118_RISE-4T9A9202.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191118_RISE-4T9A9205.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191118_RISE-4T9A9205.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191118_RISE-4T9A9209.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191118_RISE-4T9A9209.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191118_RISE-4T9A9211.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191118_RISE-4T9A9211.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191118_RISE-4T9A9214.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191118_RISE-4T9A9214.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191118_RISE-4T9A9216.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191118_RISE-4T9A9216.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191118_RISE-4T9A9220.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191118_RISE-4T9A9220.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191118_RISE-4T9A9228.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191118_RISE-4T9A9228.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191118_RISE-4T9A9234.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191118_RISE-4T9A9234.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191118_RISE-4T9A9239.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191118_RISE-4T9A9239.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191118_RISE-4T9A9245.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191118_RISE-4T9A9245.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191118_RISE-4T9A9246.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191118_RISE-4T9A9246.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191118_RISE-4T9A9249.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191118_RISE-4T9A9249.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191118_RISE-4T9A9251.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191118_RISE-4T9A9251.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191118_RISE-4T9A9258.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191118_RISE-4T9A9258.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191118_RISE-4T9A9261.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191118_RISE-4T9A9261.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191118_RISE-4T9A9264.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191118_RISE-4T9A9264.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191118_RISE-4T9A9268.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191118_RISE-4T9A9268.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191118_RISE-4T9A9270.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191118_RISE-4T9A9270.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191118_RISE-4T9A9272.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191118_RISE-4T9A9272.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191118_RISE-4T9A9276.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191118_RISE-4T9A9276.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191119_RISE-PD3_3903.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191119_RISE-PD3_3903.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191119_RISE-PD3_3904.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191119_RISE-PD3_3904.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191119_RISE-PD3_3907.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191119_RISE-PD3_3907.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191119_RISE-PD3_3910.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191119_RISE-PD3_3910.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191119_RISE-PD3_3911.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191119_RISE-PD3_3911.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191119_RISE-PD3_3914.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191119_RISE-PD3_3914.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191119_RISE-PD3_3916.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191119_RISE-PD3_3916.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191119_RISE-PD3_3918.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191119_RISE-PD3_3918.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191119_RISE-PD3_3921.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191119_RISE-PD3_3921.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191119_RISE-PD3_3923.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191119_RISE-PD3_3923.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191119_RISE-PD3_3925.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191119_RISE-PD3_3925.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191119_RISE-PD3_3927.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191119_RISE-PD3_3927.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191119_RISE-PD3_3929.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191119_RISE-PD3_3929.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191119_RISE-PD3_3931.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191119_RISE-PD3_3931.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191119_RISE-PD3_3933.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191119_RISE-PD3_3933.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191119_RISE-PD3_3934.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191119_RISE-PD3_3934.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191119_RISE-PD3_3937.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191119_RISE-PD3_3937.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191119_RISE-PD3_3940.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191119_RISE-PD3_3940.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191119_RISE-PD3_3946.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191119_RISE-PD3_3946.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191119_RISE-PD3_3950.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191119_RISE-PD3_3950.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191119_RISE-PD3_3957.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191119_RISE-PD3_3957.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191119_RISE-PD3_3958.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191119_RISE-PD3_3958.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191119_RISE-PD3_3964.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191119_RISE-PD3_3964.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191119_RISE-PD3_3966.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191119_RISE-PD3_3966.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191119_RISE-PD3_3969.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191119_RISE-PD3_3969.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191119_RISE-PD3_3972.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191119_RISE-PD3_3972.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/20191119_RISE-PD3_3974.jpg" data-src = "https://rise2019.org/img/Day2-Photos/20191119_RISE-PD3_3974.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/2019_11_19 RISE 2019_IMG_8934.jpg" data-src = "https://rise2019.org/img/Day2-Photos/2019_11_19 RISE 2019_IMG_8934.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/2019_11_19 RISE 2019_IMG_8940.jpg" data-src = "https://rise2019.org/img/Day2-Photos/2019_11_19 RISE 2019_IMG_8940.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/2019_11_19 RISE 2019_IMG_8947.jpg" data-src = "https://rise2019.org/img/Day2-Photos/2019_11_19 RISE 2019_IMG_8947.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/2019_11_19 RISE 2019_IMG_8948.jpg" data-src = "https://rise2019.org/img/Day2-Photos/2019_11_19 RISE 2019_IMG_8948.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/2019_11_19 RISE 2019_IMG_8950.jpg" data-src = "https://rise2019.org/img/Day2-Photos/2019_11_19 RISE 2019_IMG_8950.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/2019_11_19 RISE 2019_IMG_8953.jpg" data-src = "https://rise2019.org/img/Day2-Photos/2019_11_19 RISE 2019_IMG_8953.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/2019_11_19 RISE 2019_IMG_8961.jpg" data-src = "https://rise2019.org/img/Day2-Photos/2019_11_19 RISE 2019_IMG_8961.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/2019_11_19 RISE 2019_IMG_8971.jpg" data-src = "https://rise2019.org/img/Day2-Photos/2019_11_19 RISE 2019_IMG_8971.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/2019_11_19 RISE 2019_IMG_8976.jpg" data-src = "https://rise2019.org/img/Day2-Photos/2019_11_19 RISE 2019_IMG_8976.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/2019_11_19 RISE 2019_IMG_8979.jpg" data-src = "https://rise2019.org/img/Day2-Photos/2019_11_19 RISE 2019_IMG_8979.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/2019_11_19 RISE 2019_IMG_8980.jpg" data-src = "https://rise2019.org/img/Day2-Photos/2019_11_19 RISE 2019_IMG_8980.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/2019_11_19 RISE 2019_IMG_8984.jpg" data-src = "https://rise2019.org/img/Day2-Photos/2019_11_19 RISE 2019_IMG_8984.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/2019_11_19 RISE 2019_IMG_8990.jpg" data-src = "https://rise2019.org/img/Day2-Photos/2019_11_19 RISE 2019_IMG_8990.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/2019_11_19 RISE 2019_IMG_8998.jpg" data-src = "https://rise2019.org/img/Day2-Photos/2019_11_19 RISE 2019_IMG_8998.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/2019_11_19 RISE 2019_IMG_9000.jpg" data-src = "https://rise2019.org/img/Day2-Photos/2019_11_19 RISE 2019_IMG_9000.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/2019_11_19 RISE 2019_IMG_9003.jpg" data-src = "https://rise2019.org/img/Day2-Photos/2019_11_19 RISE 2019_IMG_9003.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/2019_11_19 RISE 2019_IMG_9007.jpg" data-src = "https://rise2019.org/img/Day2-Photos/2019_11_19 RISE 2019_IMG_9007.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/2019_11_19 RISE 2019_IMG_9011.jpg" data-src = "https://rise2019.org/img/Day2-Photos/2019_11_19 RISE 2019_IMG_9011.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/2019_11_19 RISE 2019_IMG_9012.jpg" data-src = "https://rise2019.org/img/Day2-Photos/2019_11_19 RISE 2019_IMG_9012.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/2019_11_19 RISE 2019_IMG_9016.jpg" data-src = "https://rise2019.org/img/Day2-Photos/2019_11_19 RISE 2019_IMG_9016.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/2019_11_19 RISE 2019_IMG_9017.jpg" data-src = "https://rise2019.org/img/Day2-Photos/2019_11_19 RISE 2019_IMG_9017.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/2019_11_19 RISE 2019_IMG_9020.jpg" data-src = "https://rise2019.org/img/Day2-Photos/2019_11_19 RISE 2019_IMG_9020.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/2019_11_19 RISE 2019_IMG_9023.jpg" data-src = "https://rise2019.org/img/Day2-Photos/2019_11_19 RISE 2019_IMG_9023.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/2019_11_19 RISE 2019_IMG_9029.jpg" data-src = "https://rise2019.org/img/Day2-Photos/2019_11_19 RISE 2019_IMG_9029.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/2019_11_19 RISE 2019_IMG_9035.jpg" data-src = "https://rise2019.org/img/Day2-Photos/2019_11_19 RISE 2019_IMG_9035.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/2019_11_19 RISE 2019_IMG_9042.jpg" data-src = "https://rise2019.org/img/Day2-Photos/2019_11_19 RISE 2019_IMG_9042.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/2019_11_19 RISE 2019_IMG_9043.jpg" data-src = "https://rise2019.org/img/Day2-Photos/2019_11_19 RISE 2019_IMG_9043.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/2019_11_19 RISE 2019_IMG_9046.jpg" data-src = "https://rise2019.org/img/Day2-Photos/2019_11_19 RISE 2019_IMG_9046.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/2019_11_19 RISE 2019_IMG_9054.jpg" data-src = "https://rise2019.org/img/Day2-Photos/2019_11_19 RISE 2019_IMG_9054.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/2019_11_19 RISE 2019_IMG_9066.jpg" data-src = "https://rise2019.org/img/Day2-Photos/2019_11_19 RISE 2019_IMG_9066.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/2019_11_19 RISE 2019_IMG_9068.jpg" data-src = "https://rise2019.org/img/Day2-Photos/2019_11_19 RISE 2019_IMG_9068.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/2019_11_19 RISE 2019_IMG_9071.jpg" data-src = "https://rise2019.org/img/Day2-Photos/2019_11_19 RISE 2019_IMG_9071.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/2019_11_19 RISE 2019_IMG_9076.jpg" data-src = "https://rise2019.org/img/Day2-Photos/2019_11_19 RISE 2019_IMG_9076.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/2019_11_19 RISE 2019_IMG_9082.jpg" data-src = "https://rise2019.org/img/Day2-Photos/2019_11_19 RISE 2019_IMG_9082.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/2019_11_19 RISE 2019_IMG_9086.jpg" data-src = "https://rise2019.org/img/Day2-Photos/2019_11_19 RISE 2019_IMG_9086.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/2019_11_19 RISE 2019_IMG_9087.jpg" data-src = "https://rise2019.org/img/Day2-Photos/2019_11_19 RISE 2019_IMG_9087.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/2019_11_19 RISE 2019_IMG_9089.jpg" data-src = "https://rise2019.org/img/Day2-Photos/2019_11_19 RISE 2019_IMG_9089.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/2019_11_19 RISE 2019_IMG_9090.jpg" data-src = "https://rise2019.org/img/Day2-Photos/2019_11_19 RISE 2019_IMG_9090.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/2019_11_19 RISE 2019_IMG_9093.jpg" data-src = "https://rise2019.org/img/Day2-Photos/2019_11_19 RISE 2019_IMG_9093.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/2019_11_19 RISE 2019_IMG_9096.jpg" data-src = "https://rise2019.org/img/Day2-Photos/2019_11_19 RISE 2019_IMG_9096.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/2019_11_19 RISE 2019_IMG_9099.jpg" data-src = "https://rise2019.org/img/Day2-Photos/2019_11_19 RISE 2019_IMG_9099.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/2019_11_19 RISE 2019_IMG_9101.jpg" data-src = "https://rise2019.org/img/Day2-Photos/2019_11_19 RISE 2019_IMG_9101.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/2019_11_19 RISE 2019_IMG_9103.jpg" data-src = "https://rise2019.org/img/Day2-Photos/2019_11_19 RISE 2019_IMG_9103.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/2019_11_19 RISE 2019_IMG_9104.jpg" data-src = "https://rise2019.org/img/Day2-Photos/2019_11_19 RISE 2019_IMG_9104.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/2019_11_19 RISE 2019_IMG_9106.jpg" data-src = "https://rise2019.org/img/Day2-Photos/2019_11_19 RISE 2019_IMG_9106.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/2019_11_19 RISE 2019_IMG_9107.jpg" data-src = "https://rise2019.org/img/Day2-Photos/2019_11_19 RISE 2019_IMG_9107.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/2019_11_19 RISE 2019_IMG_9109.jpg" data-src = "https://rise2019.org/img/Day2-Photos/2019_11_19 RISE 2019_IMG_9109.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/2019_11_19 RISE 2019_IMG_9111.jpg" data-src = "https://rise2019.org/img/Day2-Photos/2019_11_19 RISE 2019_IMG_9111.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/2019_11_19 RISE 2019_IMG_9116.jpg" data-src = "https://rise2019.org/img/Day2-Photos/2019_11_19 RISE 2019_IMG_9116.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/2019_11_19 RISE 2019_IMG_9121.jpg" data-src = "https://rise2019.org/img/Day2-Photos/2019_11_19 RISE 2019_IMG_9121.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/2019_11_19 RISE 2019_IMG_9122.jpg" data-src = "https://rise2019.org/img/Day2-Photos/2019_11_19 RISE 2019_IMG_9122.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/2019_11_19 RISE 2019_IMG_9124.jpg" data-src = "https://rise2019.org/img/Day2-Photos/2019_11_19 RISE 2019_IMG_9124.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/2019_11_19 RISE 2019_IMG_9125.jpg" data-src = "https://rise2019.org/img/Day2-Photos/2019_11_19 RISE 2019_IMG_9125.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/2019_11_19 RISE 2019_IMG_9126.jpg" data-src = "https://rise2019.org/img/Day2-Photos/2019_11_19 RISE 2019_IMG_9126.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/2019_11_19 RISE 2019_IMG_9130.jpg" data-src = "https://rise2019.org/img/Day2-Photos/2019_11_19 RISE 2019_IMG_9130.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/2019_11_19 RISE 2019_IMG_9136.jpg" data-src = "https://rise2019.org/img/Day2-Photos/2019_11_19 RISE 2019_IMG_9136.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/2019_11_19 RISE 2019_IMG_9139.jpg" data-src = "https://rise2019.org/img/Day2-Photos/2019_11_19 RISE 2019_IMG_9139.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/2019_11_19 RISE 2019_IMG_9141.jpg" data-src = "https://rise2019.org/img/Day2-Photos/2019_11_19 RISE 2019_IMG_9141.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/2019_11_19 RISE 2019_IMG_9143.jpg" data-src = "https://rise2019.org/img/Day2-Photos/2019_11_19 RISE 2019_IMG_9143.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/2019_11_19 RISE 2019_IMG_9148.jpg" data-src = "https://rise2019.org/img/Day2-Photos/2019_11_19 RISE 2019_IMG_9148.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/2019_11_19 RISE 2019_IMG_9167.jpg" data-src = "https://rise2019.org/img/Day2-Photos/2019_11_19 RISE 2019_IMG_9167.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/2019_11_19 RISE 2019_IMG_9172.jpg" data-src = "https://rise2019.org/img/Day2-Photos/2019_11_19 RISE 2019_IMG_9172.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day2-Thumbnails/2019_11_19 RISE 2019_IMG_9173.jpg" data-src = "https://rise2019.org/img/Day2-Photos/2019_11_19 RISE 2019_IMG_9173.jpg">
+
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="day3-tab">
+                                                        <div class = "image-wrapper">
+                                                            <img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/20191119_RISE_4T9A9612.jpg" data-src = "https://rise2019.org/img/Day3-Photos/20191119_RISE_4T9A9612.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/20191119_RISE_4T9A9614.jpg" data-src = "https://rise2019.org/img/Day3-Photos/20191119_RISE_4T9A9614.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/20191119_RISE_4T9A9615.jpg" data-src = "https://rise2019.org/img/Day3-Photos/20191119_RISE_4T9A9615.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/20191119_RISE_4T9A9618.jpg" data-src = "https://rise2019.org/img/Day3-Photos/20191119_RISE_4T9A9618.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/20191119_RISE_4T9A9619.jpg" data-src = "https://rise2019.org/img/Day3-Photos/20191119_RISE_4T9A9619.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/20191119_RISE_4T9A9622.jpg" data-src = "https://rise2019.org/img/Day3-Photos/20191119_RISE_4T9A9622.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/20191119_RISE_4T9A9626.jpg" data-src = "https://rise2019.org/img/Day3-Photos/20191119_RISE_4T9A9626.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/20191119_RISE_4T9A9630.jpg" data-src = "https://rise2019.org/img/Day3-Photos/20191119_RISE_4T9A9630.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/20191119_RISE_4T9A9632.jpg" data-src = "https://rise2019.org/img/Day3-Photos/20191119_RISE_4T9A9632.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/20191119_RISE_4T9A9636.jpg" data-src = "https://rise2019.org/img/Day3-Photos/20191119_RISE_4T9A9636.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/20191119_RISE_4T9A9638.jpg" data-src = "https://rise2019.org/img/Day3-Photos/20191119_RISE_4T9A9638.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/20191119_RISE_4T9A9641.jpg" data-src = "https://rise2019.org/img/Day3-Photos/20191119_RISE_4T9A9641.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/20191119_RISE_4T9A9645.jpg" data-src = "https://rise2019.org/img/Day3-Photos/20191119_RISE_4T9A9645.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/20191119_RISE_4T9A9647.jpg" data-src = "https://rise2019.org/img/Day3-Photos/20191119_RISE_4T9A9647.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/20191119_RISE_4T9A9649.jpg" data-src = "https://rise2019.org/img/Day3-Photos/20191119_RISE_4T9A9649.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/20191119_RISE_4T9A9650.jpg" data-src = "https://rise2019.org/img/Day3-Photos/20191119_RISE_4T9A9650.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/20191120_RISE_4T9A9652.jpg" data-src = "https://rise2019.org/img/Day3-Photos/20191120_RISE_4T9A9652.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/20191120_RISE_4T9A9656.jpg" data-src = "https://rise2019.org/img/Day3-Photos/20191120_RISE_4T9A9656.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/20191120_RISE_4T9A9658.jpg" data-src = "https://rise2019.org/img/Day3-Photos/20191120_RISE_4T9A9658.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/20191120_RISE_4T9A9660.jpg" data-src = "https://rise2019.org/img/Day3-Photos/20191120_RISE_4T9A9660.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/20191120_RISE_4T9A9661.jpg" data-src = "https://rise2019.org/img/Day3-Photos/20191120_RISE_4T9A9661.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/20191120_RISE_4T9A9662.jpg" data-src = "https://rise2019.org/img/Day3-Photos/20191120_RISE_4T9A9662.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/20191120_RISE_4T9A9663.jpg" data-src = "https://rise2019.org/img/Day3-Photos/20191120_RISE_4T9A9663.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/20191120_RISE_4T9A9666.jpg" data-src = "https://rise2019.org/img/Day3-Photos/20191120_RISE_4T9A9666.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/20191120_RISE_4T9A9668.jpg" data-src = "https://rise2019.org/img/Day3-Photos/20191120_RISE_4T9A9668.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/20191120_RISE_4T9A9675.jpg" data-src = "https://rise2019.org/img/Day3-Photos/20191120_RISE_4T9A9675.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/20191120_RISE_4T9A9678.jpg" data-src = "https://rise2019.org/img/Day3-Photos/20191120_RISE_4T9A9678.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/20191120_RISE_4T9A9680.jpg" data-src = "https://rise2019.org/img/Day3-Photos/20191120_RISE_4T9A9680.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/20191120_RISE_4T9A9684.jpg" data-src = "https://rise2019.org/img/Day3-Photos/20191120_RISE_4T9A9684.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/20191120_RISE_4T9A9686.jpg" data-src = "https://rise2019.org/img/Day3-Photos/20191120_RISE_4T9A9686.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/20191120_RISE_4T9A9693.jpg" data-src = "https://rise2019.org/img/Day3-Photos/20191120_RISE_4T9A9693.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/20191120_RISE_4T9A9700.jpg" data-src = "https://rise2019.org/img/Day3-Photos/20191120_RISE_4T9A9700.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/20191120_RISE_4T9A9702.jpg" data-src = "https://rise2019.org/img/Day3-Photos/20191120_RISE_4T9A9702.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/20191120_RISE_4T9A9708.jpg" data-src = "https://rise2019.org/img/Day3-Photos/20191120_RISE_4T9A9708.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/20191120_RISE_4T9A9714.jpg" data-src = "https://rise2019.org/img/Day3-Photos/20191120_RISE_4T9A9714.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/20191120_RISE_4T9A9715.jpg" data-src = "https://rise2019.org/img/Day3-Photos/20191120_RISE_4T9A9715.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/20191120_RISE_4T9A9720.jpg" data-src = "https://rise2019.org/img/Day3-Photos/20191120_RISE_4T9A9720.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/20191120_RISE_4T9A9722.jpg" data-src = "https://rise2019.org/img/Day3-Photos/20191120_RISE_4T9A9722.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/20191120_RISE_4T9A9724.jpg" data-src = "https://rise2019.org/img/Day3-Photos/20191120_RISE_4T9A9724.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/20191120_RISE_4T9A9732.jpg" data-src = "https://rise2019.org/img/Day3-Photos/20191120_RISE_4T9A9732.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/20191120_RISE_4T9A9733.jpg" data-src = "https://rise2019.org/img/Day3-Photos/20191120_RISE_4T9A9733.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/20191120_RISE_4T9A9735.jpg" data-src = "https://rise2019.org/img/Day3-Photos/20191120_RISE_4T9A9735.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/20191120_RISE_4T9A9737.jpg" data-src = "https://rise2019.org/img/Day3-Photos/20191120_RISE_4T9A9737.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/20191120_RISE_4T9A9740.jpg" data-src = "https://rise2019.org/img/Day3-Photos/20191120_RISE_4T9A9740.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/20191120_RISE_4T9A9745.jpg" data-src = "https://rise2019.org/img/Day3-Photos/20191120_RISE_4T9A9745.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/20191120_RISE_4T9A9748.jpg" data-src = "https://rise2019.org/img/Day3-Photos/20191120_RISE_4T9A9748.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/20191120_RISE_4T9A9751.jpg" data-src = "https://rise2019.org/img/Day3-Photos/20191120_RISE_4T9A9751.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/20191120_RISE_4T9A9753.jpg" data-src = "https://rise2019.org/img/Day3-Photos/20191120_RISE_4T9A9753.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/20191120_RISE_4T9A9764.jpg" data-src = "https://rise2019.org/img/Day3-Photos/20191120_RISE_4T9A9764.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/20191120_RISE_4T9A9766.jpg" data-src = "https://rise2019.org/img/Day3-Photos/20191120_RISE_4T9A9766.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/20191120_RISE_4T9A9774.jpg" data-src = "https://rise2019.org/img/Day3-Photos/20191120_RISE_4T9A9774.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/20191120_RISE_4T9A9776.jpg" data-src = "https://rise2019.org/img/Day3-Photos/20191120_RISE_4T9A9776.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/20191120_RISE_4T9A9781.jpg" data-src = "https://rise2019.org/img/Day3-Photos/20191120_RISE_4T9A9781.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/20191120_RISE_4T9A9784.jpg" data-src = "https://rise2019.org/img/Day3-Photos/20191120_RISE_4T9A9784.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/20191120_RISE_4T9A9786.jpg" data-src = "https://rise2019.org/img/Day3-Photos/20191120_RISE_4T9A9786.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/20191120_RISE_4T9A9788.jpg" data-src = "https://rise2019.org/img/Day3-Photos/20191120_RISE_4T9A9788.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/20191120_RISE_4T9A9792.jpg" data-src = "https://rise2019.org/img/Day3-Photos/20191120_RISE_4T9A9792.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/20191120_RISE_4T9A9795.jpg" data-src = "https://rise2019.org/img/Day3-Photos/20191120_RISE_4T9A9795.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/20191120_RISE_4T9A9800.jpg" data-src = "https://rise2019.org/img/Day3-Photos/20191120_RISE_4T9A9800.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/20191120_RISE_4T9A9802.jpg" data-src = "https://rise2019.org/img/Day3-Photos/20191120_RISE_4T9A9802.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/20191120_RISE_4T9A9808.jpg" data-src = "https://rise2019.org/img/Day3-Photos/20191120_RISE_4T9A9808.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/20191120_RISE_4T9A9814.jpg" data-src = "https://rise2019.org/img/Day3-Photos/20191120_RISE_4T9A9814.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/20191120_RISE_4T9A9828.jpg" data-src = "https://rise2019.org/img/Day3-Photos/20191120_RISE_4T9A9828.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/20191120_RISE_4T9A9835.jpg" data-src = "https://rise2019.org/img/Day3-Photos/20191120_RISE_4T9A9835.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_19 RISE 2019_IMG_9175.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_19 RISE 2019_IMG_9175.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_19 RISE 2019_IMG_9176.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_19 RISE 2019_IMG_9176.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_19 RISE 2019_IMG_9184.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_19 RISE 2019_IMG_9184.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_19 RISE 2019_IMG_9189.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_19 RISE 2019_IMG_9189.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_19 RISE 2019_IMG_9190.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_19 RISE 2019_IMG_9190.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_19 RISE 2019_IMG_9191.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_19 RISE 2019_IMG_9191.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_19 RISE 2019_IMG_9193.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_19 RISE 2019_IMG_9193.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_19 RISE 2019_IMG_9195.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_19 RISE 2019_IMG_9195.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_19 RISE 2019_IMG_9198.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_19 RISE 2019_IMG_9198.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_19 RISE 2019_IMG_9204.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_19 RISE 2019_IMG_9204.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_19 RISE 2019_IMG_9207.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_19 RISE 2019_IMG_9207.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_19 RISE 2019_IMG_9211.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_19 RISE 2019_IMG_9211.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_19 RISE 2019_IMG_9214.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_19 RISE 2019_IMG_9214.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_20 RISE ConferenceIMG_9224.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_20 RISE ConferenceIMG_9224.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_20 RISE ConferenceIMG_9233.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_20 RISE ConferenceIMG_9233.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_20 RISE ConferenceIMG_9236.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_20 RISE ConferenceIMG_9236.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_20 RISE ConferenceIMG_9243.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_20 RISE ConferenceIMG_9243.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_20 RISE ConferenceIMG_9249.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_20 RISE ConferenceIMG_9249.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_20 RISE ConferenceIMG_9254.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_20 RISE ConferenceIMG_9254.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_20 RISE ConferenceIMG_9257.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_20 RISE ConferenceIMG_9257.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_20 RISE ConferenceIMG_9262.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_20 RISE ConferenceIMG_9262.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_20 RISE ConferenceIMG_9263.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_20 RISE ConferenceIMG_9263.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_20 RISE ConferenceIMG_9281.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_20 RISE ConferenceIMG_9281.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_20 RISE ConferenceIMG_9284.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_20 RISE ConferenceIMG_9284.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_20 RISE ConferenceIMG_9296.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_20 RISE ConferenceIMG_9296.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_20 RISE ConferenceIMG_9301.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_20 RISE ConferenceIMG_9301.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_20 RISE ConferenceIMG_9302.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_20 RISE ConferenceIMG_9302.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_20 RISE ConferenceIMG_9303.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_20 RISE ConferenceIMG_9303.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_20 RISE ConferenceIMG_9309.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_20 RISE ConferenceIMG_9309.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_20 RISE ConferenceIMG_9310.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_20 RISE ConferenceIMG_9310.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_20 RISE ConferenceIMG_9312.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_20 RISE ConferenceIMG_9312.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_20 RISE ConferenceIMG_9318.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_20 RISE ConferenceIMG_9318.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_20 RISE ConferenceIMG_9321.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_20 RISE ConferenceIMG_9321.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_20 RISE ConferenceIMG_9322.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_20 RISE ConferenceIMG_9322.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_20 RISE ConferenceIMG_9325.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_20 RISE ConferenceIMG_9325.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_20 RISE ConferenceIMG_9332.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_20 RISE ConferenceIMG_9332.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_20 RISE ConferenceIMG_9335.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_20 RISE ConferenceIMG_9335.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_20 RISE ConferenceIMG_9337.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_20 RISE ConferenceIMG_9337.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_20 RISE ConferenceIMG_9341.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_20 RISE ConferenceIMG_9341.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_20 RISE ConferenceIMG_9345.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_20 RISE ConferenceIMG_9345.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_20 RISE ConferenceIMG_9347.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_20 RISE ConferenceIMG_9347.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_20 RISE ConferenceIMG_9352.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_20 RISE ConferenceIMG_9352.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_20 RISE ConferenceIMG_9360.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_20 RISE ConferenceIMG_9360.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_20 RISE ConferenceIMG_9365.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_20 RISE ConferenceIMG_9365.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_20 RISE ConferenceIMG_9368.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_20 RISE ConferenceIMG_9368.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_20 RISE ConferenceIMG_9369.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_20 RISE ConferenceIMG_9369.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_20 RISE ConferenceIMG_9372.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_20 RISE ConferenceIMG_9372.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_20 RISE ConferenceIMG_9376.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_20 RISE ConferenceIMG_9376.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_20 RISE ConferenceIMG_9384.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_20 RISE ConferenceIMG_9384.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_20 RISE ConferenceIMG_9389.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_20 RISE ConferenceIMG_9389.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_20 RISE ConferenceIMG_9404.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_20 RISE ConferenceIMG_9404.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_20 RISE ConferenceIMG_9405.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_20 RISE ConferenceIMG_9405.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_20 RISE Conference_MG_6012.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_20 RISE Conference_MG_6012.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_20 RISE Conference_MG_6013.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_20 RISE Conference_MG_6013.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_20 RISE Conference_MG_6016.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_20 RISE Conference_MG_6016.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_20 RISE Conference_MG_6019.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_20 RISE Conference_MG_6019.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_20 RISE Conference_MG_6020.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_20 RISE Conference_MG_6020.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_20 RISE Conference_MG_6022.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_20 RISE Conference_MG_6022.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_20 RISE Conference_MG_6026.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_20 RISE Conference_MG_6026.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_20 RISE Conference_MG_6030.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_20 RISE Conference_MG_6030.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_20 RISE Conference_MG_6034.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_20 RISE Conference_MG_6034.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_20 RISE Conference_MG_6035.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_20 RISE Conference_MG_6035.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_20 RISE Conference_MG_6037.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_20 RISE Conference_MG_6037.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_20 RISE Conference_MG_6038.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_20 RISE Conference_MG_6038.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_20 RISE Conference_MG_6039.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_20 RISE Conference_MG_6039.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_20 RISE Conference_MG_6048.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_20 RISE Conference_MG_6048.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_20 RISE Conference_MG_6051.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_20 RISE Conference_MG_6051.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_20 RISE Conference_MG_6052.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_20 RISE Conference_MG_6052.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_20 RISE Conference_MG_6055.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_20 RISE Conference_MG_6055.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_20 RISE Conference_MG_6057.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_20 RISE Conference_MG_6057.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_20 RISE Conference_MG_6059.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_20 RISE Conference_MG_6059.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_20 RISE Conference_MG_6063.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_20 RISE Conference_MG_6063.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_20 RISE Conference_MG_6064.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_20 RISE Conference_MG_6064.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_20 RISE Conference_MG_6065.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_20 RISE Conference_MG_6065.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_20 RISE Conference_MG_6067.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_20 RISE Conference_MG_6067.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_20 RISE Conference_MG_6075.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_20 RISE Conference_MG_6075.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_20 RISE Conference_MG_6078.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_20 RISE Conference_MG_6078.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_20 RISE Conference_MG_6079.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_20 RISE Conference_MG_6079.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_20 RISE Conference_MG_6090.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_20 RISE Conference_MG_6090.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_20 RISE Conference_MG_6092.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_20 RISE Conference_MG_6092.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_20 RISE Conference_MG_6098.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_20 RISE Conference_MG_6098.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_20 RISE Conference_MG_6100.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_20 RISE Conference_MG_6100.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_20 RISE Conference_MG_6107.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_20 RISE Conference_MG_6107.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_20 RISE Conference_MG_6120.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_20 RISE Conference_MG_6120.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_20 RISE Conference_MG_6127.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_20 RISE Conference_MG_6127.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_20 RISE Conference_MG_6132.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_20 RISE Conference_MG_6132.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_20 RISE Conference_MG_6134.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_20 RISE Conference_MG_6134.jpg">
+<img class = "rise-photos" style = "height: 150px; width: 225px" src = "https://rise2019.org/img/Day3-Thumbnails/2019_11_20 RISE Conference_MG_6140.jpg" data-src = "https://rise2019.org/img/Day3-Photos/2019_11_20 RISE Conference_MG_6140.jpg">
+
+                                                        </div>
+                                                </div>
+                                              </div>
+                                    </article>
+                                </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </div>
+    <div class="container-fluid ">
+        <div class="region region-below-content ">
+            <section class="views-element-container block block-views block-views-blockbelow-content-block-1 clearfix " id="block-views-block-below-content-block-1 " data-block-plugin-id="views_block:below_content-block_1 ">
+                <div class="form-group ">
+                    <div class="view view-below-content view-id-below_content view-display-id-block_1 js-view-dom-id-cc6d4778fa595020fdfe4c5e6e721bc6bf14412d9eb171517285c156771df1bc "></div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <footer class="footer container-fluid " role="contentinfo ">
+        <div class="region region-footer ">
+            <section id="block-addressandlogoforthefooter " class="footer-address block block-block-content block-block-contentde2c4b9b-bfb1-4b18-8ca4-5ca199e568a5 clearfix " data-block-plugin-id="block_content:de2c4b9b-bfb1-4b18-8ca4-5ca199e568a5 ">
+                <div class="field field--name-field-logo field--type-image field--label-hidden field--item ">
+                    <a href="https://www.ncseglobal.org/ ">
+                        <img src="https://www.albany.edu/rise2019/img/logos/NCSE.png " width="315 " height="39 " alt="University at Albany Logo " typeof="Image " class="img-responsive " style="position: relative; left: -7px; ">
+                    </a>
+                </div>
+                <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item ">
+                    <p>
+                        <a href="https://www.google.com/maps/place/740+15th+St+NW+%23900,+Washington,+DC+20005/@38.8997545,-77.0360236,17z/data=!3m1!4b1!4m5!3m4!1s0x89b7b7bdf3712bdf:0x6228835860ed5caa!8m2!3d38.8997503!4d-77.0338349 " target="_blank ">740 15th Street, 
+                                NW Suite 900<br>
+                                Washington, DC 20005 
+                            </a>
+                        <br> Contact Email:
+                        <a href="mailto:NCSE@NCSEGlobal.org ">NCSE@NCSEGlobal.org</a>
+                        <br> Contact Number:
+                        <a href="tel:2029865471,2404 ">(202)-986-5471 ext(2404)</a>
+                    </p>
+                </div>
+            </section>
+
+
+            <section id="block-addressandlogofortheUAlbanyfooter " class="footer-address block block-block-content block-block-contentde2c4b9b-bfb1-4b18-8ca4-5ca199e568a5 clearfix " data-block-plugin-id="block_content:de2c4b9b-bfb1-4b18-8ca4-5ca199e568a5 ">
+                <div class="field field--name-field-logo field--type-image field--label-hidden field--item ">
+                    <a href="https://www.albany.edu/ ">
+                        <img src="/sites/default/files/logo_1.png " width="315 " height="39 " alt="University at Albany Logo " typeof="Image " class="img-responsive ">
+                    </a>
+                </div>
+                <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item ">
+                    <p>
+                        <a href="https://www.google.com/maps/place/1400+Washington+Ave,+Albany,+NY+12222/@42.6859115,-73.8287166,17z/data=!3m1!4b1!4m5!3m4!1s0x89de0b3ce5c93e45:0x4cdbe8d7b52fa412!8m2!3d42.6859115!4d-73.8265279 " target="_blank ">1400 Washington Avenue
+                                                                <br>
+        Albany, NY 12222
+                                                            </a>
+                        <br> Undergraduate Admissions:
+                        <a href="tel:5184425435 ">(518) 442-5435</a>
+                        <br> Graduate Admissions:
+                        <a href="tel:5184423980 ">(518) 442-3980</a>
+                        <br> Main:
+                        <a href="tel:5184423300 ">(518) 442-3300</a>
+                    </p>
+                </div>
+            </section>
+        </div>
+    </footer>
+    <script type="application/json " data-drupal-selector="drupal-settings-json ">
+        {
+            "path ": {
+                "baseUrl ": "\/ ",
+                "scriptPath ": null,
+                "pathPrefix ": " ",
+                "currentPath ": "node\/986 ",
+                "currentPathIsAdmin ": false,
+                "isFront ": false,
+                "currentLanguage ": "en "
+            },
+            "pluralDelimiter ": "\u0003 ",
+            "google_analytics ": {
+                "trackOutbound ": true,
+                "trackMailto ": true,
+                "trackDownload ": true,
+                "trackDownloadExtensions ": "7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip "
+            },
+            "bootstrap ": {
+                "forms_has_error_value_toggle ": 1,
+                "modal_animation ": 1,
+                "modal_backdrop ": "true ",
+                "modal_keyboard ": 1,
+                "modal_show ": 1,
+                "modal_size ": " ",
+                "popover_enabled ": 1,
+                "popover_animation ": 1,
+                "popover_container ": "body ",
+                "popover_content ": " ",
+                "popover_delay ": "0 ",
+                "popover_html ": 0,
+                "popover_placement ": "right ",
+                "popover_selector ": " ",
+                "popover_title ": " ",
+                "popover_trigger ": "click ",
+                "popover_trigger_autoclose ": 1
+            },
+            "field_group ": {
+                "html_element ": {
+                    "mode ": "default ",
+                    "context ": "view ",
+                    "settings ": {
+                        "id ": " ",
+                        "classes ": "sidebar-callout-content-wrapper ",
+                        "element ": "div ",
+                        "show_label ": false,
+                        "label_element ": "h3 ",
+                        "attributes ": " ",
+                        "effect ": "none ",
+                        "speed ": "fast ",
+                        "label ": "Left Column "
+                    }
+                },
+                "background_image ": {
+                    "mode ": "default ",
+                    "context ": "view ",
+                    "settings ": {
+                        "id ": " ",
+                        "classes ": " ",
+                        "image ": "field_image ",
+                        "image_style ": "sidebar_callout_375x_225_ ",
+                        "hide_if_missing ": false
+                    }
+                }
+            },
+            "flexslider ": {
+                "optionsets ": {
+                    "gallery_slider ": {
+                        "animation ": "slide ",
+                        "animationSpeed ": 600,
+                        "direction ": "horizontal ",
+                        "slideshow ": true,
+                        "easing ": "linear ",
+                        "smoothHeight ": false,
+                        "reverse ": false,
+                        "slideshowSpeed ": 7000,
+                        "animationLoop ": true,
+                        "randomize ": false,
+                        "startAt ": 0,
+                        "itemWidth ": 1000,
+                        "itemMargin ": 0,
+                        "minItems ": 0,
+                        "maxItems ": 0,
+                        "move ": 0,
+                        "directionNav ": true,
+                        "controlNav ": true,
+                        "thumbCaptions ": false,
+                        "thumbCaptionsBoth ": false,
+                        "keyboard ": true,
+                        "multipleKeyboard ": false,
+                        "mousewheel ": false,
+                        "touch ": true,
+                        "prevText ": "Previous ",
+                        "nextText ": "Next ",
+                        "namespace ": "flex- ",
+                        "selector ": ".slides \u003E li ",
+                        "sync ": " ",
+                        "asNavFor ": " ",
+                        "initDelay ": 0,
+                        "useCSS ": true,
+                        "video ": false,
+                        "pausePlay ": true,
+                        "pauseText ": "Pause ",
+                        "playText ": "Play ",
+                        "pauseOnAction ": true,
+                        "pauseOnHover ": false,
+                        "controlsContainer ": " ",
+                        "manualControls ": " "
+                    }
+                },
+                "instances ": {
+                    "flexslider-1 ": "gallery_slider "
+                }
+            },
+            "kwall_site_alert ": {
+                "dismissedCookie ": []
+            },
+            "ajax ": [],
+            "user ": {
+                "uid ": 0,
+                "permissionsHash ": "8663b3a6412697872f9b1828c9c96c56aea5caa5d53cbd1523bb83ba0ef8e7a5 "
+            }
+        }
+    </script>
+    <script src="core/assets/vendor/domready/ready.min.js?v=1.0.8 "></script>
+    <script src="core/assets/vendor/jquery/jquery.min.js?v=2.2.4 "></script>
+    <script src="core/assets/vendor/underscore/underscore-min.js?v=1.8.3 "></script>
+    <script src="//cdn.jsdelivr.net/bootstrap/3.3.7/js/bootstrap.js "></script>
+    <script src="core/assets/vendor/jquery-once/jquery.once.min.js?v=2.1.1 "></script>
+    <script src="https://www.albany.edu/rise2019/libraries/download.js "></script>
+    <script src="core/misc/drupalSettingsLoader.js?v=8.3.2 "></script>
+    <script src="core/misc/drupal.js?v=8.3.2 "></script>
+    <script src="core/misc/drupal.init.js?v=8.3.2 "></script>
+    <!-- <script src="modules/contrib/google_analytics/js/google_analytics.js?v=8.3.2 "></script> -->
+    <script src="themes/bootstrap/js/drupal.bootstrap.js?pr6ry1 "></script>
+    <script src="themes/bootstrap/js/attributes.js?pr6ry1 "></script>
+    <script src="themes/bootstrap/js/theme.js "></script>
+    <script src="themes/albany_bootstrap_theme/bootstrap/js/affix.js?pr6ry1 "></script>
+    <script src="themes/albany_bootstrap_theme/bootstrap/js/alert.js?pr6ry1 "></script>
+    <script src="themes/albany_bootstrap_theme/bootstrap/js/button.js?pr6ry1 "></script>
+    <script src="themes/albany_bootstrap_theme/bootstrap/js/carousel.js?pr6ry1 "></script>
+    <script src="themes/albany_bootstrap_theme/bootstrap/js/collapse.js?pr6ry1 "></script>
+    <script src="themes/albany_bootstrap_theme/bootstrap/js/dropdown.js?pr6ry1 "></script>
+    <script src="themes/albany_bootstrap_theme/bootstrap/js/modal.js?pr6ry1 "></script>
+    <script src="themes/albany_bootstrap_theme/bootstrap/js/tooltip.js?pr6ry1 "></script>
+    <script src="themes/albany_bootstrap_theme/bootstrap/js/popover.js?pr6ry1 "></script>
+    <script src="themes/albany_bootstrap_theme/bootstrap/js/scrollspy.js?pr6ry1 "></script>
+    <script src="themes/albany_bootstrap_theme/bootstrap/js/tab.js?pr6ry1 "></script>
+    <script src="themes/albany_bootstrap_theme/bootstrap/js/transition.js?pr6ry1 "></script>
+    <script src="themes/albany_bootstrap_theme/js/jquery.matchHeight-min.js?pr6ry1 "></script>
+    <script src="themes/albany_bootstrap_theme/js/match_heights.js?pr6ry1 "></script>
+    <script src="themes/albany_bootstrap_theme/js/megamenu.js?pr6ry1 "></script>
+    <script src="themes/albany_bootstrap_theme/js/megamenu_init.js?pr6ry1 "></script>
+    <script src="themes/albany_bootstrap_theme/js/hero_slideshow.js?pr6ry1 "></script>
+    <script src="themes/albany_bootstrap_theme/js/iscroll-new.js?pr6ry1 "></script>
+    <script src="themes/albany_bootstrap_theme/js/drawer.min.js?pr6ry1 "></script>
+    <script src="themes/albany_bootstrap_theme/js/pushmenu.js?pr6ry1 "></script>
+    <script src="themes/albany_bootstrap_theme/js/search-button.js?pr6ry1 "></script>
+    <script src="themes/albany_bootstrap_theme/js/jquery.fittext.js?pr6ry1 "></script>
+    <script src="themes/albany_bootstrap_theme/js/fittext.js?pr6ry1 "></script>
+    <script src="themes/albany_bootstrap_theme/js/slide-controls.js?pr6ry1 "></script>
+    <script src="themes/albany_bootstrap_theme/js/map_accessibility.js?pr6ry1 "></script>
+    <script src="themes/albany_bootstrap_theme/js/paragraph_anchors.js?pr6ry1 "></script>
+    <script src="themes/albany_bootstrap_theme/js/detailed-title.js?pr6ry1 "></script>
+    <!-- <script src="themes/albany_bootstrap_theme/dependencies?pr6ry1 "></script> -->
+    <script src="themes/bootstrap/js/popover.js?pr6ry1 "></script>
+    <script src="libraries/flexslider/jquery.flexslider-min.js?pr6ry1 "></script>
+    <script src="modules/contrib/flexslider/assets/js/flexslider.load.js?pr6ry1 "></script>
+    <script src="modules/custom/kwall_site_alert/js/slick.min.js?v=1.x "></script>
+    <script src="core/assets/vendor/jquery.cookie/jquery.cookie.min.js?v=1.4.1 "></script>
+    <script src="modules/custom/kwall_site_alert/js/dismissed-cookie.js?v=1.x "></script>
+    <script type="text/javascript ">
+        window.NREUM || (NREUM = {});
+        NREUM.info = {
+            "beacon ": "bam.nr-data.net ",
+            "licenseKey ": "7179c41561 ",
+            "applicationID ": "65783760 ",
+            "transactionName ": "MgQGZkZVDUdUUU1aVgtOJVFAXQxaGnZLRkkEDThFUVYFW0dfZl1WAQQ4c1dXBkdGbm5WWwMOFl96WwdRdFFaVkoWTFpRXFEAX2JXW1VWFww2V0dBD0BGc1pQXBYS ",
+            "queueTime ": 0,
+            "applicationTime ": 774,
+            "atts ": "HkMFEA5PHkk=",
+            " errorBeacon ": "bam.nr-data.net ",
+            "agent ": " "
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js "></script>
+    <script>
+   /**      $(".rise-photos").click(function(event){
+        window.open($(this).attr("data-src"), '_blank');
+    })**/
+    let modal = document.getElementById("imageModal");
+    $(".rise-photos").click(function(event){
+        let src = $(this).attr("data-src");        
+        modal.style.display = "block";
+        let modalImg = document.getElementById("modal-content");
+        modalImg.src = src;    
+    })
+
+    modal.onclick = function(){
+        modal.style.display = "none";
+    }
+    
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,190 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+.navbar-default {
+  background: #000000;
+  border-bottom: 2px solid #414358;
+}
+
+.navbar-default:after {
+  background: none;
+}
+
+.rise-right {
+  position: absolute;
+  right: 0;
+  bottom: 34%;
+}
+
+.logo.navbar-btn.pull-left {
+  position: relative;
+  top: -10px;
+  margin-bottom: 1.1%;
+}
+
+.slide-text h1,
+.slide-text p {
+  text-shadow: 3px 1px 2px black;
+}
+
+.slide-text p {
+  color: #eeb211 !important;
+}
+
+.slide-button a {
+  font-size: 22px;
+}
+
+.slide-wrapper {
+  position: relative;
+}
+
+.menu-burger {
+  display: none;
+}
+
+/* .rise-cochairText {
+    display: none;
+} */
+
+.logo.navbar-btn.pull-left img {
+  height: 102px;
+}
+
+.logo.navbar-btn.rise-right img {
+  height: 49px;
+}
+
+@media (max-width: 767px) {
+  .logo.navbar-btn.pull-left {
+    /* position: absolute;
+        left: 0; */
+  }
+  /* .logo.navbar-btn.pull-left img {
+        height: 25px;
+    } */
+  .logo.navbar-btn.rise-right {
+    /* bottom: -69px; */
+    position: relative;
+  }
+  /* .logo.navbar-btn.rise-right img {
+        height: 33px;
+    } */
+  .rise-cochairText {
+    display: none;
+  }
+}
+
+.partener-img-box {
+  border: 1px solid #a5a2a2;
+  box-shadow: 2px 2px 12px #a7a4a4;
+}
+
+.partener-img-box:hover {
+  box-shadow: 2px 2px 2px #46166b;
+}
+
+footer.footer {
+  background-image: none;
+}
+
+#block-addressandlogofortheUAlbanyfooter {
+  float: right;
+}
+
+.rise-cochairText {
+  color: #ffffff;
+  font-family: calibri;
+  font-style: italic;
+  font-size: 17px;
+  position: absolute;
+  top: 11%;
+  z-index: 2;
+  left: 1%;
+}
+
+.link-text {
+  font-family: "TradeGothicLTStd-BdCn20", Helvetica, Arial, sans-serif;
+  display: inline-block;
+  margin-top: 25px;
+  color: #46166b;
+  background: url(/themes/albany_bootstrap_theme/images/arrow1p.png) no-repeat
+    right center;
+  padding-right: 35px;
+  font-size: 2.6rem;
+  text-decoration: underline;
+}
+
+.news-Cycle-font-family {
+  font-family: "News Cycle", Helvetica, Arial, sans-serif;
+  font-size: 2.2rem;
+  line-height: 31px;
+}
+
+.bg-img-rise {
+  background-image: url(https://www.albany.edu/themes/albany_bootstrap_theme/images/grid-normal.jpg);
+}
+
+.rise-shadow {
+  text-shadow: 3px 1px 2px black;
+  color: #eeb211 !important;
+}
+
+.rise-sponsor-box {
+  height: 147px;
+  background: #46166b;
+  padding: 22px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.font-blue {
+  color: #1159dc !important;
+}
+
+.rise-border-shadow {
+  border: 1px solid #a5a2a2;
+  box-shadow: 2px 2px 12px #a7a4a4;
+  padding: 0 7px 0 10px;
+}
+
+@media (min-width: 768px) {
+  .partners .col-sm-3 {
+    height: 141.5px;
+  }
+}
+
+@media (min-width: 992px) {
+  .partners .col-md-3 {
+    height: 270px;
+  }
+}
+
+.field--item.menu-item {
+  float: left;
+}
+
+.social-media-container a.white-text {
+  background-color: #46166b;
+  border-radius: 3px;
+  display: inline-block;
+  padding: 4px 6px 0px 8px;
+  margin: 0 10px 8px 1px;
+  text-decoration: none;
+  color: #ffffff;
+  width: 245px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.social-media-container a.relive-button {
+    padding: 10px 0px 10px 0px;
+    height: 47px;
+    width: 160px;
+    background-color: #46166b;
+    border-radius: 3px;
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 0 10px 8px 1px;
+}

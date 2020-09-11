@@ -1,0 +1,29 @@
+.sidebar-callout-overlay a:visited {
+    color: #fff;
+}
+
+.sidebar-callout-overlay a:hover {
+    color: #fff;
+}
+
+.sidebar-callout-overlay a:visited:hover {
+    color: #fff;
+}
+
+.region-sidebar-first .paragraph .sidebar-callout-overlay a:visited {
+    color: #fff;
+}
+
+.region-sidebar-first .paragraph .sidebar-callout-overlay a:visited:hover {
+    color: #fff;
+}
+
+.region-sidebar-first .paragraph .sidebar-callout-overlay ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.region-sidebar-first .paragraph .sidebar-callout-overlay ul li {
+    margin-bottom: .5em;
+}

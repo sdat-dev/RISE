@@ -1,0 +1,17 @@
+.department-directory-list-view .views-field-field-title-person {
+    margin-bottom: 0px !important;
+    font-family: 'News Cycle', Helvetica, Arial, sans-serif;
+    font-weight: bold;
+}
+
+.views-field.views-field-field-display-dept {
+    margin-bottom: .5em;
+}
+
+.views-field.views-field-field-display-summary-of-about {
+    margin-top: .5em;
+}
+
+.department-directory-list-view .views-row {
+    padding-bottom: 0px !important;
+}

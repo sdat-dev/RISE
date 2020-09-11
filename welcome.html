@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" xmlns:article="http://ogp.me/ns/article#" xmlns:book="http://ogp.me/ns/book#" xmlns:product="http://ogp.me/ns/product#" xmlns:profile="http://ogp.me/ns/profile#" xmlns:video="http://ogp.me/ns/video#" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script type="text/javascript">
+        window.NREUM || (NREUM = {}), __nr_require = function(e, n, t) {
+            function r(t) {
+                if (!n[t]) {
+                    var o = n[t] = {
+                        exports: {}
+                    };
+                    e[t][0].call(o.exports, function(n) {
+                        var o = e[t][1][n];
+                        return r(o || n)
+                    }, o, o.exports)
+                }
+                return n[t].exports
+            }
+            if ("function" == typeof __nr_require) return __nr_require;
+            for (var o = 0; o <
+                t.length; o++) r(t[o]);
+            return r
+        }({
+            1: [function(e, n, t) {
+                function r() {}
+
+                function o(e, n, t) {
+                    return function() {
+                        return i(e, [c.now()].concat(u(arguments)), n ? null : this, t), n ? void 0 : this
+                    }
+                }
+                var i = e("handle"),
+                    a = e(3),
+                    u = e(4),
+                    f = e("ee").get("tracer"),
+                    c = e("loader"),
+                    s = NREUM;
+                "undefined" == typeof window.newrelic && (newrelic = s);
+                var p = ["setPageViewName", "setCustomAttribute", "setErrorHandler", "finished", "addToTrace", "inlineHit", "addRelease"],
+                    d = "api-",
+                    l = d + "ixn-";
+                a(p, function(e, n) {
+                    s[n] = o(d + n, !0, "api")
+                }), s.addPageAction = o(d + "addPageAction", !0), s.setCurrentRouteName = o(d + "routeName", !0), n.exports = newrelic, s.interaction = function() {
+                    return (new r).get()
+                };
+                var m = r.prototype = {
+                    createTracer: function(e, n) {
+                        var t = {},
+                            r = this,
+                            o = "function" == typeof n;
+                        return i(l + "tracer", [c.now(), e, t], r),
+                            function() {
+                                if (f.emit((o ? "" : "no-") + "fn-start", [c.now(), r, o], t), o) try {
+                                    return n.apply(this, arguments)
+                                } catch (e) {
+                                    throw f.emit("fn-err", [arguments, this, e], t), e
+                                } finally {
+                                    f.emit("fn-end", [c.now()], t)
+                                }
+                            }
+                    }
+                };
+                a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","), function(e, n) {
+                    m[n] = o(l + n)
+                }), newrelic.noticeError = function(e, n) {
+                    "string" == typeof e && (e = new Error(e)), i("err", [e, c.now(), !1, n])
+                }
+            }, {}],
+            2: [function(e, n, t) {
+                function r(e, n) {
+                    if (!o) return !1;
+                    if (e !== o) return !1;
+                    if (!n) return !0;
+                    if (!i) return !1;
+                    for (var t = i.split("."), r = n.split("."), a = 0; a <
+                        r.length; a++)
+                        if (r[a] !== t[a]) return !1;
+                    return !0
+                }
+                var o = null,
+                    i = null,
+                    a = /Version\/(\S+)\s+Safari/;
+                if (navigator.userAgent) {
+                    var u = navigator.userAgent,
+                        f = u.match(a);
+                    f && u.indexOf("Chrome") === -1 && u.indexOf("Chromium") === -1 && (o = "Safari", i = f[1])
+                }
+                n.exports = {
+                    agent: o,
+                    version: i,
+                    match: r
+                }
+            }, {}],
+            3: [function(e, n, t) {
+                function r(e, n) {
+                    var t = [],
+                        r = "",
+                        i = 0;
+                    for (r in e) o.call(e, r) && (t[i] = n(r, e[r]), i += 1);
+                    return t
+                }
+                var o = Object.prototype.hasOwnProperty;
+                n.exports = r
+            }, {}],
+            4: [function(e, n, t) {
+                function r(e, n, t) {
+                    n || (n = 0), "undefined" == typeof t && (t = e ? e.length : 0);
+                    for (var r = -1, o = t - n || 0, i = Array(o <
+                            0 ? 0 : o); ++r <
+                        o;) i[r] = e[n + r];
+                    return i
+                }
+                n.exports = r
+            }, {}],
+            5: [function(e, n, t) {
+                n.exports = {
+                    exists: "undefined" != typeof window.performance && window.performance.timing && "undefined" != typeof window.performance.timing.navigationStart
+                }
+            }, {}],
+            ee: [function(e, n, t) {
+                function r() {}
+
+                function o(e) {
+                    function n(e) {
+                        return e && e instanceof r ? e : e ? f(e, u, i) : i()
+                    }
+
+                    function t(t, r, o, i) {
+                        if (!d.aborted || i) {
+                            e && e(t, r, o);
+                            for (var a = n(o), u = v(t), f = u.length, c = 0; c <
+                                f; c++) u[c].apply(a, r);
+                            var p = s[y[t]];
+                            return p && p.push([b, t, r, a]), a
+                        }
+                    }
+
+                    function l(e, n) {
+                        h[e] = v(e).concat(n)
+                    }
+
+                    function m(e, n) {
+                        var t = h[e];
+                        if (t)
+                            for (var r = 0; r <
+                                t.length; r++) t[r] === n && t.splice(r, 1)
+                    }
+
+                    function v(e) {
+                        return h[e] || []
+                    }
+
+                    function g(e) {
+                        return p[e] = p[e] || o(t)
+                    }
+
+                    function w(e, n) {
+                        c(e, function(e, t) {
+                            n = n || "feature", y[t] = n, n in s || (s[n] = [])
+                        })
+                    }
+                    var h = {},
+                        y = {},
+                        b = {
+                            on: l,
+                            addEventListener: l,
+                            removeEventListener: m,
+                            emit: t,
+                            get: g,
+                            listeners: v,
+                            context: n,
+                            buffer: w,
+                            abort: a,
+                            aborted: !1
+                        };
+                    return b
+                }
+
+                function i() {
+                    return new r
+                }
+
+                function a() {
+                    (s.api || s.feature) && (d.aborted = !0, s = d.backlog = {})
+                }
+                var u = "nr@context",
+                    f = e("gos"),
+                    c = e(3),
+                    s = {},
+                    p = {},
+                    d = n.exports = o();
+                d.backlog = s
+            }, {}],
+            gos: [function(e, n, t) {
+                function r(e, n, t) {
+                    if (o.call(e, n)) return e[n];
+                    var r = t();
+                    if (Object.defineProperty && Object.keys) try {
+                        return Object.defineProperty(e, n, {
+                            value: r,
+                            writable: !0,
+                            enumerable: !1
+                        }), r
+                    } catch (i) {}
+                    return e[n] = r, r
+                }
+                var o = Object.prototype.hasOwnProperty;
+                n.exports = r
+            }, {}],
+            handle: [function(e, n, t) {
+                function r(e, n, t, r) {
+                    o.buffer([e], r), o.emit(e, n, t)
+                }
+                var o = e("ee").get("handle");
+                n.exports = r, r.ee = o
+            }, {}],
+            id: [function(e, n, t) {
+                function r(e) {
+                    var n = typeof e;
+                    return !e || "object" !== n && "function" !== n ? -1 : e === window ? 0 : a(e, i, function() {
+                        return o++
+                    })
+                }
+                var o = 1,
+                    i = "nr@id",
+                    a = e("gos");
+                n.exports = r
+            }, {}],
+            loader: [function(e, n, t) {
+                function r() {
+                    if (!E++) {
+                        var e = x.info = NREUM.info,
+                            n = l.getElementsByTagName("script")[0];
+                        if (setTimeout(s.abort, 3e4), !(e && e.licenseKey && e.applicationID && n)) return s.abort();
+                        c(y, function(n, t) {
+                            e[n] || (e[n] = t)
+                        }), f("mark", ["onload", a() + x.offset], null, "api");
+                        var t = l.createElement("script");
+                        t.src = "https://" + e.agent, n.parentNode.insertBefore(t, n)
+                    }
+                }
+
+                function o() {
+                    "complete" === l.readyState && i()
+                }
+
+                function i() {
+                    f("mark", ["domContent", a() + x.offset], null, "api")
+                }
+
+                function a() {
+                    return O.exists && performance.now ? Math.round(performance.now()) : (u = Math.max((new Date).getTime(), u)) - x.offset
+                }
+                var u = (new Date).getTime(),
+                    f = e("handle"),
+                    c = e(3),
+                    s = e("ee"),
+                    p = e(2),
+                    d = window,
+                    l = d.document,
+                    m = "addEventListener",
+                    v = "attachEvent",
+                    g = d.XMLHttpRequest,
+                    w = g && g.prototype;
+                NREUM.o = {
+                    ST: setTimeout,
+                    SI: d.setImmediate,
+                    CT: clearTimeout,
+                    XHR: g,
+                    REQ: d.Request,
+                    EV: d.Event,
+                    PR: d.Promise,
+                    MO: d.MutationObserver
+                };
+                var h = "" + location,
+                    y = {
+                        beacon: "bam.nr-data.net",
+                        errorBeacon: "bam.nr-data.net",
+                        agent: "js-agent.newrelic.com/nr-1123.min.js"
+                    },
+                    b = g && w && w[m] && !/CriOS/.test(navigator.userAgent),
+                    x = n.exports = {
+                        offset: u,
+                        now: a,
+                        origin: h,
+                        features: {},
+                        xhrWrappable: b,
+                        userAgent: p
+                    };
+                e(1), l[m] ? (l[m]("DOMContentLoaded", i, !1), d[m]("load", r, !1)) : (l[v]("onreadystatechange", o), d[v]("onload", r)), f("mark", ["firstbyte", u], null, "api");
+                var E = 0,
+                    O = e(5)
+            }, {}]
+        }, {}, ["loader"]);
+    </script>
+    <!-- <script>
+        (function(i, s, o, g, r, a, m) {
+            i["GoogleAnalyticsObject"] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, "script", "//www.google-analytics.com/analytics.js", "ga");
+        ga("create", "UA-20759213-1", {
+            "cookieDomain": "auto"
+        });
+        ga("set", "anonymizeIp", true);
+        ga("send", "pageview");
+    </script> -->
+    <meta name="title" content="Conference Resources | University at Albany" />
+    <meta name="description" content="Inner Page Headline
+
+This is a standard body content area for the page. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+ 
+
+ " />
+    <meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+    <meta name="MobileOptimized" content="width" />
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/sites/default/files/favicon_0.ico" type="image/vnd.microsoft.icon" />
+    <link rel="canonical" href="/paragraphs-sidebar" />
+    <link rel="shortlink" href="/node/986" />
+    <link rel="revision" href="/paragraphs-sidebar" />
+    <script src="sites/default/files/google_tag/google_tag.script.js?pr6ry1"></script>
+    <title>Welcome | University at Albany</title>
+    <style media="all">
+        @import url("core/modules/system/css/components/align.module.css?pr6ry1");
+        @import url("core/modules/system/css/components/fieldgroup.module.css?pr6ry1");
+        @import url("core/modules/system/css/components/container-inline.module.css?pr6ry1");
+        @import url("core/modules/system/css/components/clearfix.module.css?pr6ry1");
+        @import url("core/modules/system/css/components/details.module.css?pr6ry1");
+        @import url("core/modules/system/css/components/hidden.module.css?pr6ry1");
+        @import url("core/modules/system/css/components/item-list.module.css?pr6ry1");
+        @import url("core/modules/system/css/components/js.module.css?pr6ry1");
+        @import url("core/modules/system/css/components/nowrap.module.css?pr6ry1");
+        @import url("core/modules/system/css/components/position-container.module.css?pr6ry1");
+        @import url("core/modules/system/css/components/progress.module.css?pr6ry1");
+        @import url("core/modules/system/css/components/reset-appearance.module.css?pr6ry1");
+        @import url("core/modules/system/css/components/resize.module.css?pr6ry1");
+        @import url("core/modules/system/css/components/sticky-header.module.css?pr6ry1");
+        @import url("core/modules/system/css/components/system-status-counter.css?pr6ry1");
+        @import url("core/modules/system/css/components/system-status-report-counters.css?pr6ry1");
+        @import url("core/modules/system/css/components/system-status-report-general-info.css?pr6ry1");
+        @import url("core/modules/system/css/components/tablesort.module.css?pr6ry1");
+        @import url("core/modules/system/css/components/tree-child.module.css?pr6ry1");
+        @import url("core/modules/views/css/views.module.css?pr6ry1");
+        @import url("profiles/lightning/modules/contrib/video_embed_field/css/video_embed_field.responsive-video.css?pr6ry1");
+        @import url("libraries/flexslider/flexslider.css?pr6ry1");
+        @import url("modules/contrib/calendar/css/calendar.css?pr6ry1");
+        @import url("modules/contrib/calendar/css/calendar_multiday.css?pr6ry1");
+        @import url("modules/contrib/flexslider/assets/css/flexslider_img.css?pr6ry1");
+        @import url("modules/custom/kwall_site_alert/css/slick.css?pr6ry1");
+    </style>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/bootstrap/3.3.7/css/bootstrap.css" media="all" />
+    <style media="all">
+        @import url("themes/bootstrap/css/3.3.7/overrides.min.css?pr6ry1");
+        @import url("themes/albany_bootstrap_theme/css/style.css?pr6ry1");
+        @import url("themes/albany_bootstrap_theme/styleguide/assets/css/style.css?pr6ry1");
+    </style>
+    <link rel="stylesheet" href="themes/albany_bootstrap_theme/css/rise-style.css" />
+    <style media="all">
+        @import url("sites/default/files/asset_injector/css/all_pages_background-bd2de4081d49a2e6dcfab599b80af0e0.css?pr6ry1");
+        @import url("sites/default/files/asset_injector/css/bullets_top_align-05c791021ddbed47afbd8e3e871c3cb3.css?pr6ry1");
+        @import url("sites/default/files/asset_injector/css/button_link_visited_color-0fb9cd86c6c5ae6d23396189bdde950d.css?pr6ry1");
+        @import url("sites/default/files/asset_injector/css/department_directory_overrides_-2141edbe7afd088d9d7a82d039cc1a96.css?pr6ry1");
+        @import url("sites/default/files/asset_injector/css/displayorhide-631efb8b1b62b06016390765dd27ca28.css?pr6ry1");
+        @import url("sites/default/files/asset_injector/css/faculty_directory-8e4cb7742cd6421cd087a9cab0c7ab8d.css?pr6ry1");
+        @import url("sites/default/files/asset_injector/css/hide_paragraph_ids-c675307f1c90800391545be97760e9a1.css?pr6ry1");
+        @import url("sites/default/files/asset_injector/css/homepage_video_slider_extend_width-fc03cd43be39859ab71f02f0d7d2401f.css?pr6ry1");
+        @import url("sites/default/files/asset_injector/css/screen_reader_only_text_-054b849b98bd6eca3e2e992e992c1637.css?pr6ry1");
+        @import url("sites/default/files/asset_injector/css/search_results_styling-a80e8714fd8281fbc04a22239e498711.css?pr6ry1");
+        @import url("sites/default/files/asset_injector/css/sidebar_callout_purple_links-8f7465028c4af00709f3f38f33d93591.css?pr6ry1");
+        @import url("sites/default/files/asset_injector/css/table_no_hover_effect-106a9ffac8bab29473ecf1b5842efec6.css?pr6ry1");
+        @import url("sites/default/files/asset_injector/css/view_policy_block-2b7d8fe7ac27306fba5f5ea2bee52f61.css?pr6ry1");
+    </style>
+    <!--[if lte IE 8]>
+                                <script src="/core/assets/vendor/html5shiv/html5shiv.min.js?v=3.7.3"></script>
+                                <![endif]-->
+    <script async="async" src="https://admissions.albany.edu/ping">
+        /**/
+    </script>
+</head>
+
+<body class="path-node page-node-type-page has-glyphicons path-node-986">
+    <a href="#main-content" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
+    <noscript>
+                                    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WNRD5G" height="0" width="0"></iframe>
+                                </noscript>
+    <div class="alert-region">
+        <div class="region region-alert">
+            <section id="block-sitealert" data-block-plugin-id="kwall_site_alert_block" class="block block-kwall-site-alert block-kwall-site-alert-block clearfix">
+                <div id="kwall-alerts-wrapper">
+                    <div id="kwall-alerts"></div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <header class="navbar navbar-default container-fluid" id="navbar" role="banner">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <div class="region region-navigation">
+                    <a class="logo navbar-btn pull-left" href="https://www.ncseglobal.org/" title="NCSE" rel="home">
+
+                        <img src="img/logos/NCSE.png" alt="NCSE" height="67px" />
+                    </a>
+                    <a class="logo navbar-btn rise-right" href="/" title="Home" rel="home">
+                        <img src="/sites/default/files/logo.png" alt="Home" />
+                    </a>
+
+                </div>
+            </div>
+        </div>
+        <div class="region region-mobile-navigation">
+            <div class="drawer-wrap">
+                <a class="logo navbar-btn pull-left" href="/" title="Home" rel="home">
+                    <img src="/sites/default/files/logo.png" alt="Home" />
+                </a>
+            </div>
+        </div>
+    </header>
+    <div role="main" class="main-container container-fluid js-quickedit-main-content">
+        <div class="row">
+            <div class="region region-above-content">
+                <section class="views-element-container block block-views block-views-blockabove-content-block-1 clearfix" id="block-views-block-above-content-block-1" data-block-plugin-id="views_block:above_content-block_1">
+                    <div class="form-group">
+                        <div class="view view-above-content view-id-above_content view-display-id-block_1 js-view-dom-id-cef650317e97cf184b00e538bd012dee521bcc357a6860f7528b629034bdd562">
+                            <div class="view-content">
+                                <div class="col-sm-12">
+                                    <article role="article" about="/paragraphs-sidebar" class="page above-content clearfix">
+                                        <div class="content">
+                                            <div class="field field--name-field-alternate-page-title field--type-viewfield field--label-hidden">
+                                                <div class="field__item field__item-label-hidden">
+                                                    <div class="views-element-container form-group">
+                                                        <div class="view view-duplicate-of-center-page-title view-id-duplicate_of_center_page_title view-display-id-default js-view-dom-id-d4afda0f0c4662cf00ba1f3350f8cdaf0ce125b12bfe038a85c1fbed2a20002d">
+                                                            <div class="view-content">
+                                                                <div class="views-row">
+                                                                    <div class="views-field views-field-title">
+                                                                        <h1 class="field-content">RISE 2019 Conference - Welcome</h1>
+                                                                    </div>
+                                                                    <div class="views-field views-field-field-page-subtitle">
+                                                                        <div class="field-content">
+                                                                            <p>Transforming University Engagement In Pre- and Post-Disaster Environments: Lessons from Puerto Rico</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="content-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <aside class="col-sm-4 sidebar-first" role="complementary">
+                            <div class="region region-sidebar-first">
+                                <nav role="navigation" aria-labelledby="block-megamenumainnavigation-menu" id="block-megamenumainnavigation" class="sidebar-menu-block" data-block-plugin-id="menu_block:main">
+                                    <h2 class="visually-hidden" id="block-megamenumainnavigation-menu">Mega Menu - Main navigation</h2>
+                                    <ul class="menu menu--rise-conference nav">
+                                        <li class="first">
+                                            <a href="home.html" target="_self" rel="" data-drupal-link-system-path="node/47081">RISE CONFERENCE HOME</a>
+                                        </li>
+                                        <li>
+                                            <a href="registration.html" data-drupal-link-system-path="node/47681">REGISTRATION & SPONSORSHIP</a>
+
+                                        </li>
+                                        <li>
+                                            <a href="welcome.html" target="_self" rel="" data-drupal-link-system-path="node/47181" class="is-active">WELCOME</a>
+                                        </li>
+                                        <li>
+                                            <a href="about.html" data-drupal-link-system-path="node/47671">ABOUT</a>
+                                        </li>
+                                        <li>
+                                            <a href="agenda.html" data-drupal-link-system-path="node/47136">AGENDA</a>
+                                        </li>
+                                        <li>
+                                            <a href="honorary-committee.html" data-drupal-link-system-path="node/47356">LEADERSHIP & PARTICIPANTS</a>
+                                        </li>
+                                        <li>
+                                            <a href="poster-winners.html" data-drupal-link-system-path="node/47761">STUDENT POSTERS</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="resources.html" data-drupal-link-system-path="node/47586">CONFERENCE RESOURCES</a>
+                                        </li>
+                                        <li>
+                                            <a href="current-efforts.html" data-drupal-link-system-path="node/47161">CURRENT EFFORTS</a>
+                                        </li>
+                                        <li class="">
+                                            <a href="news-communications.html" data-drupal-link-system-path="node/47586">NEWS & COMMUNICATIONS</a>
+                                        </li>
+                                        <li class="expanded dropdown">
+                                            <a href="directions-and-parking.html" class="dropdown-toggle" data-toggle="" data-drupal-link-system-path="node/47681" target="#" data-target="#" aria-expanded="false">ATTENDEE INFORMATION<span class="caret"></span></a>
+                                            <ul class="dropdown-menu">
+                                                <li class="first">
+                                                    <a href="directions-and-parking.html" data-drupal-link-system-path="node/47681">Directions &amp; Parking</a>
+                                                </li>
+                                                <li class="second">
+                                                    <a href="hotel-accommodations.html" target="_self" rel="" data-drupal-link-system-path="node/47171">Hotel Accommodations</a>
+                                                </li>
+                                                <li class="second">
+                                                    <a href="venue.html" data-drupal-link-system-path="node/47591">Venue</a>
+                                                </li>
+                                                <li class="last">
+                                                    <a href="anti-harassment-anti-discrimination-policy.html" data-drupal-link-system-path="node/47591">Anti-Harassment & Discrimination Policy</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="">
+                                            <a href="get-involved.html">GET INVOLVED</a>
+                                        </li>
+
+                                    </ul>
+                                </nav>
+
+                            </div>
+                        </aside>
+                        <section class="col-sm-8" style="float: right;">
+                            <div class="highlighted">
+                                <div class="region region-highlighted"></div>
+                            </div>
+                            <a id="main-content"></a>
+                            <div class="region region-content">
+                                <article role="article" about="/paragraphs-sidebar" class="page full clearfix">
+                                    <div class="content">
+
+                                        <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item">
+                                            <h2>WELCOME FROM THE UALBANY PRESIDENT</h2>
+
+                                            <p>&nbsp;</p>
+
+                                            <div data-embed-button="media_browser" data-entity-embed-display="view_mode:media.embedded" data-entity-type="media" data-entity-uuid="7e65e94f-48b5-40ca-a0bc-2b805b4aa1f3" data-langcode="en" class="embedded-entity align-right">
+                                                <div>
+
+
+                                                    <div class="field field--name-image field--type-image field--label-hidden field--item"> <img src="https://rise2019.org/img/Speakers/rodriguez-havidan.png" width="255" height="383" alt="havidan rodriguez photo" typeof="foaf:Image" class="img-responsive"></div>
+
+                                                </div>
+                                            </div>
+                                            <p data-key="1">Dear Friends,</p>
+
+                                            <p>I am delighted to welcome you to RISE 2019: Transforming University Engagement in Pre- and Post-Disaster Environments: Lessons from Puerto Rico.</p>
+
+                                            <p>As you know, Hurricane María was one of the worst and most deadly disasters in Puerto Rico’s history. In the months following María, more than 30 universities traveled to Puerto Rico, including a number of SUNY
+                                                and CUNY institutions, with the purpose of pursuing quick response research, service-learning, student exchange, and humanitarian relief. Most of these efforts were related to disaster response, recovery
+                                                and resiliency endeavors. They were very well-intentioned and necessary to both help communities in need, as well as to advance critical research.</p>
+
+                                            <p>However, in the aftermath of Hurricane Maria, critical questions emerged about how universities and colleges can play a more impactful role in resiliency planning, preparation and recovery.</p>
+
+                                            <p>RISE 2019 will provide a platform for a national conversation to explore ways in which institutions of higher education can strengthen preparedness, response and recovery efforts using Puerto Rico as a case
+                                                study, and in so doing, improve the well-being of communities vulnerable to climate change and extreme weather – arguably the most serious challenge our global society is facing today.</p>
+
+                                            <p>We look forward to you joining us for RISE 2019 this November for a series of critical conversations that will deepen university-community engagement, and strengthen the resiliency of communities in the years
+                                                ahead!
+                                            </p>
+
+                                            <p>Sincerely,</p>
+
+                                            <p>Havidán Rodríguez<br> President
+                                                <br> University at Albany<br> State University of New York<br> &nbsp;
+                                            </p>
+
+                                            <p>&nbsp;</p>
+                                        </div>
+
+                                        <div class="field field--name-field-view field--type-viewfield field--label-">
+
+                                            <div class="field__label"></div>
+
+                                        </div>
+
+                                    </div>
+                                </article>
+                            </div>
+                        </section>
+                        <section class="col-sm-8" style="float: right;">
+                            <div class="highlighted">
+                                <div class="region region-highlighted"></div>
+                            </div>
+                            <a id="main-content"></a>
+                            <div class="region region-content">
+                                <article role="article" about="/paragraphs-sidebar" class="page full clearfix">
+                                    <div class="content">
+
+                                        <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item">
+                                            <h2>WELCOME FROM THE SUNY CHANCELLOR</h2>
+
+                                            <p>&nbsp;</p>
+
+                                            <div data-embed-button="media_browser" data-entity-embed-display="view_mode:media.embedded" data-entity-type="media" data-entity-uuid="7e65e94f-48b5-40ca-a0bc-2b805b4aa1f3" data-langcode="en" class="embedded-entity align-right">
+                                                <div>
+
+
+                                                    <div class="field field--name-image field--type-image field--label-hidden field--item"> <img src="https://www.albany.edu/sites/default/files/Chancellor%20Johnson.png" width="255" height="383" alt="Chancellor Johnson photo" typeof="foaf:Image" class="img-responsive"></div>
+
+                                                </div>
+                                            </div>
+                                            <p data-key="1">Dear Students, Faculty, Staff, Colleagues, and Friends:</p>
+
+                                            <p>On behalf of The State University of New York, it is a pleasure to welcome you to RISE 2019: Transforming University Engagement in Pre- and Post-Disaster Environments: Lessons from Puerto Rico.</p>
+                                            <p>A little over two years ago, Hurricane Maria dealt a devastating blow to Puerto Rico leaving behind a path of destruction not seen in the island’s history. As quickly as the storm tore through the island, New
+                                                York, led by Governor Andrew Cuomo responded with staff, resources and a commitment to help the people of Puerto Rico in any way possible.</p>
+                                            <p>I am proud to say SUNY was part of that monumental effort, joining countless New Yorkers in the response, recovery and rebuilding efforts. SUNY Maritime College’s training ship the Empire State VI was a part
+                                                of that initial recovery. We followed months later to support the Governor’s rebuilding efforts sending over 500 students from SUNY Maritime, University at Albany and SUNY College of Environmental Science
+                                                and Forestry. We continued in conjunction with the City University of New York where SUNY sent 500 more student volunteers in 2018 and 2019 on two-week rotations, working in a dozen communities, assisting
+                                                hundreds of families, giving them hope and providing our students with life-changing service learning opportunities.</p>
+                                            <p>During that endeavor we acted, we grew and we learned, and now it’s time to share those lessons so we can be ready for the next storm. This time, however, we are armed with the knowledge gained from our first-hand
+                                                experience in disaster relief. And with it, our hope with this conference is to develop new techniques, establish new partnerships and build a coalition of committed higher education professionals and students
+                                                charged with responding to these disasters while building a more resilient global community.</p>
+                                            <p>By participating in RISE 2019, you have chosen to be part of a historic commitment to help people in need while also working to uncover ways to lessen the impacts on our fragile planet. And as the Chancellor
+                                                of the largest higher education system in the nation, I promise you that SUNY is dedicated to ensuring this work is a top priority. Thank you for rising to the challenge of our shared responsibility and
+                                                helping create a roadmap that will benefit future generations to come.</p>
+
+                                            <p>Sincerely,</p>
+
+                                            <p>Kristina M. Johnson<br> Chancellor
+                                                <br>State University of New York<br> &nbsp;
+                                            </p>
+
+                                            <p>&nbsp;</p>
+                                        </div>
+
+                                        <div class="field field--name-field-view field--type-viewfield field--label-">
+
+                                            <div class="field__label"></div>
+
+                                        </div>
+
+                                    </div>
+                                </article>
+                            </div>
+                        </section>
+
+                        <section class="col-sm-8" style="float: right;">
+                            <div class="highlighted">
+                                <div class="region region-highlighted"></div>
+                            </div>
+                            <a id="main-content"></a>
+                            <div class="region region-content">
+                                <article role="article" about="/paragraphs-sidebar" class="page full clearfix">
+                                    <div class="content">
+
+                                        <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item">
+                                            <h2>WELCOME FROM THE CUNY CHANCELLOR</h2>
+
+                                            <p>&nbsp;</p>
+
+                                            <div data-embed-button="media_browser" data-entity-embed-display="view_mode:media.embedded" data-entity-type="media" data-entity-uuid="7e65e94f-48b5-40ca-a0bc-2b805b4aa1f3" data-langcode="en" class="embedded-entity align-right">
+                                                <div>
+
+
+                                                    <div class="field field--name-image field--type-image field--label-hidden field--item"> <img src="https://rise2019.org/img/Speakers/matos-rodriguez-felix-v.png" width="255" height="383" alt="Félix V. Matos Rodríguez" typeof="foaf:Image" class="img-responsive"></div>
+
+                                                </div>
+                                            </div>
+                                            <p data-key="1">Dear Friends,</p>
+
+                                            <p>We are all aware of the accelerating pace and severity of climate-driven natural disasters. The destruction and havoc caused by extreme events – from ferocious hurricanes in the Caribbean and East Coast to deadly
+                                                floods and typhoons in the Midwest to wildfires in California – is an inescapable threat no matter where we live. Out of this Category 4 reality has come the realization that universities and colleges can
+                                                and should play a crucial role in how their communities – and the nation as a whole – prepare for and recover from extreme weather disasters.</p>
+
+                                            <p>Our recent experiences are a starting point for the important discussions we will have at the RISE 2019 conference. CUNY is proud of its continuing participation in Gov. Cuomo’s NY Stands with Puerto Rico Recovery
+                                                and Rebuilding Initiative, which has sent more than 1,000 CUNY and SUNY students to the island over the past two years. We are proud of the response we had to Superstorm Sandy, when our faculty’s efforts
+                                                ranged from pioneering research that used our supercomputers to make storm surge flooding on Staten Island less unpredictable, to carving out a new area of study in the psychological effects of disaster
+                                                survival.
+                                            </p>
+
+                                            <p>And now we are honored to participate in this ambitious and much-needed conference to explore ways that anchor institutions can marshal resources, partner with government and conduct research to strengthen disaster
+                                                preparation and response. Communities and regions must become more resilient at a time when the effects of the global climate crisis are becoming an ever-present part of our lives. As the leader of an institution
+                                                whose mission is driven by education and research for the public good, I cannot imagine a more important meeting of the minds.</p>
+
+                                            <p>Sincerely,</p>
+
+                                            <p>Félix V. Matos Rodríguez<br> Chancellor
+                                                <br> The City University of New York
+                                            </p>
+
+                                            <p>&nbsp;</p>
+                                        </div>
+
+                                        <div class="field field--name-field-view field--type-viewfield field--label-">
+
+                                            <div class="field__label"></div>
+
+                                        </div>
+
+                                    </div>
+                                </article>
+                            </div>
+                        </section>
+                        <section class="col-sm-8" style="float: right;">
+                            <div class="highlighted">
+                                <div class="region region-highlighted"></div>
+                            </div>
+                            <a id="main-content"></a>
+                            <div class="region region-content">
+                                <article role="article" about="/paragraphs-sidebar" class="page full clearfix">
+                                    <div class="content">
+
+                                        <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item">
+                                            <h2>WELCOME FROM THE UNIVERSITY OF PUERTO RICO</h2>
+
+                                            <p>&nbsp;</p>
+
+                                            <div data-embed-button="media_browser" data-entity-embed-display="view_mode:media.embedded" data-entity-type="media" data-entity-uuid="7e65e94f-48b5-40ca-a0bc-2b805b4aa1f3" data-langcode="en" class="embedded-entity align-right">
+                                                <div>
+
+
+                                                    <div class="field field--name-image field--type-image field--label-hidden field--item"> <img src="https://rise2019.org/img/Speakers/haddock-acevedo-jorge.png" width="255" height="383" alt="Jorge Haddock Acevedo" typeof="foaf:Image" class="img-responsive"></div>
+
+                                                </div>
+                                            </div>
+                                            <p data-key="1">Dear Friends,</p>
+
+                                            <p>Greetings from the University of Puerto Rico (UPR) Community. I am pleased to welcome you to RISE 2019: Transforming University Engagement in Pre- and Post-Disaster Environments: Lessons from Puerto Rico.</p>
+
+                                            <p>Hurricane Maria arrived on our island on September 20, 2017 and was one of the worst disasters in Puerto Rico’s history. It was the strongest hurricane to hit PR in more than 80 years. Hurricane Maria destroyed
+                                                homes, roads and bridges; it knocked out power across the entire island and triggered heavy flooding. More than two years since Hurricane Maria have passed, but in some areas we are still in the recovery
+                                                mode.
+                                            </p>
+
+                                            <p>The UPR community is very thankful for all the assistance we received, including help from more that 50 university alliances. Many universities were quick to respond in support of our academic endeavors including
+                                                student transfer and exchange programs, humanitarian relief, disaster case management and numerous other ways. Thank You, Thank You, Thank You!!! </p>
+                                            <p>For everyone who supported us from the distance, it would be difficult to have a sense of the enormous impact that of you had in the recovery and well-being of all of us, directly and indirectly. You were all
+                                                part of one of the most life transforming events in our island’s history.</p>
+                                            <p>We take great pride in and embrace our responsibility in the important and central role that our university played in the recovery of our island. We brought hope and support to our students, families and communities.
+                                                That is why being part of RISE 2019 is so important for us.</p>
+                                            <p>To this end, our universities and colleges are extraordinarily well-positioned to leverage our research, discovery, teaching, workforce development, and community and public engagement mission to make a lasting
+                                                impact in protecting our communities and our planet from the effects of climate change. </p>
+                                            <p>This Conference, RISE 2019, will serve as a catalyst in the global dialogue to bring increasing awareness, effective action, and informed and responsible decision making related to disaster preparedness, as
+                                                well as the role of universities in all of them. These conversations will result in advances in response and recovery efforts through more sustainable and resilient universities and communities.</p>
+                                            <p>We look forward to our continued partnership and collaboration.</p>
+                                            <p>Sincerely,</p>
+
+                                            <p>Jorge Haddock Acevedo<br>President
+                                                <br>University of Puerto Rico
+                                            </p>
+
+                                            <p>&nbsp;</p>
+                                        </div>
+
+                                        <div class="field field--name-field-view field--type-viewfield field--label-">
+
+                                            <div class="field__label"></div>
+
+                                        </div>
+
+                                    </div>
+                                </article>
+                            </div>
+                        </section>
+                        <section class="col-sm-8" style="float: right;">
+                            <div class="highlighted">
+                                <div class="region region-highlighted"></div>
+                            </div>
+                            <a id="main-content"></a>
+                            <div class="region region-content">
+                                <article role="article" about="/paragraphs-sidebar" class="page full clearfix">
+                                    <div class="content">
+
+                                        <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item">
+                                            <h2>WELCOME FROM THE NCSE EXECUTIVE DIRECTOR</h2>
+
+                                            <p>&nbsp;</p>
+
+                                            <div data-embed-button="media_browser" data-entity-embed-display="view_mode:media.embedded" data-entity-type="media" data-entity-uuid="7e65e94f-48b5-40ca-a0bc-2b805b4aa1f3" data-langcode="en" class="embedded-entity align-right">
+                                                <div>
+
+
+                                                    <div class="field field--name-image field--type-image field--label-hidden field--item"> <img src="https://rise2019.org/img/Speakers/wyman-michelle.png" width="255" height="383" alt="havidan rodriguez photo" typeof="foaf:Image" class="img-responsive"></div>
+
+                                                </div>
+                                            </div>
+                                            <p data-key="1">Dear Friends,</p>
+
+                                            <p>The past five years have seen an unprecedented pace and intensity in extreme weather events ranging from hurricanes and wildfires to extended heat and drought cycles. The impacts are far reaching and touch all
+                                                parts of a community and region.
+
+                                            </p>
+
+                                            <p>The research, education and work that universities provide in pre- and post-disaster environments at the community level, and extensively across universities spanning the United States and beyond, is increasingly
+                                                recognized and valued.
+
+                                            </p>
+
+                                            <p>RISE 2019 will bring together scholars, decision-makers and experts from across sectors to share tools, lessons and learning on resilience. RISE 2019 will mark the launch of the RISE platform, a formal effort
+                                                to connect and engage all universities working on resilience education, research and action. </p>
+
+                                            <p>Under the leadership of RISE 2019 Program Chairs Marla Lugo Perez and Cecilio Ortiz Garcia, and in partnership with the University of Albany and a number of key universities, this technical conference will focus
+                                                on exchanging knowledge, connecting and building collaborations. </p>
+
+                                            <p>Please join us and become a part of RISE.</p>
+
+                                            <p>Sincerely,</p>
+
+                                            <p>Michelle Wyman
+                                                <br>Executive Director<br>National Council for Science and the Environment
+
+                                            </p>
+
+                                            <p>&nbsp;</p>
+                                        </div>
+
+                                        <div class="field field--name-field-view field--type-viewfield field--label-">
+
+                                            <div class="field__label"></div>
+
+                                        </div>
+
+                                    </div>
+                                </article>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    </article>
+    </div>
+    </section>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="container-fluid">
+        <div class="region region-below-content">
+            <section class="views-element-container block block-views block-views-blockbelow-content-block-1 clearfix" id="block-views-block-below-content-block-1" data-block-plugin-id="views_block:below_content-block_1">
+                <div class="form-group">
+                    <div class="view view-below-content view-id-below_content view-display-id-block_1 js-view-dom-id-cc6d4778fa595020fdfe4c5e6e721bc6bf14412d9eb171517285c156771df1bc"></div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <footer class="footer container-fluid" role="contentinfo">
+        <div class="region region-footer">
+            <section id="block-addressandlogoforthefooter" class="footer-address block block-block-content block-block-contentde2c4b9b-bfb1-4b18-8ca4-5ca199e568a5 clearfix" data-block-plugin-id="block_content:de2c4b9b-bfb1-4b18-8ca4-5ca199e568a5">
+                <div class="field field--name-field-logo field--type-image field--label-hidden field--item">
+                    <a href="htt

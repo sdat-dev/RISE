@@ -1,0 +1,110 @@
+/**
+ * @file
+ * Contains css for 
+   1. Quotes About Rise
+   2. Share a Quote
+ */
+
+.quotes p {
+  line-height: 29px;
+}
+
+.crop {
+  width: 270px;
+  height: 128px;
+  overflow: hidden;
+}
+
+.crop img {
+  width: 315px;
+  height: 228px;
+}
+
+.quotes-img {
+  width: 96px;
+  height: 101px;
+  border-radius: 144px;
+  display: inline;
+}
+
+.fa-quote-left {
+  margin-right: 4px;
+  position: relative;
+  top: -5px;
+}
+
+.fa-quote-right {
+  margin-left: 4px;
+  position: relative;
+  top: -5px;
+}
+
+.field.field--name-field-generic-content-area.field--type-text-long.field--label-hidden.field--item {
+  padding: 8px;
+  margin-bottom: 48px;
+  box-shadow: 1px 1px 5px 1px #9a9a9a;
+  border-radius: 4px;
+}
+
+.signature-box {
+  text-align: center;
+}
+
+.button-wrapper {
+  text-align: right;
+}
+
+#quotesbutton {
+  border-radius: 4px;
+  padding: 8px;
+}
+
+.modal-title {
+  display: inline-block;
+}
+
+#exampleModal {
+  margin-top: 2%;
+}
+
+@media screen and (max-width: 575px) {
+  .modal-dialog {
+    width: 95%;
+    margin: auto;
+  }
+
+  .modal-body {
+    height: 450px;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .modal-dialog {
+    width: 95%;
+    margin: auto;
+  }
+
+  .modal-body {
+    height: 600px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .modal-dialog {
+    width: 720px;
+  }
+
+  .modal-body {
+    height: 750px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .modal-dialog {
+    width: 800px;
+  }
+
+  .modal-body {
+    height: 900px;
+  }
+}

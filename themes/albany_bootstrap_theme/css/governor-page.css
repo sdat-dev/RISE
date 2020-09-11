@@ -1,0 +1,51 @@
+.field--item.menu-item {
+    margin-left: 1px;
+    margin-right: 10px;
+    margin-bottom: 8px;
+    padding-right: 8px;
+    padding-left: 8px;
+    background-color: #6060629e;
+    border-radius: 3px;
+    display: inline-block;
+}
+
+.white-text {
+    color: white !important;
+}
+
+.logo.navbar-btn.pull-left {
+    position: relative;
+    top: -10px;
+    margin-bottom: 0;
+}
+
+.navbar-default {
+    padding: 12px 0 0;
+}
+
+.rise-right {
+    bottom: 28%;
+}
+
+.grid-subtitle {
+    background: #00000052;
+    display: inline-block;
+    padding: 5px;
+}
+
+.text-on-image {
+    position: absolute;
+    bottom: 0;
+    background: #00000052;
+    width: 95%;
+    padding: 1px 0px 2px 5px;
+    font-family: 'TradeGothicLTStd-BdCn20', Helvetica, Arial, sans-serif;
+    font-size: 2.2rem;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: normal;
+}
+
+.field--item.menu-item.selected {
+    background-color: #f7f7ff9e;
+}

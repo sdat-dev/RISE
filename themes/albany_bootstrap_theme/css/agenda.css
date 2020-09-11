@@ -1,0 +1,38 @@
+.speaker-container {
+    margin-top: 10px;
+}
+
+.session-container {
+    margin-bottom: 10px;
+    box-shadow: 1px 2px 6px #d3cece;
+    padding: 11px;
+}
+
+.session-container:hover {
+    box-shadow: 1px 2px 6px #787676;
+}
+
+.panelist {
+    padding-left: 12px;
+    font-size: 15px;
+}
+
+.moderator-text {
+    font-size: 16px;
+}
+
+.strong {
+    font-weight: 800;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.speaker-container a {
+    color: #45126c;
+}

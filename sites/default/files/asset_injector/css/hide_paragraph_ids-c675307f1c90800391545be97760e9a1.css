@@ -1,0 +1,7 @@
+div:target::before {
+    content: "";
+    display: block;
+    visibility: hidden;
+    height: 240px;
+    margin-top: -240px;
+}

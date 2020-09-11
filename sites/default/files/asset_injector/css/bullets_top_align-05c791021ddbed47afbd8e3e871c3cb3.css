@@ -1,0 +1,4 @@
+ul.bulletstop li,
+.content ul li {
+    background: url(https://www.albany.edu/themes/albany_bootstrap_theme/styleguide/assets/images/bullet-purple.png) no-repeat left 11px;
+}

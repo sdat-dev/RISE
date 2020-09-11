@@ -1,0 +1,1848 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" xmlns:article="http://ogp.me/ns/article#" xmlns:book="http://ogp.me/ns/book#" xmlns:product="http://ogp.me/ns/product#" xmlns:profile="http://ogp.me/ns/profile#" xmlns:video="http://ogp.me/ns/video#" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script type="text/javascript">
+        window.NREUM || (NREUM = {}), __nr_require = function(e, n, t) {
+            function r(t) {
+                if (!n[t]) {
+                    var o = n[t] = {
+                        exports: {}
+                    };
+                    e[t][0].call(o.exports, function(n) {
+                        var o = e[t][1][n];
+                        return r(o || n)
+                    }, o, o.exports)
+                }
+                return n[t].exports
+            }
+            if ("function" == typeof __nr_require) return __nr_require;
+            for (var o = 0; o <
+                t.length; o++) r(t[o]);
+            return r
+        }({
+            1: [function(e, n, t) {
+                function r() {}
+
+                function o(e, n, t) {
+                    return function() {
+                        return i(e, [c.now()].concat(u(arguments)), n ? null : this, t), n ? void 0 : this
+                    }
+                }
+                var i = e("handle"),
+                    a = e(3),
+                    u = e(4),
+                    f = e("ee").get("tracer"),
+                    c = e("loader"),
+                    s = NREUM;
+                "undefined" == typeof window.newrelic && (newrelic = s);
+                var p = ["setPageViewName", "setCustomAttribute", "setErrorHandler", "finished", "addToTrace", "inlineHit", "addRelease"],
+                    d = "api-",
+                    l = d + "ixn-";
+                a(p, function(e, n) {
+                    s[n] = o(d + n, !0, "api")
+                }), s.addPageAction = o(d + "addPageAction", !0), s.setCurrentRouteName = o(d + "routeName", !0), n.exports = newrelic, s.interaction = function() {
+                    return (new r).get()
+                };
+                var m = r.prototype = {
+                    createTracer: function(e, n) {
+                        var t = {},
+                            r = this,
+                            o = "function" == typeof n;
+                        return i(l + "tracer", [c.now(), e, t], r),
+                            function() {
+                                if (f.emit((o ? "" : "no-") + "fn-start", [c.now(), r, o], t), o) try {
+                                    return n.apply(this, arguments)
+                                } catch (e) {
+                                    throw f.emit("fn-err", [arguments, this, e], t), e
+                                } finally {
+                                    f.emit("fn-end", [c.now()], t)
+                                }
+                            }
+                    }
+                };
+                a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","), function(e, n) {
+                    m[n] = o(l + n)
+                }), newrelic.noticeError = function(e, n) {
+                    "string" == typeof e && (e = new Error(e)), i("err", [e, c.now(), !1, n])
+                }
+            }, {}],
+            2: [function(e, n, t) {
+                function r(e, n) {
+                    if (!o) return !1;
+                    if (e !== o) return !1;
+                    if (!n) return !0;
+                    if (!i) return !1;
+                    for (var t = i.split("."), r = n.split("."), a = 0; a <
+                        r.length; a++)
+                        if (r[a] !== t[a]) return !1;
+                    return !0
+                }
+                var o = null,
+                    i = null,
+                    a = /Version\/(\S+)\s+Safari/;
+                if (navigator.userAgent) {
+                    var u = navigator.userAgent,
+                        f = u.match(a);
+                    f && u.indexOf("Chrome") === -1 && u.indexOf("Chromium") === -1 && (o = "Safari", i = f[1])
+                }
+                n.exports = {
+                    agent: o,
+                    version: i,
+                    match: r
+                }
+            }, {}],
+            3: [function(e, n, t) {
+                function r(e, n) {
+                    var t = [],
+                        r = "",
+                        i = 0;
+                    for (r in e) o.call(e, r) && (t[i] = n(r, e[r]), i += 1);
+                    return t
+                }
+                var o = Object.prototype.hasOwnProperty;
+                n.exports = r
+            }, {}],
+            4: [function(e, n, t) {
+                function r(e, n, t) {
+                    n || (n = 0), "undefined" == typeof t && (t = e ? e.length : 0);
+                    for (var r = -1, o = t - n || 0, i = Array(o <
+                            0 ? 0 : o); ++r <
+                        o;) i[r] = e[n + r];
+                    return i
+                }
+                n.exports = r
+            }, {}],
+            5: [function(e, n, t) {
+                n.exports = {
+                    exists: "undefined" != typeof window.performance && window.performance.timing && "undefined" != typeof window.performance.timing.navigationStart
+                }
+            }, {}],
+            ee: [function(e, n, t) {
+                function r() {}
+
+                function o(e) {
+                    function n(e) {
+                        return e && e instanceof r ? e : e ? f(e, u, i) : i()
+                    }
+
+                    function t(t, r, o, i) {
+                        if (!d.aborted || i) {
+                            e && e(t, r, o);
+                            for (var a = n(o), u = v(t), f = u.length, c = 0; c <
+                                f; c++) u[c].apply(a, r);
+                            var p = s[y[t]];
+                            return p && p.push([b, t, r, a]), a
+                        }
+                    }
+
+                    function l(e, n) {
+                        h[e] = v(e).concat(n)
+                    }
+
+                    function m(e, n) {
+                        var t = h[e];
+                        if (t)
+                            for (var r = 0; r <
+                                t.length; r++) t[r] === n && t.splice(r, 1)
+                    }
+
+                    function v(e) {
+                        return h[e] || []
+                    }
+
+                    function g(e) {
+                        return p[e] = p[e] || o(t)
+                    }
+
+                    function w(e, n) {
+                        c(e, function(e, t) {
+                            n = n || "feature", y[t] = n, n in s || (s[n] = [])
+                        })
+                    }
+                    var h = {},
+                        y = {},
+                        b = {
+                            on: l,
+                            addEventListener: l,
+                            removeEventListener: m,
+                            emit: t,
+                            get: g,
+                            listeners: v,
+                            context: n,
+                            buffer: w,
+                            abort: a,
+                            aborted: !1
+                        };
+                    return b
+                }
+
+                function i() {
+                    return new r
+                }
+
+                function a() {
+                    (s.api || s.feature) && (d.aborted = !0, s = d.backlog = {})
+                }
+                var u = "nr@context",
+                    f = e("gos"),
+                    c = e(3),
+                    s = {},
+                    p = {},
+                    d = n.exports = o();
+                d.backlog = s
+            }, {}],
+            gos: [function(e, n, t) {
+                function r(e, n, t) {
+                    if (o.call(e, n)) return e[n];
+                    var r = t();
+                    if (Object.defineProperty && Object.keys) try {
+                        return Object.defineProperty(e, n, {
+                            value: r,
+                            writable: !0,
+                            enumerable: !1
+                        }), r
+                    } catch (i) {}
+                    return e[n] = r, r
+                }
+                var o = Object.prototype.hasOwnProperty;
+                n.exports = r
+            }, {}],
+            handle: [function(e, n, t) {
+                function r(e, n, t, r) {
+                    o.buffer([e], r), o.emit(e, n, t)
+                }
+                var o = e("ee").get("handle");
+                n.exports = r, r.ee = o
+            }, {}],
+            id: [function(e, n, t) {
+                function r(e) {
+                    var n = typeof e;
+                    return !e || "object" !== n && "function" !== n ? -1 : e === window ? 0 : a(e, i, function() {
+                        return o++
+                    })
+                }
+                var o = 1,
+                    i = "nr@id",
+                    a = e("gos");
+                n.exports = r
+            }, {}],
+            loader: [function(e, n, t) {
+                function r() {
+                    if (!E++) {
+                        var e = x.info = NREUM.info,
+                            n = l.getElementsByTagName("script")[0];
+                        if (setTimeout(s.abort, 3e4), !(e && e.licenseKey && e.applicationID && n)) return s.abort();
+                        c(y, function(n, t) {
+                            e[n] || (e[n] = t)
+                        }), f("mark", ["onload", a() + x.offset], null, "api");
+                        var t = l.createElement("script");
+                        t.src = "https://" + e.agent, n.parentNode.insertBefore(t, n)
+                    }
+                }
+
+                function o() {
+                    "complete" === l.readyState && i()
+                }
+
+                function i() {
+                    f("mark", ["domContent", a() + x.offset], null, "api")
+                }
+
+                function a() {
+                    return O.exists && performance.now ? Math.round(performance.now()) : (u = Math.max((new Date).getTime(), u)) - x.offset
+                }
+                var u = (new Date).getTime(),
+                    f = e("handle"),
+                    c = e(3),
+                    s = e("ee"),
+                    p = e(2),
+                    d = window,
+                    l = d.document,
+                    m = "addEventListener",
+                    v = "attachEvent",
+                    g = d.XMLHttpRequest,
+                    w = g && g.prototype;
+                NREUM.o = {
+                    ST: setTimeout,
+                    SI: d.setImmediate,
+                    CT: clearTimeout,
+                    XHR: g,
+                    REQ: d.Request,
+                    EV: d.Event,
+                    PR: d.Promise,
+                    MO: d.MutationObserver
+                };
+                var h = "" + location,
+                    y = {
+                        beacon: "bam.nr-data.net",
+                        errorBeacon: "bam.nr-data.net",
+                        agent: "js-agent.newrelic.com/nr-1123.min.js"
+                    },
+                    b = g && w && w[m] && !/CriOS/.test(navigator.userAgent),
+                    x = n.exports = {
+                        offset: u,
+                        now: a,
+                        origin: h,
+                        features: {},
+                        xhrWrappable: b,
+                        userAgent: p
+                    };
+                e(1), l[m] ? (l[m]("DOMContentLoaded", i, !1), d[m]("load", r, !1)) : (l[v]("onreadystatechange", o), d[v]("onload", r)), f("mark", ["firstbyte", u], null, "api");
+                var E = 0,
+                    O = e(5)
+            }, {}]
+        }, {}, ["loader"]);
+    </script>
+    <!-- <script>
+        (function(i, s, o, g, r, a, m) {
+            i["GoogleAnalyticsObject"] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, "script", "//www.google-analytics.com/analytics.js", "ga");
+        ga("create", "UA-20759213-1", {
+            "cookieDomain": "auto"
+        });
+        ga("set", "anonymizeIp", true);
+        ga("send", "pageview");
+    </script> -->
+    <meta name="title" content="STEERING COMMITTEE | University at Albany" />
+    <meta name="description" content="Inner Page Headline
+ 
+
+ " />
+    <meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+    <meta name="MobileOptimized" content="width" />
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/sites/default/files/favicon_0.ico" type="image/vnd.microsoft.icon" />
+    <link rel="canonical" href="/paragraphs-sidebar" />
+    <link rel="shortlink" href="/node/986" />
+    <link rel="revision" href="/paragraphs-sidebar" />
+    <script src="sites/default/files/google_tag/google_tag.script.js?pr6ry1"></script>
+    <title>STEERING COMMITTEE | University at Albany</title>
+    <style media="all">
+        @import url("core/modules/system/css/components/align.module.css?pr6ry1");
+        @import url("core/modules/system/css/components/fieldgroup.module.css?pr6ry1");
+        @import url("core/modules/system/css/components/container-inline.module.css?pr6ry1");
+        @import url("core/modules/system/css/components/clearfix.module.css?pr6ry1");
+        @import url("core/modules/system/css/components/details.module.css?pr6ry1");
+        @import url("core/modules/system/css/components/hidden.module.css?pr6ry1");
+        @import url("core/modules/system/css/components/item-list.module.css?pr6ry1");
+        @import url("core/modules/system/css/components/js.module.css?pr6ry1");
+        @import url("core/modules/system/css/components/nowrap.module.css?pr6ry1");
+        @import url("core/modules/system/css/components/position-container.module.css?pr6ry1");
+        @import url("core/modules/system/css/components/progress.module.css?pr6ry1");
+        @import url("core/modules/system/css/components/reset-appearance.module.css?pr6ry1");
+        @import url("core/modules/system/css/components/resize.module.css?pr6ry1");
+        @import url("core/modules/system/css/components/sticky-header.module.css?pr6ry1");
+        @import url("core/modules/system/css/components/system-status-counter.css?pr6ry1");
+        @import url("core/modules/system/css/components/system-status-report-counters.css?pr6ry1");
+        @import url("core/modules/system/css/components/system-status-report-general-info.css?pr6ry1");
+        @import url("core/modules/system/css/components/tablesort.module.css?pr6ry1");
+        @import url("core/modules/system/css/components/tree-child.module.css?pr6ry1");
+        @import url("core/modules/views/css/views.module.css?pr6ry1");
+        @import url("profiles/lightning/modules/contrib/video_embed_field/css/video_embed_field.responsive-video.css?pr6ry1");
+        @import url("libraries/flexslider/flexslider.css?pr6ry1");
+        @import url("modules/contrib/calendar/css/calendar.css?pr6ry1");
+        @import url("modules/contrib/calendar/css/calendar_multiday.css?pr6ry1");
+        @import url("modules/contrib/flexslider/assets/css/flexslider_img.css?pr6ry1");
+        @import url("modules/custom/kwall_site_alert/css/slick.css?pr6ry1");
+    </style>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/bootstrap/3.3.7/css/bootstrap.css" media="all" />
+    <style media="all">
+        @import url("themes/bootstrap/css/3.3.7/overrides.min.css?pr6ry1");
+        @import url("themes/albany_bootstrap_theme/css/style.css?pr6ry1");
+        @import url("themes/albany_bootstrap_theme/styleguide/assets/css/style.css?pr6ry1");
+    </style>
+    <link rel="stylesheet" href="themes/albany_bootstrap_theme/css/rise-style.css" />
+    <style media="all">
+        @import url("sites/default/files/asset_injector/css/all_pages_background-bd2de4081d49a2e6dcfab599b80af0e0.css?pr6ry1");
+        @import url("sites/default/files/asset_injector/css/bullets_top_align-05c791021ddbed47afbd8e3e871c3cb3.css?pr6ry1");
+        @import url("sites/default/files/asset_injector/css/button_link_visited_color-0fb9cd86c6c5ae6d23396189bdde950d.css?pr6ry1");
+        @import url("sites/default/files/asset_injector/css/department_directory_overrides_-2141edbe7afd088d9d7a82d039cc1a96.css?pr6ry1");
+        @import url("sites/default/files/asset_injector/css/displayorhide-631efb8b1b62b06016390765dd27ca28.css?pr6ry1");
+        @import url("sites/default/files/asset_injector/css/faculty_directory-8e4cb7742cd6421cd087a9cab0c7ab8d.css?pr6ry1");
+        @import url("sites/default/files/asset_injector/css/hide_paragraph_ids-c675307f1c90800391545be97760e9a1.css?pr6ry1");
+        @import url("sites/default/files/asset_injector/css/homepage_video_slider_extend_width-fc03cd43be39859ab71f02f0d7d2401f.css?pr6ry1");
+        @import url("sites/default/files/asset_injector/css/screen_reader_only_text_-054b849b98bd6eca3e2e992e992c1637.css?pr6ry1");
+        @import url("sites/default/files/asset_injector/css/search_results_styling-a80e8714fd8281fbc04a22239e498711.css?pr6ry1");
+        @import url("sites/default/files/asset_injector/css/sidebar_callout_purple_links-8f7465028c4af00709f3f38f33d93591.css?pr6ry1");
+        @import url("sites/default/files/asset_injector/css/table_no_hover_effect-106a9ffac8bab29473ecf1b5842efec6.css?pr6ry1");
+        @import url("sites/default/files/asset_injector/css/view_policy_block-2b7d8fe7ac27306fba5f5ea2bee52f61.css?pr6ry1");
+    </style>
+    <!--[if lte IE 8]>
+                                <script src="/core/assets/vendor/html5shiv/html5shiv.min.js?v=3.7.3"></script>
+                                <![endif]-->
+    <script async="async" src="https://admissions.albany.edu/ping">
+        /**/
+    </script>
+</head>
+
+<body class="path-node page-node-type-page has-glyphicons path-node-986">
+    <a href="#main-content" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
+    <noscript>
+                                    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WNRD5G" height="0" width="0"></iframe>
+                                </noscript>
+    <div class="alert-region">
+        <div class="region region-alert">
+            <section id="block-sitealert" data-block-plugin-id="kwall_site_alert_block" class="block block-kwall-site-alert block-kwall-site-alert-block clearfix">
+                <div id="kwall-alerts-wrapper">
+                    <div id="kwall-alerts"></div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <header class="navbar navbar-default container-fluid" id="navbar" role="banner">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <div class="region region-navigation">
+                    <a class="logo navbar-btn pull-left" href="https://www.ncseglobal.org/" title="NCSE" rel="home">
+
+                        <img src="img/logos/NCSE.png" alt="NCSE" height="67px" />
+                    </a>
+                    <a class="logo navbar-btn rise-right" href="/" title="Home" rel="home">
+                        <img src="/sites/default/files/logo.png" alt="Home" />
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="region region-mobile-navigation">
+            <div class="drawer-wrap">
+                <a class="logo navbar-btn pull-left" href="/" title="Home" rel="home">
+                    <img src="/sites/default/files/logo.png" alt="Home" />
+                </a>
+            </div>
+        </div>
+    </header>
+    <div role="main" class="main-container container-fluid js-quickedit-main-content">
+        <div class="row">
+            <div class="region region-above-content">
+                <section class="views-element-container block block-views block-views-blockabove-content-block-1 clearfix" id="block-views-block-above-content-block-1" data-block-plugin-id="views_block:above_content-block_1">
+                    <div class="form-group">
+                        <div class="view view-above-content view-id-above_content view-display-id-block_1 js-view-dom-id-cef650317e97cf184b00e538bd012dee521bcc357a6860f7528b629034bdd562">
+                            <div class="view-content">
+                                <div class="col-sm-12">
+                                    <article role="article" about="/paragraphs-sidebar" class="page above-content clearfix">
+                                        <div class="content">
+                                            <div class="field field--name-field-alternate-page-title field--type-viewfield field--label-hidden">
+                                                <div class="field__item field__item-label-hidden">
+                                                    <div class="views-element-container form-group">
+                                                        <div class="view view-duplicate-of-center-page-title view-id-duplicate_of_center_page_title view-display-id-default js-view-dom-id-d4afda0f0c4662cf00ba1f3350f8cdaf0ce125b12bfe038a85c1fbed2a20002d">
+                                                            <div class="view-content">
+                                                                <div class="views-row">
+                                                                    <div class="views-field views-field-title">
+                                                                        <h1 class="field-content">RISE 2019 Conference - STEERING COMMITTEE</h1>
+                                                                    </div>
+                                                                    <div class="views-field views-field-field-page-subtitle">
+                                                                        <div class="field-content">
+                                                                            <p>Transforming University Engagement In Pre- and Post-Disaster Environments: Lessons from Puerto Rico</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="content-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <aside class="col-sm-4 sidebar-first" role="complementary">
+                            <div class="region region-sidebar-first">
+                                <nav role="navigation" aria-labelledby="block-megamenumainnavigation-menu" id="block-megamenumainnavigation" class="sidebar-menu-block" data-block-plugin-id="menu_block:main">
+                                    <h2 class="visually-hidden" id="block-megamenumainnavigation-menu">Mega Menu - Main navigation</h2>
+                                    <ul class="menu menu--rise-conference nav">
+                                        <li class="first">
+                                            <a href="home.html" target="_self" rel="" data-drupal-link-system-path="node/47081">RISE CONFERENCE HOME</a>
+                                        </li>
+                                        <li>
+                                            <a href="registration.html" data-drupal-link-system-path="node/47681">REGISTRATION & SPONSORSHIP</a>
+
+                                        </li>
+
+                                        <li>
+                                            <a href="welcome.html" target="_self" rel="" data-drupal-link-system-path="node/47181">WELCOME</a>
+                                        </li>
+                                        <li>
+                                            <a href="about.html" data-drupal-link-system-path="node/47671">ABOUT</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="agenda.html" data-drupal-link-system-path="node/47136">AGENDA </a>
+                                        </li>
+                                        <li class="expanded dropdown first last open2 open">
+                                            <a href="honorary-committee.html" class="dropdown-toggle open" data-toggle="" data-drupal-link-system-path="node/47681" target="#" data-target="#" aria-expanded="true">LEADERSHIP & PARTICIPANTS<span class="caret"></span></a>
+                                            <ul class="dropdown-menu">
+                                                <li class="first">
+                                                    <a href="honorary-committee.html" data-drupal-link-system-path="node/47356">Honorary Committee</a>
+                                                </li>
+                                                <li class="second">
+                                                    <a href="steering-committee.html" data-drupal-link-system-path="node/47761" class="is-active">Steering Committee</a>
+                                                </li>
+                                                <li class="third">
+                                                    <a href="co-chairs.html" data-drupal-link-system-path="node/48151">RISE Program Co-Chairs</a>
+                                                </li>
+                                                <li class="fourth">
+                                                    <a href="participatinginstitutions.html" data-drupal-link-system-path="node/47136">RISE 2019 Institutions</a>
+                                                </li>
+                                                <li class="last">
+                                                    <a href="participants.html" data-drupal-link-system-path="node/47136">RISE 2019 Speakers</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="poster-winners.html" data-drupal-link-system-path="node/47761">STUDENT POSTERS</a>
+                                        </li>
+                                        <li>
+                                            <a href="resources.html" data-drupal-link-system-path="node/47586">CONFERENCE RESOURCES</a>
+                                        </li>
+                                        <li>
+                                            <a href="current-efforts.html" data-drupal-link-system-path="node/47161">CURRENT EFFORTS</a>
+                                        </li>
+                                        <li class="">
+                                            <a href="news-communications.html" data-drupal-link-system-path="node/47586">NEWS & COMMUNICATIONS</a>
+                                        </li>
+                                        <li class="expanded dropdown">
+                                            <a href="directions-and-parking.html" class="dropdown-toggle" data-toggle="" data-drupal-link-system-path="node/47681" target="#" data-target="#" aria-expanded="false">ATTENDEE INFORMATION<span class="caret"></span></a>
+                                            <ul class="dropdown-menu">
+                                                <li class="first">
+                                                    <a href="directions-and-parking.html" data-drupal-link-system-path="node/47681">Directions &amp; Parking</a>
+                                                </li>
+                                                <li class="second">
+                                                    <a href="hotel-accommodations.html" target="_self" rel="" data-drupal-link-system-path="node/47171">Hotel Accommodations</a>
+                                                </li>
+                                                <li class="second">
+                                                    <a href="venue.html" data-drupal-link-system-path="node/47591">Venue</a>
+                                                </li>
+                                                <li class="last">
+                                                    <a href="anti-harassment-anti-discrimination-policy.html" data-drupal-link-system-path="node/47591">Anti-Harassment & Discrimination Policy</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="">
+                                            <a href="get-involved.html">GET INVOLVED</a>
+                                        </li>
+                                        <li class = "expanded dropdown">
+                                            <a href="https://www.albany.edu/rise2019/relive-rise.html" id = "relive-rise" data-drupal-link-system-path="node/47356">RELIVE RISE 2019</a>
+                                            <ul class="dropdown-menu">
+                                                    <li class="first">
+                                                        <a href="https://www.albany.edu/rise2019/relive-rise.html"  data-drupal-link-system-path="node/47681">RISE 2019 Videos</a>
+                                                    </li>
+                                                    <li class="last">
+                                                        <a href="https://www.albany.edu/rise2019/rise-photos.html"  data-drupal-link-system-path="node/47591">RISE 2019 Photos</a>
+                                                    </li>
+                                                </ul>
+                                    </li>
+                                    </ul>
+                                </nav>
+
+                            </div>
+                        </aside>
+                        <section class="col-sm-8">
+                            <div class="highlighted">
+                                <div class="region region-highlighted"></div>
+                            </div>
+                            <a id="main-content"></a>
+                            <div class="region region-content">
+                                <article role="article" about="/paragraphs-sidebar" class="page full clearfix">
+                                    <div class="content">
+
+                                        <div class="field field--name-field-paragraphs-inline field--type-entity-reference-revisions field--label-hidden field--items">
+                                            <div class="field--item">
+                                                <div class="paragraph paragraph--type--generic-text-paragraph paragraph--view-mode--default" id="">
+
+                                                    <div class="field field--name-field-generic-content-area field--type-text-long field--label-hidden field--item">
+                                                        <h4>Sheila Curran Bernard<br> Associate Professor<br> Department of History and Documentary Studies Program<br> College of Arts and Sciences<br> University at Albany <br>State University Of New York</h4>
+
+                                                        <div data-embed-button="media_browser" data-entity-embed-display="view_mode:media.embedded" data-entity-type="media" data-entity-uuid="92e102de-8b0f-43d0-a565-03db4360138d" data-langcode="en" class="embedded-entity align-right">
+                                                            <div>
+
+
+                                                                <div class="field field--name-image field--type-image field--label-hidden field--item"> <img src="/sites/default/files/Sheila%20Curran.png" width="216" height="270" alt="Sheila Curran Bernard" typeof="foaf:Image" class="img-responsive" style="margin-left: 12px;"></div>
+
+                                                            </div>
+                                                        </div>
+                                                        <p>Sheila Curran Bernard is an Emmy and Peabody Award-winning writer and filmmaker with credits on nearly 50 hours of primetime broadcast and theatrical programming, most of it positioned to serve as
+                                                            the centerpiece of national public engagement and education efforts. Her credits include the feature documentary Slavery by Another Name, based on the Pulitzer Prize-winning book by Douglas A.
+                                                            Blackmon, as well as the series Eyes on the Prize; I'll Make Me a World; and School: The Story of American Public Education (and companion book, Beacon Press). Her consulting work in science
+                                                            programming includes Wired to Win, a giant-screen film about neuroscience; and Inside Story, a dramatic feature produced by Discovery Learning Alliance and Quizzical Pictures as the centerpiece
+                                                            of an HIV/AIDS education endeavor. She has led master classes and served as a jurist at festivals in the U.S., Belgium, Poland, and Norway.</p>
+
+                                                        <p>Prof. Bernard is the author of Documentary Storytelling, a pioneering work on the use of dramatic storytelling tools to strengthen nonfiction media. Now going into its fifth edition, the book has
+                                                            been translated into Portuguese, Korean, Chinese, Polish, and Japanese with an Arabic edition due out in 2020. With Kenn Rabin, she is also the author of Archival Storytelling, now going into
+                                                            its second edition. She holds a B.S. in Communication, magna cum laude, from Boston University, and an M.F.A. in Creative Writing from Goddard College. In 2005, she served as the Anschutz Distinguished
+                                                            Fellow in American Studies at Princeton University. She joined the faculty at UAlbany in 2008, where she currently directs the Institute for History and Public Engagement.</p>
+                                                        <style type="text/css">
+                                                            <!--
+                                                            /*--><![CDATA[/* ><!--*/
+                                                            
+                                                            <!--
+                                                            /*--><![CDATA[/* ><!--*/
+                                                            
+                                                            <!--
+                                                            /*--><![CDATA[/* ><!--*/
+                                                            
+                                                            .more-text {
+                                                                display: none;
+                                                            }
+                                                            
+                                                            .toggle-link {
+                                                                text-decoration: underline;
+                                                                color: #0074c3;
+                                                                cursor: pointer;
+                                                            }
+                                                            /*--><!]]]]]]><![CDATA[><![CDATA[>*/
+                                                            /*--><!]]]]><![CDATA[>*/
+                                                            /*--><!]]>*/
+                                                        </style>
+                                                        <!-- <p class="more-text">Bernard is the author of Documentary Storytelling, a pioneering work on the use of dramatic storytelling tools to strengthen nonfiction media. Now going into its fifth edition, the book has been
+                                                            translated into Portuguese, Korean, Chinese, Persian, Polish, and Japanese with an Arabic edition due out in 2020.</p>
+
+                                                        <p class="more-text">Bernard holds a B.S. in Communication, magna cum laude, from Boston University, and an M.F.A. in Creative Writing from Goddard College. In 2005, she spent a semester as the Anschutz Distinguished
+                                                            Fellow in American Studies at Princeton University. Since 2008 she's been a faculty member at the University at Albany, State University of New York (SUNY), where she is a tenured &nbsp;associate
+                                                            professor in the Department of History and the Documentary Studies Program and director of the Graduate Program in Public History. She is a recipient of the University’s President's Award for
+                                                            Excellence in Scholarship and Creative Activities and the SUNY Chancellor's Award for Excellence in Scholarship and Creative Activities (2016-17).</p>
+
+                                                        <p><span class="toggle-link" style="
+                                  ">Read More</span></p> -->
+
+                                                        <p>&nbsp;</p>
+                                                    </div>
+
+                                                    <div class="field field--name-field-view field--type-viewfield field--label-">
+
+                                                        <div class="field__label"></div>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div class="field--item">
+                                                <div class="paragraph paragraph--type--generic-text-paragraph paragraph--view-mode--default" id="">
+
+                                                    <div class="field field--name-field-generic-content-area field--type-text-long field--label-hidden field--item">
+                                                        <h4>Kim Diana Connolly<br> Professor<br>Director of Clinical Legal Education<br> Vice Dean for Advocacy and Experimental Education<br> University at Buffalo<br> State University of New York</h4>
+
+                                                        <div data-embed-button="media_browser" data-entity-embed-display="view_mode:media.embedded" data-entity-type="media" data-entity-uuid="0b0e6f4e-dd92-4785-b1ee-41f7e370a9a6" data-langcode="en" class="embedded-entity align-right">
+                                                            <div>
+
+
+                                                                <div class="field field--name-image field--type-image field--label-hidden field--item"> <img src="/sites/default/files/Kim%20Diana%20Connolly1.png" width="215" height="270" alt="Kim Diana Connolly" typeof="foaf:Image" class="img-responsive"></div>
+
+                                                            </div>
+                                                        </div>
+                                                        <p>Kim Diana Connolly has focused her academic career on how best to educate future lawyers, as well as how best to use laws and policies to protect the planet and its inhabitants. She serves as the
+                                                            Vice Dean for Advocacy and Experiential Learning for the University at Buffalo School of Law, and directs the Clinical Legal Education Program. Professor Connolly often presents and participates
+                                                            in collective endeavors that focus on experiential legal education, and has served in national leadership positions for many years. Professor Connolly also studies, writes and speaks about environmental
+                                                            and animal law policies, creatively examining and sharing ideas as to how to move toward a sustainable future.</p>
+
+                                                        <p>Professor Connolly’s commitment to advocacy began before she attended law school, when she ran a non-profit working to bring social justice to those facing a lack of access to clean water and sanitary
+                                                            wastewater removal in North Carolina. After earning her law degree, she has advocated in multiple arenas, including in judicial settings, before federal, state and local legislative bodies, with
+                                                            federal, international, state, and local administrative bodies, and beyond.</p>
+
+                                                        <p class="more-text">Before joining the law faculty at School of Law, Professor Connolly taught at the University of South Carolina School of Law, where she was associated faculty at the School of the Environment. Prior
+                                                            to her teaching career, she practiced law with a number of Washington, D.C., law firms, including Beveridge and Diamond and Hunton &amp; Williams. She received her J.D., magna cum laude, from
+                                                            Georgetown University Law Center and her LL.M. with highest honors from George Washington University Law School. Professor Connolly did her undergraduate work in chemistry at the University of
+                                                            North Carolina at Chapel Hill where she was a Morehead Scholar, and served as a VISTA volunteer between college and law school. She also received a certification in Non-Profit Management from
+                                                            Duke University.</p>
+
+                                                        <p><span class="toggle-link" style="">Read More</span><br> &nbsp;
+                                                        </p>
+                                                    </div>
+
+                                                    <div class="field field--name-field-view field--type-viewfield field--label-">
+
+                                                        <div class="field__label"></div>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div class="field--item">
+                                                <div class="paragraph paragraph--type--generic-text-paragraph paragraph--view-mode--default" id="">
+
+                                                    <div class="field field--name-field-generic-content-area field--type-text-long field--label-hidden field--item">
+                                                        <h4>Christopher F. D'Elia &nbsp;<br> Dean and Professor<br> School of the Coast &amp; Environment&nbsp;<br> Louisiana State University&nbsp;</h4>
+
+                                                        <div data-embed-button="media_browser" data-entity-embed-display="view_mode:media.embedded" data-entity-type="media" data-entity-uuid="822803f6-361e-4d9f-9644-421363634f32" data-langcode="en" class="embedded-entity align-right">
+                                                            <div>
+
+
+                                                                <div class="field field--name-image field--type-image field--label-hidden field--item"> <img src="/sites/default/files/Delia.png" width="216" height="280" alt="Christopher F. D'Elia " typeof="foaf:Image" class="img-responsive"></div>
+
+                                                            </div>
+                                                        </div>
+                                                        <p>Christopher F. D'Elia has been professor and dean of the Louisiana State University School of the Coast &amp; Environment since July 2009. Prior to that, he was associate vice chancellor for Academic
+                                                            Affairs for Research and Graduate Studies and professor of marine sciences at the University of South Florida in St. Petersburg, vice president of research at the University of Albany, and earlier
+                                                            was director of the Maryland Sea Grant program for the University of Maryland College System.&nbsp;</p>
+
+                                                        <p>Dr. D’Elia is also a former president of the Estuarine Research Federation. D'Elia was part of a University of Rhode Island/Metcalf Institute of Marine Sciences program underwritten by a National
+                                                            Science Foundation.&nbsp;</p>
+
+                                                        <p>Dr. D’Elia has received a number of honors and awards including being Elected a Fellow of the American Association for the Advancement of Science (1992), receiving the University of Georgia Graduate
+                                                            School Alumni of Distinction Award (2014), receiving the Wes Tunnel Lifetime Achievement Award for the Gulf of Mexico University Research Collaborative (2019), and being named a Sustaining Fellow
+                                                            for the Association for the Sciences of Limnology and Oceanography (2019).<br> &nbsp;
+                                                        </p>
+                                                    </div>
+
+                                                    <div class="field field--name-field-view field--type-viewfield field--label-">
+
+                                                        <div class="field__label"></div>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div class="field--item">
+                                                <div class="paragraph paragraph--type--generic-text-paragraph paragraph--view-mode--default" id="">
+
+                                                    <div class="field field--name-field-generic-content-area field--type-text-long field--label-hidden field--item">
+                                                        <h4>Tom Fish &nbsp;<br> National Coordinator<br>Cooperative Ecosystem Studies Units Network<br>U.S. Department of the Interior<br>National Park Service</h4>
+
+                                                        <div data-embed-button="media_browser" data-entity-embed-display="view_mode:media.embedded" data-entity-type="media" data-entity-uuid="822803f6-361e-4d9f-9644-421363634f32" data-langcode="en" class="embedded-entity align-right">
+                                                            <div>
+
+
+                                                                <div class="field field--name-image field--type-image field--label-hidden field--item"> <img src="img/tom-fish.jpg" width="216" height="280" alt="Tom Fish" typeof="foaf:Image" class="img-responsive"></div>
+
+                                                            </div>
+                                                        </div>
+                                                        <p>Tom has worked in natural resource management, planning, research, and education for over 30 years. As the national coordinator for the CESU Network, he works across government, academia, and the
+                                                            NGO community to facilitate collaborative research, technical assistance, education and capacity building in support of natural and cultural heritage resource stewardship.
+                                                        </p>
+                                                        <p>Tom’s work covers a wide range of topics relating to global change, partnerships and intergovernmental relations, aquatic (marine, estuarine, freshwater, riparian) and forest ecosystem management,
+                                                            land use policy and planning, applied social science, risk and resilience, environmental values, program evaluation, and training for environmental professionals and protected area managers in
+                                                            the U.S. and abroad. Tom previously held positions with NOAA’s Human Dimensions of Coastal Management Program, USDA Forest Service’s Social and Economic Dimensions of Ecosystem Management Research
+                                                            Unit, and spent ten years in South Florida with the Florida Department of Environmental Protection, Rookery Bay National Estuarine Research Reserve, Newfound Harbor Marine Institute, and in private
+                                                            consulting. Tom holds a Ph.D. in conservation biology (University of Minnesota), M.S. in science education (Florida Institute of Technology), and B.A. degrees in biology and German (Concordia
+                                                            College). </p>
+                                                        <p>&nbsp;</p>
+                                                    </div>
+
+                                                    <div class="field field--name-field-view field--type-viewfield field--label-">
+
+                                                        <div class="field__label"></div>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div class="field--item">
+                                                <div class="paragraph paragraph--type--generic-text-paragraph paragraph--view-mode--default" id="">
+
+                                                    <div class="field field--name-field-generic-content-area field--type-text-long field--label-hidden field--item">
+                                                        <h4>Mandy Frantz<br> Research Development Specialist<br> Stony Brook University<br> State University of New York</h4>
+
+                                                        <div data-embed-button="media_browser" data-entity-embed-display="view_mode:media.embedded" data-entity-type="media" data-entity-uuid="888f29dd-94a9-4184-af00-1c47a8b61392" data-langcode="en" class="embedded-entity align-right">
+                                                            <div>
+
+
+                                                                <div class="field field--name-image field--type-image field--label-hidden field--item"> <img src="/sites/default/files/Mandy%20Frantz.png" width="217" height="270" alt="Mandy Frantz" typeof="foaf:Image" class="img-responsive"></div>
+
+                                                            </div>
+                                                        </div>
+                                                        <p>Mandy Frantz received her Bachelor’s degree in Economics from Rutgers University.</p>
+
+                                                        <p>During and after her time at Rutgers, she assisted with a number of academic research projects and was published as a co-author in the Journal of Community Practice. Mandy spent several years working
+                                                            at a non-profit social service agency, where she &nbsp;focused &nbsp;on &nbsp;grant &nbsp;management &nbsp;and &nbsp;proposal &nbsp;development &nbsp;for &nbsp;new &nbsp;funding &nbsp;opportunities.
+                                                            &nbsp;
+                                                        </p>
+
+                                                        <p>In &nbsp;her &nbsp;previous position &nbsp;as &nbsp;Grant &nbsp;Administrator &nbsp;in &nbsp;the &nbsp;Governor's &nbsp;Office &nbsp;of &nbsp;Storm &nbsp;Recovery, &nbsp;she &nbsp;assisted &nbsp;sub-recipients
+                                                            &nbsp;in complying with both state and federal grant regulations.</p>
+
+                                                        <p>&nbsp;</p>
+                                                    </div>
+
+                                                    <div class="field field--name-field-view field--type-viewfield field--label-">
+
+                                                        <div class="field__label"></div>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div class="field--item">
+                                                <div class="paragraph paragraph--type--generic-text-paragraph paragraph--view-mode--default" id="">
+
+                                                    <div class="field field--name-field-generic-content-area field--type-text-long field--label-hidden field--item">
+                                                        <h4>Jorge E. González<br> Presidential Professor of The City College of New York <br>NOAA-CREST Professor of Mechanical Engineering <br>The City College of New York </h4>
+
+
+                                                        <div data-embed-button="media_browser" data-entity-embed-display="view_mode:media.embedded" data-entity-type="media" data-entity-uuid="55f37da2-5bfc-4009-abc9-56224443e34a" data-langcode="en" class="embedded-entity align-right">
+                                                            <div>
+
+
+                                                                <div class="field field--name-image field--type-image field--label-hidden field--item"> <img src="https://www.albany.edu/rise2019/img/jorge-gonzalez.jpg" width="214" height="311" alt="Jorge E. Gonzalez" typeof="foaf:Image" class="img-responsive"></div>
+
+                                                            </div>
+                                                        </div>
+                                                        <p>Prof. González is the Director of The Hispanic Alliance for the Graduate Education and the Professoriate on Environmental Sciences and Engineering (H-AGEP), of The CUNY Initiative to Promote Academic
+                                                            Success in STEM (CiPASS), lead scientist of the Coastal-Urban Environmental Research Group (CUERG), The City College of New York Presidential Professor, and the NOAA CREST professor of Mechanical
+                                                            Engineering at the City College of New York.
+                                                        </p>
+                                                        <p>
+                                                            Prof. González earned his Doctorate (1994) and Bachelor (1988) degrees in Mechanical Engineering from the Georgia Institute of Technology and from the University of Puerto Rico-Mayagüez, respectively. He joined The City College of New York faculty in
+                                                            2008 after tenures at Santa Clara University, California, as Professor and David Packard Scholar, and as Chairman and Professor of Mechanical Engineering at the University of Puerto Rico-Mayagüez.
+                                                            He teaches and conducts research in urban energy sustainability, urban weather and climate, urban remote sensing, and regional climate modeling and analysis. Professor González holds several
+                                                            patents in solar energy equipment, aerosol detection, and energy forecasting for buildings, and was recognized as a prominent young researcher by the National Science Foundation with a prestigious
+                                                            CAREER Award.
+                                                        </p>
+                                                        <p class="more-text">
+                                                            He has authored or co-authored more than 90 peer-reviewed publications, has delivered 100s of conference presentations, and his research has attracted more than $30M in external funding. He is a Fellow Member of the American Society of Mechanical Engineering
+                                                            (ASME), and Vice-Chairman of the American Meteorological Society Board on the Urban Environment. He was appointed in 2015 by the Mayor of the City as Member of the Climate Change Panel for the
+                                                            City of New York, and more recently as Senior Visiting Scientist of the Beijing Institute of Urban Meteorology and of Brookhaven National Laboratory. He is the coeditor of the ASME Handbook of
+                                                            Integrated and Sustainable Buildings Equipment and Systems, and was named this year 2019 as the Founding Editor of the newest ASME Journal of Engineering for Sustainable Buildings and Cities.
+                                                            &nbsp;
+                                                        </p>
+                                                        <p><span class="toggle-link" style="">Read More</span><br> &nbsp; </p>
+                                                    </div>
+
+                                                    <div class="field field--name-field-view field--type-viewfield field--label-">
+
+                                                        <div class="field__label"></div>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div class="field--item">
+                                                <div class="paragraph paragraph--type--generic-text-paragraph paragraph--view-mode--default" id="">
+
+                                                    <div class="field field--name-field-generic-content-area field--type-text-long field--label-hidden field--item">
+                                                        <h4>Zack Guido<br> Research Scientist <br>Institute of the Environment and School of Natural Resources and Environment <br>University of Arizona</h4>
+
+
+                                                        <div data-embed-button="media_browser" data-entity-embed-display="view_mode:media.embedded" data-entity-type="media" data-entity-uuid="55f37da2-5bfc-4009-abc9-56224443e34a" data-langcode="en" class="embedded-entity align-right">
+                                                            <div>
+
+
+                                                                <div class="field field--name-image field--type-image field--label-hidden field--item"> <img src="https://www.albany.edu/rise2019/img/zack-guido.jpg" width="214" height="311" alt="Jorge E. Gonzalez" typeof="foaf:Image" class="img-responsive"></div>
+
+                                                            </div>
+                                                        </div>
+                                                        <p>Zack Guido is a research scientist at the UA’s Institute of the Environment and School of Natural Resources and Environment, and leads the UA International Research and Applications Project.</p>
+                                                        <p> Zack’s research interests focus on climate adaptation and specifically on understanding the impacts of climate variability and change on environmental resources including water and food; understanding
+                                                            key aspects of vulnerability and how people adapt to and cope with the climate; and the role of weather and climate services in decision-making. Zack has active research projects in the U.S.
+                                                            Southwest, Caribbean, and Africa. Zack has extensive international research and practice experience. A three-year Peace Corps stint in Bolivia between 2000 and 2003 led to co-founding a 501(c)3
+                                                            non-profit organization to work with rural Bolivian communities to build resilience to drought and diminishing surface water from retreating glaciers. Zack has also worked as a hydrogeologist
+                                                            consultant for a Tucson-based company. Zack loves coffee.<br><br> &nbsp;
+                                                        </p>
+                                                    </div>
+                                                    <div class="field field--name-field-view field--type-viewfield field--label-">
+                                                        <div class="field__label"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="field--item">
+                                                <div class="paragraph paragraph--type--generic-text-paragraph paragraph--view-mode--default" id="">
+
+                                                    <div class="field field--name-field-generic-content-area field--type-text-long field--label-hidden field--item">
+                                                        <h4>Michael Jacobson<br> Research Development Specialist<br> Binghamton University<br> State University of New York</h4>
+
+                                                        <div data-embed-button="media_browser" data-entity-embed-display="view_mode:media.embedded" data-entity-type="media" data-entity-uuid="2bab1fb9-272c-4600-b1ad-b7d76973266a" data-langcode="en" class="embedded-entity align-right">
+                                                            <div>
+
+
+                                                                <div class="field field--name-image field--type-image field--label-hidden field--item"> <img src="/sites/default/files/Michael%20Jacobson.png" width="217" height="266" alt="Michael Jacobson" typeof="foaf:Image" class="img-responsive"></div>
+
+                                                            </div>
+                                                        </div>
+                                                        <p>Michael Jacobson serves as Research Development Specialist in the Office of Strategic Research Initiatives, where he helps faculty and staff develop research and grant proposals. He also helps conduct
+                                                            community outreach programs to apply the broader impacts of research performed at Binghamton University.&nbsp;</p>
+
+                                                        <p>In his previous position as a principal investigator and project director at Binghamton University’s Public Archaeology Facility, he helped government agencies and industry clients with cultural
+                                                            resource compliance and strategies for historic preservation. He also conducted original research on the historic period of New York State. He investigated production and consumption patterns
+                                                            at 19th century farmsteads across New York. He established a research program supported by the National Park Service for studying and preserving New York’s Revolutionary War battlefields. He
+                                                            also developed community collaborations with descendant communities and other stakeholders to create preservation strategies and promote community sustainability by recognizing the value of cultural
+                                                            resources.&nbsp;
+                                                        </p>
+
+                                                        <p>Jacobson has published articles on his research on Colorado’s Ludlow Massacre as well as created digital media to present the results of his research and aid community outreach.&nbsp;</p>
+
+                                                        <p>Jacobson holds a doctorate and MA in anthropology from Binghamton University and a BA in anthropology from Fort Lewis College in Colorado. &nbsp;<br> &nbsp;
+                                                        </p>
+
+                                                        <p>&nbsp;</p>
+                                                    </div>
+
+                                                    <div class="field field--name-field-view field--type-viewfield field--label-">
+
+                                                        <div class="field__label"></div>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div class="field--item">
+                                                <div class="paragraph paragraph--type--generic-text-paragraph paragraph--view-mode--default" id="">
+
+                                                    <div class="field field--name-field-generic-content-area field--type-text-long field--label-hidden field--item">
+                                                        <h4>Valerie A. Luzadis<br> Incoming Chair<br> NCSE Board of Directors <br> Professor of Social-Ecological Systems and Ecological Economics<br>SUNY ESF</h4>
+
+                                                        <div data-embed-button="media_browser" data-entity-embed-display="view_mode:media.embedded" data-entity-type="media" data-entity-uuid="6a26f6fe-5111-4d02-a896-4fe1ce21b124" data-langcode="en" class="embedded-entity align-right">
+                                                            <div>
+
+
+                                                                <div class="field field--name-image field--type-image field--label-hidden field--item"> <img src="/sites/default/files/Luzadis.jpeg" width="200" height="200" alt="Valerie A. Luzadis" typeof="foaf:Image" class="img-responsive"></div>
+
+                                                            </div>
+                                                        </div>
+                                                        <p>Dr. Valerie Luzadis is Professor of Social-Ecological Systems and Ecological Economics at the State University of New York College of Environmental Science and Forestry (ESF), a public, doctoral
+                                                            granting institution in upstate NY, where she has worked since 1994. Luzadis has also served as Interim Provost and as the first Executive Vice President of ESF and held several other leadership
+                                                            roles in the institution.</p>
+
+                                                        <p>Her teaching and research focuses on systems approaches to social-ecological foundations for conservation and sustainability. Luzadis’ scholarly work also includes the study and practice of collaborative
+                                                            interdisciplinary science and efforts to bring science into policy. Dr. Luzadis brings system thinking to administrative and professional leadership roles to enhance effectiveness and efficiency
+                                                            of institutions through matrixed systems of shared effort, power, and respect for all. &nbsp;</p>
+
+                                                        <p class="more-text">Dr. Luzadis serves on the Executive Committee of the Council of Environmental Deans and Directors within the National Council for Science and the Environment. She is a Past President of the United
+                                                            States Society for Ecological Economics, having also served as leader of the Founding Organizational Committee for the United States Society for Ecological Economics in 1999 and in varying capacities
+                                                            since. Dr. Luzadis also served in National and State level leadership positions in the Society of American Foresters (SAF), including: Chair of the House of Society Delegates at the National
+                                                            level in 1996 – the first woman to serve in this elected position, after having served as Chair at the New York SAF level in 1995-1996. Luzadis won the National Young Forester Leadership Award
+                                                            from the Society of American Foresters in 1997. &nbsp;</p>
+
+                                                        <p class="more-text">She brings to the academy strong practical experience having worked in Cornell Cooperative Extension and a forestry trade organization for several years and through consulting with and for environmental
+                                                            NGOs including The Nature Conservancy and the Wildlife Conservation Society. &nbsp;</p>
+
+                                                        <p><span class="toggle-link" style="">Read More</span><br> &nbsp;
+                                                        </p>
+                                                    </div>
+
+                                                    <div class="field field--name-field-view field--type-viewfield field--label-">
+
+                                                        <div class="field__label"></div>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div class="field--item">
+                                                <div class="paragraph paragraph--type--generic-text-paragraph paragraph--view-mode--default" id="">
+
+                                                    <div class="field field--name-field-generic-content-area field--type-text-long field--label-hidden field--item">
+                                                        <h4>Shao Lin<br> Professor<br> Department of Environmental Health Sciences<br> School of Public Health<br> University at Albany<br> State University of New York</h4>
+
+                                                        <div data-embed-button="media_browser" data-entity-embed-display="view_mode:media.embedded" data-entity-type="media" data-entity-uuid="2c90c9ba-aaa7-434b-acff-68626907d53d" data-langcode="en" class="embedded-entity align-right">
+                                                            <div>
+
+
+                                                                <div class="field field--name-image field--type-image field--label-hidden field--item"> <img src="/sites/default/files/Shao%20Lin.png" width="216" height="270" alt="Shao Lin PhD" typeof="foaf:Image" class="img-responsive"></div>
+
+                                                            </div>
+                                                        </div>
+                                                        <p>Dr. Shao Lin (MD, PhD) currently is a full Professor of both Dept. of Environmental Health Science, and Dept. of Epidemiology and Biostatistics, as well as the Associate Director for Global Health
+                                                            Research, School of Public Health, University at Albany (UAlbany), State University of New York. She has 25 years of experience in directing various environmental health studies and has successfully
+                                                            completed more than 40 projects when she worked in the New York State Department of Health and in UAlbany. As a Principal Investigator, she has directed studies assessing health impacts of various
+                                                            environmental exposures including natural or man-made disasters, extreme weather events, air pollution, heavy traffic exposure, residential exposure to urban air toxics from outdoor/indoor sources,
+                                                            and a series of school environment-health projects.</p>
+
+                                                        <p>More relevantly, Dr. Lin has been acting as a Principal Investigator for nine federal grants investigating various disasters (September 11 Disaster, Hurricane Sandy etc.), and extreme weather events
+                                                            on human health. She has being involved in multiple national climate-health committees/ workgroups and was invited in the Expert Panelist of a National Climate Health Report, a President’s Workforce.
+                                                            She is also the reviewer of multiple environmental health journals and the standing members of NIH grant reviewer. Dr. Lin has over 100 publications and has grant-funding record over 10 million.</p>
+
+                                                        <p><br> &nbsp;
+                                                        </p>
+                                                    </div>
+
+                                                    <div class="field field--name-field-view field--type-viewfield field--label-">
+
+                                                        <div class="field__label"></div>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div class="field--item">
+                                                <div class="paragraph paragraph--type--generic-text-paragraph paragraph--view-mode--default" id="">
+
+                                                    <div class="field field--name-field-generic-content-area field--type-text-long field--label-hidden field--item">
+                                                        <h4>Nina Maung-Gaona<br> Associate Vice President for Research<br> Stony Brook University<br> State University of New York</h4>
+
+                                                        <div data-embed-button="media_browser" data-entity-embed-display="view_mode:media.embedded" data-entity-type="media" data-entity-uuid="0e7a9da4-1c0c-4f40-896d-8e76768c4137" data-langcode="en" class="embedded-entity align-right">
+                                                            <div>
+
+
+                                                                <div class="field field--name-image field--type-image field--label-hidden field--item"> <img src="/sites/default/files/Nina.png" width="218" height="271" alt="Nina Maung-Gaona" typeof="foaf:Image" class="img-responsive"></div>
+
+                                                            </div>
+                                                        </div>
+                                                        <p>As of February 8, 2016, Nina Maung-Gaona has been chosen as the Associate Vice President for Research (AVPR) to oversee the operations of the Office of the Vice President for Research in her capacity
+                                                            as Research Foundation Deputy Operations Manager.</p>
+
+                                                        <p>Maung-Gaona has been a valuable staff member at Stony Brook since 2000. As director of the Center for Inclusive Education (CIE), she has led a highly successful team supported by more than $8 million
+                                                            of external funding from government agencies such as the National Science Foundation and the National Institutes of Health. CIE’s important work in diversity, STEM outreach and faculty career
+                                                            preparation has been pivotal to Stony Brook’s mission.</p>
+
+                                                        <p>Maung-Gaona is a recognized leader in diversity in STEM, with more than 20 years of experience in developing education programs and writing successful grant applications. She has a proven track record
+                                                            of successfully working with faculty across all disciplines and spearheading intra- and inter-university collaborations involving the administration of multimillion-dollar grants from various
+                                                            funding agencies.</p>
+
+                                                        <p>Prior to Stony Brook, Maung-Gaona worked for the United Nations where she developed programs and grants for education, conflict resolution, renewable energy and environmental protection. She has
+                                                            been awarded the State University of New York Chancellor’s Award for Professional Service, the Martin Luther King Jr. Commission Award for Leadership and the Suffolk County Human Right’s Commission
+                                                            for Public Service.<br> &nbsp;
+                                                        </p>
+                                                    </div>
+
+                                                    <div class="field field--name-field-view field--type-viewfield field--label-">
+
+                                                        <div class="field__label"></div>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div class="field--item">
+                                                <div class="paragraph paragraph--type--generic-text-paragraph paragraph--view-mode--default" id="">
+
+                                                    <div id="cecilio-garcia" class="field field--name-field-generic-content-area field--type-text-long field--label-hidden field--item">
+                                                        <h4>Cecilio Ortiz Garcia (RISE Co-Chair)<br> Professor<br>Political Science<br>Department of Social Sciences<br> University of Puerto Rico</h4>
+
+                                                        <div data-embed-button="media_browser" data-entity-embed-display="view_mode:media.embedded" data-entity-type="media" data-entity-uuid="9a7efb53-fdec-45d4-8332-44281e046730" data-langcode="en" class="embedded-entity align-right">
+                                                            <div>
+
+
+                                                                <div class="field field--name-image field--type-image field--label-hidden field--item"> <img src="/sites/default/files/Cecilio.png" width="214" height="270" alt="Cecilio Ortiz Garcia" typeof="foaf:Image" class="img-responsive"></div>
+
+                                                            </div>
+                                                        </div>
+                                                        <p>Cecilio Ortiz Garcia is Professor of Political Science at the University of Puerto Rico-Mayaguez. His research focuses on environmental /energy justice issues and the governance of socio-technical
+                                                            systems transitions. He is the author of “Airs of Injustice: How Air Pollution Affects the Health of Hispanics and Latinos in the U.S. (2004).&nbsp;</p>
+
+                                                        <p>In 2009, Dr. Ortiz Garcia served as Co-Principal Investigator in the project Sustainable Development for Rural Communities: Social, Health, Economic and Environmental Advances. Through this project
+                                                            a consortium of universities and colleges in Mexico, Canada and the United States tackled crucial issues in rural sustainability preparing a new generation of students and creating a collaborative
+                                                            network of researchers. &nbsp;</p>
+
+                                                        <p>In 2015, he co-founded the National Institute of Energy and Island Sustainability of the University of Puerto Rico. This Institute is an interdisciplinary effort to connect all energy and sustainability-related
+                                                            research and development inside the UPR system in a convergence platform across its eleven campuses. After Hurricane Maria, and in collaboration with the Arizona State University School for the
+                                                            Future of Innovation in Society, and colleagues at the University of Minnesota, Dr. Ortiz Garcia formed the RISE-Puerto Rico Platform (Resiliency through Innovation in Sustainable Energy). RISE-
+                                                            Puerto Rico seeks to re-design the way University-Community relations develop for more just and culturally respectful university post-disaster interventions.&nbsp;</p>
+
+                                                        <p><br> &nbsp;
+                                                        </p>
+                                                    </div>
+
+                                                    <div class="field field--name-field-view field--type-viewfield field--label-">
+
+                                                        <div class="field__label"></div>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div class="field--item">
+                                                <div class="paragraph paragraph--type--generic-text-paragraph paragraph--view-mode--default" id="">
+
+                                                    <div id="marla-lugo" class="field field--name-field-generic-content-area field--type-text-long field--label-hidden field--item">
+                                                        <h4>Marla Pérez Lugo (RISE Co-Chair)<br> Professor<br>Department of Social Sciences<br> University of Puerto Rico</h4>
+
+                                                        <div data-embed-button="media_browser" data-entity-embed-display="view_mode:media.embedded" data-entity-type="media" data-entity-uuid="2ca95267-fb0c-48fb-b4a1-5e597971b338" data-langcode="en" class="embedded-entity align-right">
+                                                            <div>
+
+
+                                                                <div class="field field--name-image field--type-image field--label-hidden field--item"> <img src="/sites/default/files/Marla.png" width="218" height="270" alt="Foto Marla Perez Lugo NIEHS" typeof="foaf:Image" class="img-responsive"></div>
+
+                                                            </div>
+                                                        </div>
+                                                        <p>Marla Perez-Lugo is a professor of Sociology at the Department of Social Sciences, University of Puerto Rico-Mayaguez (UPRM), since 2002. She received her Ph.D. in environmental sociology, with a
+                                                            special focus on vulnerability to natural hazards and risk/disaster communications, from Rutgers, the State University of New Jersey (2003). She has published in the journals Professional Geographer,
+                                                            Sociological Inquiry and Organizations and the Environment.&nbsp;</p>
+
+                                                        <p>Since 2005, her research has shifted towards the social aspects of energy, energy policy, interdisciplinary energy studies and public engagement in energy decision-making processes in Puerto Rico,
+                                                            in collaboration with her colleague and life partner Dr. Cecilio Ortiz Garcia. In 2015, in collaboration with Dr. Cecilio Ortiz Garcia and Dr. Lionel Orama Exclusa, she co-founded the National
+                                                            Institute for Energy and Island Sustainability (INESI in Spanish), the only interdisciplinary and Inter-campus institute of the UPR System. INESI is a collaborative platform that identifies and
+                                                            interconnects the resources of the UPR in energy and resilience and insert those resources in the local energy policy arena and in community-based sustainable energy projects. Dr. Perez Lugo
+                                                            is currently a member of INESI's steering committee and a co-developer of RISE-PR, which stands for Resilience through Innovation in Sustainable Energy for Puerto Rico, an interuniversity collaborative
+                                                            platform with colleagues at Arizona State University and University of Minnesota.</p>
+
+                                                        <p><br> &nbsp;
+                                                        </p>
+                                                    </div>
+
+                                                    <div class="field field--name-field-view field--type-viewfield field--label-">
+
+                                                        <div class="field__label"></div>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div class="field--item">
+                                                <div class="paragraph paragraph--type--generic-text-paragraph paragraph--view-mode--default" id="">
+
+                                                    <div class="field field--name-field-generic-content-area field--type-text-long field--label-hidden field--item">
+                                                        <h4>Gary E. Machlis<br> Professor of Environmental Sustainability<br> Clemson University</h4>
+
+                                                        <div data-embed-button="media_browser" data-entity-embed-display="view_mode:media.embedded" data-entity-type="media" data-entity-uuid="c95f1ea3-9c11-423c-808f-d3fa7c6f0ec4" data-langcode="en" class="embedded-entity align-right">
+                                                            <div>
+
+
+                                                                <div class="field field--name-image field--type-image field--label-hidden field--item"> <img src="/sites/default/files/Gary%20E.%20Machlis.png" width="219" height="270" alt="Gary E. Machlis" typeof="foaf:Image" class="img-responsive"></div>
+
+                                                            </div>
+                                                        </div>
+                                                        <p>Dr. Gary E. Machlis is University Professor of Environmental Sustainability at Clemson University, and served as Science Advisor to the Director, U.S. National Park Service (NPS) during both terms
+                                                            of the Obama administration. He was the first scientist appointed to this position within the NPS, and advises the director on a range of science policy issues and programs. Dr. Machlis also
+                                                            served as co-Leader of the U.S. Department of the Interior’s Strategic Sciences Group, which conducts scientific assessments during major environmental crises. He joined the Clemson faculty in
+                                                            2013; he was on the faculty at the University of Idaho from 1979-2013.</p>
+
+                                                        <p>Dr. Machlis received his bachelor's and master's degrees from the University of Washington in Seattle, and his Ph.D. in human ecology from Yale. He has written numerous books and scientific papers
+                                                            on issues of conservation, human ecology, and sustainability, including The State of the World's Parks (1985), the first systematic study of threats to protected areas around the world. His most
+                                                            recent books (co-authored) are The Structure and Dynamics of Human Ecosystems (2017), and The Future of Conservation in America: A Chart for Rough Water (to be published in early 2018). His research
+                                                            has been published in journals as varied as Bioscience, Climatic Change, Conservation Biology, Society and Natural Resources, and Science. Machlis served as a founding Deputy Editor for Science
+                                                            Advances, the online scientific journal in the Science family of journals.</p>
+
+                                                        <p><br> &nbsp;
+                                                        </p>
+                                                    </div>
+
+                                                    <div class="field field--name-field-view field--type-viewfield field--label-">
+
+                                                        <div class="field__label"></div>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+
+                                            <div class="field--item">
+                                                <div class="paragraph paragraph--type--generic-text-paragraph paragraph--view-mode--default" id="">
+
+                                                    <div class="field field--name-field-generic-content-area field--type-text-long field--label-hidden field--item">
+                                                        <h4>Jacob Mans<br> Assistant Professor<br> University of Minnesota</h4>
+
+                                                        <div data-embed-button="media_browser" data-entity-embed-display="view_mode:media.embedded" data-entity-type="media" data-entity-uuid="3db6e8b4-a18e-481c-b367-637f6e200d61" data-langcode="en" class="embedded-entity align-right">
+                                                            <div>
+                                                                <div class="field field--name-image field--type-image field--label-hidden field--item"> <img src="img/Jacob_Mans.png" width="217" height="270" alt="Jacob Mans" typeof="foaf:Image" class="img-responsive"></div>
+
+                                                            </div>
+                                                        </div>
+                                                        <p>Jacob Mans is an architect and educator focused on understanding the feedback loops between building-scaled technical systems and large-scaled social and ecological systems. As architects and architectural
+                                                            researchers, we often describe these systems, and study them independently from one another. The reality is that architecture collects, channels, and distributes energy and materials across these
+                                                            immense, powerful and interconnected socio-technical systems. He believes architecture should ask questions and engage in critical inquiries that affect immense change rather than prioritizing
+                                                            research on the incremental improvement of preexisting architectural questions. Within a socio-technical research framework, a building can no longer be the sole scale of response to the question
+                                                            of building.</p>
+
+                                                        <p>Jacob’s architectural research and practice focuses on developing high performing socio-technical partnerships that can redefine the design of more resilient systems. He is currently conducting design-research
+                                                            projects on affordable housing and economic development with the Opaskwayak Cree Nation in Manitoba, Canada (w/ Idle No More); on the development of valued-added manufacturing processes to better
+                                                            utilize low-quality Minnesota wood resources (USFS and Savanna Pallets); and, on the development of trans-scalar academic, community, and private sector convergence practices through the design
+                                                            development of the RISE (Resilience through Innovation in Sustainable Energy) platform (w/ INESI, UPR, and the emerging RISE network).</p>
+
+                                                        <p class="more-text">He actively facilitates this work through both his teaching and service. In the spring of 2017, he led a studio with Anoka County to design/build a set of learning pavilions for their Heritage and
+                                                            YMCA programs focused on Minnesota wood resource and construction techniques. In the fall of 2017, he coordinated the “Decolonizing Design” lecture series focused on issues of the marginalization
+                                                            of non-dominant cultures within the design community. In the spring of 2018, he coordinated a catalyst workshop at the UMN to develop partnerships between the university and communities from
+                                                            Puerto Rico, OCN, Micronesia/Minnesota, and the Twin Cities homeless community. Building on the relationships established the catalyst workshop, he subsequently help to coordinate Puerto Rico
+                                                            RISE(ing) the 2018 RISE Convergence Workshop: Projects, Priorities, and Partners Informing an Action-based Research Network. </p>
+                                                        <p class="more-text">Jacob works to solve real problems affecting social, environmental, and economic conditions largely unmet by the architectural profession. Design done in this way is not limited to buildings or landscapes,
+                                                            but rather it is needed to imagine, find solutions to, and to visualize the larger, more critical, issues that we face as a global community today.</p>
+                                                        <p><span class="toggle-link" style="">Read More</span><br> &nbsp;
+                                                        </p>
+                                                    </div>
+
+                                                    <div class="field field--name-field-view field--type-viewfield field--label-">
+
+                                                        <div class="field__label"></div>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="field--item">
+                                                <div class="paragraph paragraph--type--generic-text-paragraph paragraph--view-mode--default" id="">
+
+                                                    <div class="field field--name-field-generic-content-area field--type-text-long field--label-hidden field--item">
+                                                        <h4>Marty Matlock<br> Executive Director<br> University of Arkansas Resiliency Center</h4>
+
+                                                        <div data-embed-button="media_browser" data-entity-embed-display="view_mode:media.embedded" data-entity-type="media" data-entity-uuid="55f37da2-5bfc-4009-abc9-56224443e34a" data-langcode="en" class="embedded-entity align-right">
+                                                            <div>
+
+
+                                                                <div class="field field--name-image field--type-image field--label-hidden field--item"> <img src="/sites/default/files/Marty%20Matlock.png" width="214" height="298" alt="Marty Matlock" typeof="foaf:Image" class="img-responsive"></div>
+
+                                                            </div>
+                                                        </div>
+                                                        <p>Dr. Marty Matlock is Executive Director of the University of Arkansas Resiliency Center and Professor of Ecological Engineering in the Biological and Agricultural Engineering Department. &nbsp;He
+                                                            received his Ph.D. in Biosystems Engineering from Oklahoma State University, is a registered professional engineer, a Board Certified Environmental Engineer, and a Certified Ecosystem Designer.
+                                                            Dr. Matlock has co-authored four books and more than 50 peer-reviewed manuscripts.&nbsp;<br><br> Dr. Matlock’s research focuses on technologies and processes to increase the resilience of ecosystem
+                                                            services in human-dominated ecosystems. His focus is on the interface of food, water, and community systems. He works with ecologists, engineers, architects, social and political scientists,
+                                                            agricultural scientists, economists, and business leaders to create new understanding and framing of vexing human challenges. &nbsp;His interdisciplinary work has been recognized by the leading
+                                                            organizations in agriculture, engineering, architecture, landscape architecture, and sustainable design with over 30 national and international awards. He coordinates academic, research, outreach,
+                                                            and facilities efforts in sustainable and resilient systems across the University of Arkansas campus. He serves on the USEPA Science Advisory Committee for Agriculture, previously served on the
+                                                            US Secretary of Agriculture’s Committee for the 21st Century, is Chairman of the Cherokee Nation Environmental Protection Commission, and serves as sustainability science advisor for 12 food
+                                                            and agricultural product companies.<br><br> &nbsp;
+                                                        </p>
+                                                    </div>
+
+                                                    <div class="field field--name-field-view field--type-viewfield field--label-">
+
+                                                        <div class="field__label"></div>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div class="field--item">
+                                                <div class="paragraph paragraph--type--generic-text-paragraph paragraph--view-mode--default" id="">
+
+                                                    <div class="field field--name-field-generic-content-area field--type-text-long field--label-hidden field--item">
+                                                        <h4>Valentini Pappa<br>Academic Program Coordinator<br>Adjunct Assistant Professor<br>Biological and Agricultural Engineering<br>TAMU Energy Institute</h4>
+
+                                                        <div data-embed-button="media_browser" data-entity-embed-display="view_mode:media.embedded" data-entity-type="media" data-entity-uuid="3db6e8b4-a18e-481c-b367-637f6e200d61" data-langcode="en" class="embedded-entity align-right">
+                                                            <div>
+
+
+                                                                <div class="field field--name-image field--type-image field--label-hidden field--item"> <img src="https://baen.tamu.edu//wp-content/uploads/sites/24/2017/12/Pappa-240x320.jpg" width="217" height="270" alt="Valentini Pappa" typeof="foaf:Image" class="img-responsive"></div>
+
+                                                            </div>
+                                                        </div>
+                                                        <p>Dr. Pappa is the Academic Program Leader for the Master of Science in Energy and the Certificate in Energy at Texas A&M Energy Institute since 2016. She is an accomplished professional with over
+                                                            15 years’ experience in University-level educational environments in Europe and the USA. Committed to fostering a skilled learning atmosphere with a creative and forward-thinking mentality, equality
+                                                            and increased diversity for undergraduate and graduate-level students with substantial expertise in designing new curriculums. She also works on energy workforce development of the future.</p>
+                                                        <p>Dr. Pappa is an environmentalist and holds a Ph.D. and MSc in Geoscience from the University of Edinburgh, UK. She worked in several project related to climate change and food security in Europe.
+                                                            Since 2016, her research interests have been shifted towards water-energy-food nexus, food security, sustainability, circular economy, energy policy and global environmental changes. She has
+                                                            a broad knowledge of current global challenges in developing countries and strong experience and background in global energy teaching. Other areas of interest include environmental science, carbon
+                                                            sequestration, water and energy management, climate change focusing on adaptation and mitigation. &nbsp; &nbsp;
+                                                        </p>
+                                                        <p>&nbsp;</p>
+
+                                                    </div>
+
+                                                    <div class="field field--name-field-view field--type-viewfield field--label-">
+
+                                                        <div class="field__label"></div>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div class="field--item">
+                                                <div class="paragraph paragraph--type--generic-text-paragraph paragraph--view-mode--default" id="">
+
+                                                    <div class="field field--name-field-generic-content-area field--type-text-long field--label-hidden field--item">
+                                                        <h4>Theresa Pardo<br> Center Director<br>Center for Technology in Government (CTG) <br>University At Albany</h4>
+
+                                                        <div data-embed-button="media_browser" data-entity-embed-display="view_mode:media.embedded" data-entity-type="media" data-entity-uuid="3db6e8b4-a18e-481c-b367-637f6e200d61" data-langcode="en" class="embedded-entity align-right">
+                                                            <div>
+
+
+                                                                <div class="field field--name-image field--type-image field--label-hidden field--item"> <img src="img/Theresa_Pardo.jpg" width="217" height="270" alt="Patricia Solis" typeof="foaf:Image" class="img-responsive"></div>
+
+                                                            </div>
+                                                        </div>
+                                                        <p>Theresa A. Pardo, serves as CTG UAlbany's Director, and she is also a full research professor in Public Administration and Policy at Rockefeller College of Public Affairs and Policy. </p>
+
+                                                        <p>Under her leadership, the CTG UAlbany works closely with multi-sector and multi-disciplinary teams from the United States, and around the world, to carry out applied research and problem-solving
+                                                            projects focused on the intersections of policy, management, and technology in the governmental context. CTG UAlbany has broken ground in information and knowledge sharing, smart cities, open
+                                                            government and open data, e-government, social media policy, and mobile technologies and human services delivery.</p>
+                                                        <p>She is a co-developer of the top-ranked academic program in Government Information Strategy and Management offered by Rockefeller College. </p>
+                                                        <p>Dr. Pardo has published over 130 articles, research reports, practice guides, book chapters and case studies and received numerous awards including best </p>
+
+                                                        <p class="more-text">Beyond her work on campus, Pardo is an advisor, board and committee member for a number of organizations including: OpenNY Adviser to New York State’s Governor Andrew Cuomo; Chair of the U.S. Environmental
+                                                            Protection Agency’s National Advisory Committee; Member of the User Working Group of the NASA Socioeconomic Data and Applications Center (SEDAC); Business and Operations Advisory Committee of
+                                                            the U.S. National Science Foundation, etc. </p>
+                                                        <p class="more-text">In 2015, she received Government Technology Magazine’s Top 25 Doers, Drivers, and Dreamers Award which recognizes individuals throughout the U.S. who exemplify transformative use of technology improving
+                                                            the way government does business and serves its citizens. </p>
+                                                        <p class="more-text">She also was awarded the University at Albany’s Distinguished Alumni Award, the University at Albany’s Excellence in Teaching Award, and the Rockefeller College Distinguished Service Award.</p>
+                                                        <p><span class="toggle-link" style="">Read More</span><br> &nbsp;
+                                                        </p>
+                                                    </div>
+
+                                                    <div class="field field--name-field-view field--type-viewfield field--label-">
+
+                                                        <div class="field__label"></div>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div class="field--item">
+                                                <div class="paragraph paragraph--type--generic-text-paragraph paragraph--view-mode--default" id="">
+
+                                                    <div class="field field--name-field-generic-content-area field--type-text-long field--label-hidden field--item">
+                                                        <h4>Lori Peek <br> Professor<br>Department of Sociology<br>University of Colorado Boulder </h4>
+
+
+                                                        <div data-embed-button="media_browser" data-entity-embed-display="view_mode:media.embedded" data-entity-type="media" data-entity-uuid="55f37da2-5bfc-4009-abc9-56224443e34a" data-langcode="en" class="embedded-entity align-right">
+                                                            <div>
+
+
+                                                                <div class="field field--name-image field--type-image field--label-hidden field--item"> <img src="https://www.albany.edu/rise2019/img/lori.jpg" width="214" height="314" alt="Lori Peek" typeof="foaf:Image" class="img-responsive"></div>
+
+                                                            </div>
+                                                        </div>
+                                                        <p>Lori Peek is director of the Natural Hazards Center and professor in the Department of Sociology at the University of Colorado Boulder. She studies vulnerable populations in disaster and is author
+                                                            of Behind the Backlash: Muslim Americans after 9/11, co-editor of Displaced: Life in the Katrina Diaspora, and co-author of Children of Katrina. Peek also helped develop and write school safety
+                                                            guidance for the nation, which resulted in the publication of FEMA P-1000, Safer, Stronger, Smarter: A Guide to Improving School Natural Hazard Safety &nbsp;<br><br> Peek has conducted field
+                                                            investigations in the aftermath of several major disasters. She is the principal investigator for the NSF-funded CONVERGE facility, which is dedicated to improving research coordination and advancing
+                                                            the ethical conduct and scientific rigor of disaster research. She also leads the NSF-supported Social Science Extreme Events Research (SSEER) and Interdisciplinary Science and Engineering Extreme
+                                                            Events Research (ISEEER) networks. Peek is co-principal investigator for an NSF-effort focused on advancing interdisciplinary methods and approaches for hazards and disaster research. She is
+                                                            also launching a new U.S. Geological Survey funded project on earthquake early warning systems in schools, and she is principal investigator for an evaluation research project for Save the Children.
+                                                            &nbsp;
+                                                            <br><br>Peek is past President of the International Sociological Association Research Committee on Disasters and past Chair of the American Sociological Association Environmental Sociology Section.
+                                                            She is co-PI for the NSF INCLUDES Minority SURGE Capacity in Disasters project and a Board Member for the Bill Anderson Fund; both initiatives are dedicated to increasing the number of underrepresented
+                                                            professionals in hazards mitigation and disaster research.
+                                                            <br><br> &nbsp;
+                                                        </p>
+                                                    </div>
+
+                                                    <div class="field field--name-field-view field--type-viewfield field--label-">
+
+                                                        <div class="field__label"></div>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div class="field--item">
+                                                <div class="paragraph paragraph--type--generic-text-paragraph paragraph--view-mode--default" id="">
+
+                                                    <div class="field field--name-field-generic-content-area field--type-text-long field--label-hidden field--item">
+                                                        <h4>Fernando I. Rivera<br> Associate Professor of Sociology<br>Interim Assistant Vice-Provost for Faculty Excellence<br>Director of the Puerto Rico Research Hub</h4>
+
+                                                        <div data-embed-button="media_browser" data-entity-embed-display="view_mode:media.embedded" data-entity-type="media" data-entity-uuid="3db6e8b4-a18e-481c-b367-637f6e200d61" data-langcode="en" class="embedded-entity align-right">
+                                                            <div>
+
+
+                                                                <div class="field field--name-image field--type-image field--label-hidden field--item"> <img src="img/Fernando_Rivera.jpg" width="217" height="270" alt="Patricia Solis" typeof="foaf:Image" class="img-responsive"></div>
+
+                                                            </div>
+                                                        </div>
+                                                        <p>Dr. Fernando I. Rivera is an Associate Professor of Sociology, Interim Assistant Vice-Provost for Faculty Excellence, and Director of the Puerto Rico Research Hub at the University of Central Florida.
+                                                            His research interests and activities are in the sociology of health/medical sociology, disasters, and race and ethnicity.</p>
+
+                                                        <p>His published work has investigated how different mechanisms are related to certain health and mental health outcomes with a particular emphasis on Latino populations. Dr. Rivera’s disaster research
+                                                            has explored the investigation of factors associated with disaster resilience and restoration and resilience in coupled human-natural systems. Other publications have investigated the Puerto
+                                                            Rican diaspora in Florida.</p>
+                                                        <p>Dr. Rivera earned his M.A. and Ph.D. in sociology from the University of Nebraska-Lincoln and his B.A. degree in sociology from the University of Puerto Rico-Mayagüez. He also completed a National
+                                                            Institute of Mental Health (NIMH) sponsored post-doctoral fellowship at the Institute for Health, Health Care Policy, and Aging Research at Rutgers University.</p>
+
+                                                        <!-- <p><span class="toggle-link" style="">Read More</span><br> &nbsp; -->
+                                                        </p>
+                                                    </div>
+
+                                                    <div class="field field--name-field-view field--type-viewfield field--label-">
+
+                                                        <div class="field__label"></div>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div class="field--item">
+                                                <div class="paragraph paragraph--type--generic-text-paragraph paragraph--view-mode--default" id="">
+
+                                                    <div class="field field--name-field-generic-content-area field--type-text-long field--label-hidden field--item">
+                                                        <h4>Patricia Solis<br> Executive Director<br>Knowledge Exchange for Resilience<br> Arizona State University</h4>
+
+                                                        <div data-embed-button="media_browser" data-entity-embed-display="view_mode:media.embedded" data-entity-type="media" data-entity-uuid="3db6e8b4-a18e-481c-b367-637f6e200d61" data-langcode="en" class="embedded-entity align-right">
+                                                            <div>
+
+
+                                                                <div class="field field--name-image field--type-image field--label-hidden field--item"> <img src="/sites/default/files/Patricia%20Solis_0.png" width="217" height="270" alt="Patricia Solis" typeof="foaf:Image" class="img-responsive"></div>
+
+                                                            </div>
+                                                        </div>
+                                                        <p>Patricia Solís, PhD, is Executive Director of the Knowledge Exchange for Resilience at Arizona State University, a campus-wide effort to link community needs with research innovations, managed in
+                                                            the College of Arts and Sciences. She also holds research faculty privileges in the School of Geographical Sciences and Urban Planning.&nbsp;</p>
+
+                                                        <p>She is Co-Founder and Director of YouthMappers, a consortium of more than 143 universities in 41 countries that creates and uses open spatial data for humanitarian and development needs in collaboration
+                                                            with the United States Agency for International Development.</p>
+
+                                                        <p>Prior to joining ASU, she was Co-Director of the Center for Geospatial Technology at Texas Tech University and Research Associate Professor of Geography in the Department of Geosciences and affiliated
+                                                            with the TTU Climate Science Center. She served Deputy Director and Director of Research at the American Association of Geographers. Dr. Solís received a BS in Physics, BA in German, and MA in
+                                                            Geography from Kansas State University. &nbsp;She earned her Ph.D. in Geography from the University of Iowa where she was a Presidential Fellow. &nbsp;</p>
+
+                                                        <p class="more-text">Solís has developed over fifty competitively funded projects promoting innovations in research, education and community collaboration with support from federal agencies such as the US National Science
+                                                            Foundation, the US State Department, NASA, NOAA, US Geological Survey, USAID, and others. Her research focuses on designing experiences for exchanges of knowledge, fellowships, and applications
+                                                            of open geospatial technologies to address socially relevant challenges, from water resource conflict to climate change induced hazards to broadening participation in higher education. Her creative
+                                                            leadership has resulted in the development of collaborative and participatory research methodologies, youth-engaged peer exchanges, new designs for research-centered learning, and the sustained
+                                                            institutionalization of public-private partnerships centered on using digital geographic technologies.</p>
+
+                                                        <p><span class="toggle-link" style="">Read More</span><br> &nbsp;
+                                                        </p>
+                                                    </div>
+
+                                                    <div class="field field--name-field-view field--type-viewfield field--label-">
+
+                                                        <div class="field__label"></div>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div class="field--item">
+                                                <div class="paragraph paragraph--type--generic-text-paragraph paragraph--view-mode--default" id="">
+
+                                                    <div class="field field--name-field-generic-content-area field--type-text-long field--label-hidden field--item">
+                                                        <h4>Christian Speedling<br> Global Partnerships Manager
+                                                            <br> Office of Global Affairs<br> The State University of New York</h4>
+
+                                                        <div data-embed-button="media_browser" data-entity-embed-display="view_mode:media.embedded" data-entity-type="media" data-entity-uuid="141b91b4-a1f8-4ede-adcc-720d27779415" data-langcode="en" class="embedded-entity align-right">
+                                                            <div>
+
+
+                                                                <div class="field field--name-image field--type-image field--label-hidden field--item"> <img src="img/Christian_Speedling.jpg" width="220" height="221" alt="Christian Speedling" typeof="foaf:Image" class="img-responsive"></div>
+
+                                                            </div>
+                                                        </div>
+                                                        <p>Christian Speedling is the Global Partnerships Manager within the Office of Global Affairs. His responsibilities include development and coordination of system-wide collaborative academic programs
+                                                            involving international partner institutions. He also coordinates the review of new and existing overseas, credit-bearing, academic degree and certificate programs, and serves as a reviewer for
+                                                            education abroad programs. Additionally, he serves as the coordinator of the SUNY dual diploma programs with the Turkish Higher Education Council and Turkish universities, and all aspects of
+                                                            the system-wide partnerships in Turkey. Christian also serves on the SUNY Puerto Rico Task Force and acts as the data and enrollment coordinator for the SUNY Stands with Puerto Rico initiative.
+                                                        </p>
+                                                        <p>Christian began his career in international education at SUNY New Paltz where he worked as a Study Abroad Advisor at the Center for International Programs for close to ten years. His interest in
+                                                            the field began when he studied abroad for a semester in Australia at the University of Southern Queensland. Christian earned a Bachelor of Science degree in Political Science from SUNY Brockport
+                                                            in 2004. He continued his education while employed at New Paltz and completed a Master of Arts degree at the University at Albany (Rockefeller College of Public Affairs and Policy) in Political
+                                                            Science, including a short-term study abroad experience in Southeast Asia.</p>
+
+                                                        <p>&nbsp;</p>
+                                                    </div>
+
+                                                    <div class="field field--name-field-view field--type-viewfield field--label-">
+
+                                                        <div class="field__label"></div>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div class="field--item">
+                                                <div class="paragraph paragraph--type--generic-text-paragraph paragraph--view-mode--default" id="">
+
+                                                    <div class="field field--name-field-generic-content-area field--type-text-long field--label-hidden field--item">
+                                                        <h4>Jennie C. Stephens<br> Director
+                                                            <br>School of Public Policy & Urban Affairs<br>Northeastern University
+                                                        </h4>
+
+                                                        <div data-embed-button="media_browser" data-entity-embed-display="view_mode:media.embedded" data-entity-type="media" data-entity-uuid="141b91b4-a1f8-4ede-adcc-720d27779415" data-langcode="en" class="embedded-entity align-right">
+                                                            <div>
+                                                                <div class="field field--name-image field--type-image field--label-hidden field--item"> <img src="https://rise2019.org/img/jennie-stephens.jpg" width="220" height="221" alt="Jennie C. Stephens" typeof="foaf:Image" class="img-responsive"></div>
+
+                                                            </div>
+                                                        </div>
+                                                        <p>Jennie C. Stephens is Director of Northeastern University’s School of Public Policy & Urban Affairs, Dean’s Professor of Sustainability Science & Policy, and Director for Strategic Research Collaborations
+                                                            at the Global Resilience Institute. Her research, teaching, and community engagement focus on social-political aspects of renewable energy transformation, energy justice, climate justice, energy
+                                                            democracy, and gender and race in energy and climate. Her forthcoming book, “Diversifying Power to Save the World” (Island Press forthcoming in 2020) demonstrates that responding to climate change
+                                                            require diversifying leadership, redistributing wealth and power, moving beyond technocratic solutions to climate and prioritizing transformative social justice and social change.
+                                                            <br>Professor Stephens received a 2017 Arab-American Frontiers Fellowship from the National Academy of Sciences, she is a 2015-2016 Leopold Leadership fellow, and her book Smart Grid (R)Evolution:
+                                                            Electric Power Struggles (Cambridge University Press, 2015) explores social and cultural debates about energy system change (co-authored with Wilson & Peterson). Before joining the faculty at
+                                                            Northeastern University in Boston, she taught at University of Vermont, Clark University, Tufts and MIT. She earned her PhD and MS at the California Institute of Technology in Environmental Science
+                                                            & Engineering and her BA at Harvard in Environmental Science & Public Policy<br> &nbsp;
+                                                        </p>
+
+                                                        <p>&nbsp;</p>
+                                                    </div>
+
+                                                    <div class="field field--name-field-view field--type-viewfield field--label-">
+
+                                                        <div class="field__label"></div>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div class="field--item">
+                                                <div class="paragraph paragraph--type--generic-text-paragraph paragraph--view-mode--default" id="">
+
+                                                    <div class="field field--name-field-generic-content-area field--type-text-long field--label-hidden field--item">
+                                                        <h4>Eric K. Stern<br> Professor
+                                                            <br> College of Emergency Preparedness<br> Homeland Security and Cybersecurity</h4>
+
+                                                        <div data-embed-button="media_browser" data-entity-embed-display="view_mode:media.embedded" data-entity-type="media" data-entity-uuid="141b91b4-a1f8-4ede-adcc-720d27779415" data-langcode="en" class="embedded-entity align-right">
+                                                            <div>
+
+
+                                                                <div class="field field--name-image field--type-image field--label-hidden field--item"> <img src="/sites/default/files/Eric%20Stern.png" width="220" height="221" alt="Eric Stern" typeof="foaf:Image" class="img-responsive"></div>
+
+                                                            </div>
+                                                        </div>
+                                                        <p>Dr. Eric K. Stern is a professor at the College of Emergency Preparedness, Homeland Security, and Cyber-Security at the University at Albany. Dr. Stern holds a Ph D from Stockholm University and
+                                                            a B.A. from Dartmouth College. He has published extensively in the fields of crisis and emergency management, crisis communication, resilience, security studies, executive leadership, foreign
+                                                            policy analysis and political psychology. He is also affiliated with the Swedish National Center for Crisis Management Research and Training at the Swedish Defense University (where he served
+                                                            as Director from 2004-2011) and the Disaster Research Center at the University of Delaware. He is currently serving as Editor-in- Chief of the Oxford Research Encyclopedia of Crisis Analysis.<br><br>                                                            Other key areas of interest and expertise include social media and crisis preparedness, post-crisis evaluation and learning, interactive education and instructional design, and case research/teaching
+                                                            methodologies.
+                                                            <br><br> In addition to his scholarly work, Professor Stern has collaborated closely with a wide range of US (e.g. Department of Homeland Security Science and Technology, FEMA, Coast Guard, and
+                                                            FBI) and foreign (e.g. UK, Sweden, Switzerland, Estonia, Slovenia, and S. Korea among others) government agencies, the European Union, and the OECD on a wide range of applied research and educational--
+                                                            including training and exercise development--projects.<br> &nbsp;
+                                                        </p>
+
+                                                        <p>&nbsp;</p>
+                                                    </div>
+
+                                                    <div class="field field--name-field-view field--type-viewfield field--label-">
+
+                                                        <div class="field__label"></div>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div class="field--item">
+                                                <div class="paragraph paragraph--type--generic-text-paragraph paragraph--view-mode--default" id="">
+
+                                                    <div class="field field--name-field-generic-content-area field--type-text-long field--label-hidden field--item">
+                                                        <h4>Christopher D. Thorncroft<br> Interim Director of the Atmospheric Sciences Research Center<br> University at Albany<br> State University of New York</h4>
+
+                                                        <div data-embed-button="media_browser" data-entity-embed-display="view_mode:media.embedded" data-entity-type="media" data-entity-uuid="b63069f1-7819-4679-b4af-f2e3711014e0" data-langcode="en" class="embedded-entity align-right">
+                                                            <div>
+
+
+                                                                <div class="field field--name-image field--type-image field--label-hidden field--item"> <img src="/sites/default/files/Christopher%20Thorncroft.png" width="217" height="270" alt="Christopher D. Thorncroft" typeof="foaf:Image" class="img-responsive"></div>
+
+                                                            </div>
+                                                        </div>
+                                                        <p>Christopher Thorncroft, a nationally recognized leader in tropical weather and climate research, has served as the interim director of the Atmospheric Sciences Research Center (ASRC) since February
+                                                            2019.&nbsp;
+                                                        </p>
+
+                                                        <p>As the longest serving chair in University’s Department of Atmospheric and Environmental Sciences (DAES) history, Thorncroft has been instrumental in building upon UAlbany’s rich and celebrated history
+                                                            in atmospheric sciences. Over the years, he has forged a close working relationship between ASRC and DAES faculty, staff and students – a major catalyst in UAlbany strengthening its reputation
+                                                            in weather and climate science and achieving record levels of extramural research funding.</p>
+
+                                                        <p>Thorncroft also spearheaded the UAlbany SUNY 2020 weather and climate research strategic plan, co-led the NYS Center of Excellence in Atmospheric and Environmental Prediction and Innovation and co-championed
+                                                            the NYS Mesonet – the most advanced weather observation system of its kind. Overall, his crucial leadership role helped to establish the largest weather and climate enterprise in New York and
+                                                            one of the most prominent in the nation.</p>
+
+                                                        <p>His major research focus is on improving understanding of the processes that determine the nature and variability of the West African monsoon, including how this impacts Atlantic tropical cyclone
+                                                            activity. He has also had leadership roles in several field campaigns in the West African and Tropical Atlantic regions.</p>
+
+                                                        <p>Thorncroft earned his Ph.D. in meteorology from the University of Reading in Berkshire, England in 1988, and spent over a decade at the university following his graduation as a fellow and lecturer.
+                                                            He joined UAlbany’s DAES faculty in 2001.</p>
+
+                                                        <p>&nbsp;</p>
+                                                    </div>
+
+                                                    <div class="field field--name-field-view field--type-viewfield field--label-">
+
+                                                        <div class="field__label"></div>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div class="field--item">
+                                                <div class="paragraph paragraph--type--generic-text-paragraph paragraph--view-mode--default" id="">
+
+                                                    <div class="field field--name-field-generic-content-area field--type-text-long field--label-hidden field--item">
+                                                        <script type="text/javascript">
+                                                            <!--//--><![CDATA[// ><!--
+
+                                                            var allElems = document.querySelectorAll('.toggle-link')
+                                                            for (var i = 0; i < allElems.length; i++) {
+                                                                var curElem = allElems[i];
+                                                                curElem.onclick = function() {
+                                                                    var allMoreText = this.parentElement.parentElement.querySelectorAll(".more-text");
+                                                                    for (var j = 0; j < allMoreText.length; j++) {
+                                                                        if (!allMoreText[j].style.display) {
+                                                                            allMoreText[j].style.display = "block";
+                                                                            this.innerText = "Read Less";
+                                                                        } else {
+                                                                            allMoreText[j].style.display = "";
+                                                                            this.innerText = "Read More...";
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                            //--><!]]>
+                                                        </script>
+                                                        <p>&nbsp;</p>
+                                                    </div>
+
+                                                    <div class="field field--name-field-view field--type-viewfield field--label-">
+
+                                                        <div class="field__label"></div>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="field field--name-field-view field--type-viewfield field--label-">
+
+                                            <div class="field__label"></div>
+
+                                        </div>
+
+                                    </div>
+
+                                </article>
+
+                            </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    </article>
+    </div>
+    </section>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="container-fluid">
+        <div class="region region-below-content">
+            <section class="views-element-container block block-views block-views-blockbelow-content-block-1 clearfix" id="block-views-block-below-content-block-1" data-block-plugin-id="views_block:below_content-block_1">
+                <div class="form-group">
+                    <div class="view view-below-content view-id-below_content view-display-id-block_1 js-view-dom-id-cc6d4778fa595020fdfe4c5e6e721bc6bf14412d9eb171517285c156771df1bc"></div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <footer class="footer container-fluid" role="contentinfo">
+        <div class="region region-footer">
+            <section id="block-addressandlogoforthefooter" class="footer-address block block-block-content block-block-contentde2c4b9b-bfb1-4b18-8ca4-5ca199e568a5 clearfix" data-block-plugin-id="block_content:de2c4b9b-bfb1-4b18-8ca4-5ca199e568a5">
+                <div class="field field--name-field-logo field--type-image field--label-hidden field--item">
+                    <a href="https://www.ncseglobal.org/">
+                        <img src="https://www.albany.edu/rise2019/img/logos/NCSE.png" width="315" height="39" alt="University at Albany Logo" typeof="Image" class="img-responsive" style="position: relative; left: -7px;">
+                    </a>
+                </div>
+                <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item">
+                    <p>
+                        <a href="https://www.google.com/maps/place/740+15th+St+NW+%23900,+Washington,+DC+20005/@38.8997545,-77.0360236,17z/data=!3m1!4b1!4m5!3m4!1s0x89b7b7bdf3712bdf:0x6228835860ed5caa!8m2!3d38.8997503!4d-77.0338349" target="_blank">740 15th Street, 
+                                NW Suite 900<br>
+                                Washington, DC 20005 
+                            </a>
+                        <br> Contact Email:
+                        <a href="mailto:NCSE@NCSEGlobal.org">NCSE@NCSEGlobal.org</a>
+                        <br> Contact Number:
+                        <a href="tel:2029865471">202-986-5471 ext(2404)</a>
+                    </p>
+                </div>
+            </section>
+
+
+            <section id="block-addressandlogofortheUAlbanyfooter" class="footer-address block block-block-content block-block-contentde2c4b9b-bfb1-4b18-8ca4-5ca199e568a5 clearfix" data-block-plugin-id="block_content:de2c4b9b-bfb1-4b18-8ca4-5ca199e568a5">
+                <div class="field field--name-field-logo field--type-image field--label-hidden field--item">
+                    <a href="https://www.albany.edu/">
+                        <img src="/sites/default/files/logo_1.png" width="315" height="39" alt="University at Albany Logo" typeof="Image" class="img-responsive">
+                    </a>
+                </div>
+                <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item">
+                    <p>
+                        <a href="https://www.google.com/maps/place/1400+Washington+Ave,+Albany,+NY+12222/@42.6859115,-73.8287166,17z/data=!3m1!4b1!4m5!3m4!1s0x89de0b3ce5c93e45:0x4cdbe8d7b52fa412!8m2!3d42.6859115!4d-73.8265279" target="_blank">1400 Washington Avenue
+                                                                <br>
+        Albany, NY 12222
+                                                            </a>
+                        <br> Undergraduate Admissions:
+                        <a href="tel:5184425435">(518) 442-5435</a>
+                        <br> Graduate Admissions:
+                        <a href="tel:5184423980">(518) 442-3980</a>
+                        <br> Main:
+                        <a href="tel:5184423300">(518) 442-3300</a>
+                    </p>
+                </div>
+            </section>
+        </div>
+    </footer>
+    <script type="application/json" data-drupal-selector="drupal-settings-json">
+        {
+            "path": {
+                "baseUrl": "\/",
+                "scriptPath": null,
+                "pathPrefix": "",
+                "currentPath": "node\/986",
+                "currentPathIsAdmin": false,
+                "isFront": false,
+                "currentLanguage": "en"
+            },
+            "pluralDelimiter": "\u0003",
+            "google_analytics": {
+                "trackOutbound": true,
+                "trackMailto": true,
+                "trackDownload": true,
+                "trackDownloadExtensions": "7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"
+            },
+            "bootstrap": {
+                "forms_has_error_value_toggle": 1,
+                "modal_animation": 1,
+                "modal_backdrop": "true",
+                "modal_keyboard": 1,
+                "modal_show": 1,
+                "modal_size": "",
+                "popover_enabled": 1,
+                "popover_animation": 1,
+                "popover_container": "body",
+                "popover_content": "",
+                "popover_delay": "0",
+                "popover_html": 0,
+                "popover_placement": "right",
+                "popover_selector": "",
+                "popover_title": "",
+                "popover_trigger": "click",
+                "popover_trigger_autoclose": 1
+            },
+            "field_group": {
+                "html_element": {
+                    "mode": "default",
+                    "context": "view",
+                    "settings": {
+                        "id": "",
+                        "classes": "sidebar-callout-content-wrapper",
+                        "element": "div",
+                        "show_label": false,
+                        "label_element": "h3",
+                        "attributes": "",
+                        "effect": "none",
+                        "speed": "fast",
+                        "label": "Left Column"
+                    }
+                },
+                "background_image": {
+                    "mode": "default",
+                    "context": "view",
+                    "settings": {
+                        "id": "",
+                        "classes": "",
+                        "image": "field_image",
+                        "image_style": "sidebar_callout_375x_225_",
+                        "hide_if_missing": false
+                    }
+                }
+            },
+            "flexslider": {
+                "optionsets": {
+                    "gallery_slider": {
+                        "animation": "slide",
+                        "animationSpeed": 600,
+                        "direction": "horizontal",
+                        "slideshow": true,
+                        "easing": "linear",
+                        "smoothHeight": false,
+                        "reverse": false,
+                        "slideshowSpeed": 7000,
+                        "animationLoop": true,
+                        "randomize": false,
+                        "startAt": 0,
+                        "itemWidth": 1000,
+                        "itemMargin": 0,
+                        "minItems": 0,
+                        "maxItems": 0,
+                        "move": 0,
+                        "directionNav": true,
+                        "controlNav": true,
+                        "thumbCaptions": false,
+                        "thumbCaptionsBoth": false,
+                        "keyboard": true,
+                        "multipleKeyboard": false,
+                        "mousewheel": false,
+                        "touch": true,
+                        "prevText": "Previous",
+                        "nextText": "Next",
+                        "namespace": "flex-",
+                        "selector": ".slides \u003E li",
+                        "sync": "",
+                        "asNavFor": "",
+                        "initDelay": 0,
+                        "useCSS": true,
+                        "video": false,
+                        "pausePlay": true,
+                        "pauseText": "Pause",
+                        "playText": "Play",
+                        "pauseOnAction": true,
+                        "pauseOnHover": false,
+                        "controlsContainer": "",
+                        "manualControls": ""
+                    }
+                },
+                "instances": {
+                    "flexslider-1": "gallery_slider"
+                }
+            },
+            "kwall_site_alert": {
+                "dismissedCookie": []
+            },
+            "ajax": [],
+            "user": {
+                "uid": 0,
+                "permissionsHash": "8663b3a6412697872f9b1828c9c96c56aea5caa5d53cbd1523bb83ba0ef8e7a5"
+            }
+        }
+    </script>
+    <script src="core/assets/vendor/domready/ready.min.js?v=1.0.8"></script>
+    <script src="core/assets/vendor/jquery/jquery.min.js?v=2.2.4"></script>
+    <script src="core/assets/vendor/underscore/underscore-min.js?v=1.8.3"></script>
+    <script src="//cdn.jsdelivr.net/bootstrap/3.3.7/js/bootstrap.js"></script>
+    <script src="core/assets/vendor/jquery-once/jquery.once.min.js?v=2.1.1"></script>
+    <script src="core/misc/drupalSettingsLoader.js?v=8.3.2"></script>
+    <script src="core/misc/drupal.js?v=8.3.2"></script>
+    <script src="core/misc/drupal.init.js?v=8.3.2"></script>
+    <!-- <script src="modules/contrib/google_analytics/js/google_analytics.js?v=8.3.2"></script> -->
+    <script src="themes/bootstrap/js/drupal.bootstrap.js?pr6ry1"></script>
+    <script src="themes/bootstrap/js/attributes.js?pr6ry1"></script>
+    <script src="themes/bootstrap/js/theme.js"></script>
+    <script src="themes/albany_bootstrap_theme/bootstrap/js/affix.js?pr6ry1"></script>
+    <script src="themes/albany_bootstrap_theme/bootstrap/js/alert.js?pr6ry1"></script>
+    <script src="themes/albany_bootstrap_theme/bootstrap/js/button.js?pr6ry1"></script>
+    <script src="themes/albany_bootstrap_theme/bootstrap/js/carousel.js?pr6ry1"></script>
+    <script src="themes/albany_bootstrap_theme/bootstrap/js/collapse.js?pr6ry1"></script>
+    <script src="themes/albany_bootstrap_theme/bootstrap/js/dropdown.js?pr6ry1"></script>
+    <script src="themes/albany_bootstrap_theme/bootstrap/js/modal.js?pr6ry1"></script>
+    <script src="themes/albany_bootstrap_theme/bootstrap/js/tooltip.js?pr6ry1"></script>
+    <script src="themes/albany_bootstrap_theme/bootstrap/js/popover.js?pr6ry1"></script>
+    <script src="themes/albany_bootstrap_theme/bootstrap/js/scrollspy.js?pr6ry1"></script>
+    <script src="themes/albany_bootstrap_theme/bootstrap/js/tab.js?pr6ry1"></script>
+    <script src="themes/albany_bootstrap_theme/bootstrap/js/transition.js?pr6ry1"></script>
+    <script src="themes/albany_bootstrap_theme/js/jquery.matchHeight-min.js?pr6ry1"></script>
+    <script src="themes/albany_bootstrap_theme/js/match_heights.js?pr6ry1"></script>
+    <script src="themes/albany_bootstrap_theme/js/megamenu.js?pr6ry1"></script>
+    <script src="themes/albany_bootstrap_theme/js/megamenu_init.js?pr6ry1"></script>
+    <script src="themes/albany_bootstrap_theme/js/hero_slideshow.js?pr6ry1"></script>
+    <script src="themes/albany_bootstrap_theme/js/iscroll-new.js?pr6ry1"></script>
+    <script src="themes/albany_bootstrap_theme/js/drawer.min.js?pr6ry1"></script>
+    <script src="themes/albany_bootstrap_theme/js/pushmenu.js?pr6ry1"></script>
+    <script src="themes/albany_bootstrap_theme/js/search-button.js?pr6ry1"></script>
+    <script src="themes/albany_bootstrap_theme/js/jquery.fittext.js?pr6ry1"></script>
+    <script src="themes/albany_bootstrap_theme/js/fittext.js?pr6ry1"></script>
+    <script src="themes/albany_bootstrap_theme/js/slide-controls.js?pr6ry1"></script>
+    <script src="themes/albany_bootstrap_theme/js/map_accessibility.js?pr6ry1"></script>
+    <script src="themes/albany_bootstrap_theme/js/paragraph_anchors.js?pr6ry1"></script>
+    <script src="themes/albany_bootstrap_theme/js/detailed-title.js?pr6ry1"></script>
+    <!-- <script src="themes/albany_bootstrap_theme/dependencies?pr6ry1"></script> -->
+    <script src="themes/bootstrap/js/popover.js?pr6ry1"></script>
+    <script src="libraries/flexslider/jquery.flexslider-min.js?pr6ry1"></script>
+    <script src="modules/contrib/flexslider/assets/js/flexslider.load.js?pr6ry1"></script>
+    <script src="modules/custom/kwall_site_alert/js/slick.min.js?v=1.x"></script>
+    <script src="core/assets/vendor/jquery.cookie/jquery.cookie.min.js?v=1.4.1"></script>
+    <script src="modules/custom/kwall_site_alert/js/dismissed-cookie.js?v=1.x"></script>
+    <script type="text/javascript">
+        window.NREUM || (NREUM = {});
+        NREUM.info = {
+            "beacon": "bam.nr-data.net",
+            "licenseKey": "7179c41561",
+            "applicationID": "65783760",
+            "transactionName": "MgQGZkZVDUdUUU1aVgtOJVFAXQxaGnZLRkkEDThFUVYFW0dfZl1WAQQ4c1dXBkdGbm5WWwMOFl96WwdRdFFaVkoWTFpRXFEAX2JXW1VWFww2V0dBD0BGc1pQXBYS",
+            "queueTime": 0,
+            "applicationTime": 774,
+            "atts": "HkMFEA5PHkk=",
+            "errorBeacon": "bam.nr-data.net",
+            "agent": ""
+        }
+    </script>
+</body>
+
+</html>
