@@ -16355,3 +16355,9 @@ li.active a#day3-tab {
  .resiliency-list-container{
      list-style-image: none;
  }
+
+
+ /* transcripts */
+ .transcripts:visited {
+    color: #46166b;
+  }
