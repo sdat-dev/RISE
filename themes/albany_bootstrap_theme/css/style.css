@@ -16358,6 +16358,6 @@ li.active a#day3-tab {
 
 
  /* transcripts */
- .transcripts:visited {
+ .novisitlink:visited {
     color: #46166b;
   }
