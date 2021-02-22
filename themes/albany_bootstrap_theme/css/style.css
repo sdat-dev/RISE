@@ -2667,6 +2667,10 @@ pre code {
     .col-lg-5 {
         width: 41.66666667%;
     }
+    .col-lg-4-participant {
+        width: 33.33333333%;
+        height: 75%;
+    }
     .col-lg-4 {
         width: 33.33333333%;
     }
