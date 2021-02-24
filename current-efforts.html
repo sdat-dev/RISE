@@ -1,17 +1,20 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" xmlns:article="http://ogp.me/ns/article#" xmlns:book="http://ogp.me/ns/book#" xmlns:product="http://ogp.me/ns/product#" xmlns:profile="http://ogp.me/ns/profile#" xmlns:video="http://ogp.me/ns/video#" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+<html lang="en" dir="ltr" xmlns:article="http://ogp.me/ns/article#" xmlns:book="http://ogp.me/ns/book#"
+    xmlns:product="http://ogp.me/ns/product#" xmlns:profile="http://ogp.me/ns/profile#"
+    xmlns:video="http://ogp.me/ns/video#"
+    prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
 
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <script type="text/javascript">
-        window.NREUM || (NREUM = {}), __nr_require = function(e, n, t) {
+        window.NREUM || (NREUM = {}), __nr_require = function (e, n, t) {
             function r(t) {
                 if (!n[t]) {
                     var o = n[t] = {
                         exports: {}
                     };
-                    e[t][0].call(o.exports, function(n) {
+                    e[t][0].call(o.exports, function (n) {
                         var o = e[t][1][n];
                         return r(o || n)
                     }, o, o.exports)
@@ -23,11 +26,11 @@
                 t.length; o++) r(t[o]);
             return r
         }({
-            1: [function(e, n, t) {
-                function r() {}
+            1: [function (e, n, t) {
+                function r() { }
 
                 function o(e, n, t) {
-                    return function() {
+                    return function () {
                         return i(e, [c.now()].concat(u(arguments)), n ? null : this, t), n ? void 0 : this
                     }
                 }
@@ -41,35 +44,35 @@
                 var p = ["setPageViewName", "setCustomAttribute", "setErrorHandler", "finished", "addToTrace", "inlineHit", "addRelease"],
                     d = "api-",
                     l = d + "ixn-";
-                a(p, function(e, n) {
+                a(p, function (e, n) {
                     s[n] = o(d + n, !0, "api")
-                }), s.addPageAction = o(d + "addPageAction", !0), s.setCurrentRouteName = o(d + "routeName", !0), n.exports = newrelic, s.interaction = function() {
+                }), s.addPageAction = o(d + "addPageAction", !0), s.setCurrentRouteName = o(d + "routeName", !0), n.exports = newrelic, s.interaction = function () {
                     return (new r).get()
                 };
                 var m = r.prototype = {
-                    createTracer: function(e, n) {
+                    createTracer: function (e, n) {
                         var t = {},
                             r = this,
                             o = "function" == typeof n;
                         return i(l + "tracer", [c.now(), e, t], r),
-                            function() {
+                            function () {
                                 if (f.emit((o ? "" : "no-") + "fn-start", [c.now(), r, o], t), o) try {
                                     return n.apply(this, arguments)
                                 } catch (e) {
                                     throw f.emit("fn-err", [arguments, this, e], t), e
                                 } finally {
-                                    f.emit("fn-end", [c.now()], t)
-                                }
+                                        f.emit("fn-end", [c.now()], t)
+                                    }
                             }
                     }
                 };
-                a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","), function(e, n) {
+                a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","), function (e, n) {
                     m[n] = o(l + n)
-                }), newrelic.noticeError = function(e, n) {
+                }), newrelic.noticeError = function (e, n) {
                     "string" == typeof e && (e = new Error(e)), i("err", [e, c.now(), !1, n])
                 }
             }, {}],
-            2: [function(e, n, t) {
+            2: [function (e, n, t) {
                 function r(e, n) {
                     if (!o) return !1;
                     if (e !== o) return !1;
@@ -94,7 +97,7 @@
                     match: r
                 }
             }, {}],
-            3: [function(e, n, t) {
+            3: [function (e, n, t) {
                 function r(e, n) {
                     var t = [],
                         r = "",
@@ -105,23 +108,23 @@
                 var o = Object.prototype.hasOwnProperty;
                 n.exports = r
             }, {}],
-            4: [function(e, n, t) {
+            4: [function (e, n, t) {
                 function r(e, n, t) {
                     n || (n = 0), "undefined" == typeof t && (t = e ? e.length : 0);
                     for (var r = -1, o = t - n || 0, i = Array(o <
-                            0 ? 0 : o); ++r <
+                        0 ? 0 : o); ++r <
                         o;) i[r] = e[n + r];
                     return i
                 }
                 n.exports = r
             }, {}],
-            5: [function(e, n, t) {
+            5: [function (e, n, t) {
                 n.exports = {
                     exists: "undefined" != typeof window.performance && window.performance.timing && "undefined" != typeof window.performance.timing.navigationStart
                 }
             }, {}],
-            ee: [function(e, n, t) {
-                function r() {}
+            ee: [function (e, n, t) {
+                function r() { }
 
                 function o(e) {
                     function n(e) {
@@ -158,7 +161,7 @@
                     }
 
                     function w(e, n) {
-                        c(e, function(e, t) {
+                        c(e, function (e, t) {
                             n = n || "feature", y[t] = n, n in s || (s[n] = [])
                         })
                     }
@@ -194,7 +197,7 @@
                     d = n.exports = o();
                 d.backlog = s
             }, {}],
-            gos: [function(e, n, t) {
+            gos: [function (e, n, t) {
                 function r(e, n, t) {
                     if (o.call(e, n)) return e[n];
                     var r = t();
@@ -204,23 +207,23 @@
                             writable: !0,
                             enumerable: !1
                         }), r
-                    } catch (i) {}
+                    } catch (i) { }
                     return e[n] = r, r
                 }
                 var o = Object.prototype.hasOwnProperty;
                 n.exports = r
             }, {}],
-            handle: [function(e, n, t) {
+            handle: [function (e, n, t) {
                 function r(e, n, t, r) {
                     o.buffer([e], r), o.emit(e, n, t)
                 }
                 var o = e("ee").get("handle");
                 n.exports = r, r.ee = o
             }, {}],
-            id: [function(e, n, t) {
+            id: [function (e, n, t) {
                 function r(e) {
                     var n = typeof e;
-                    return !e || "object" !== n && "function" !== n ? -1 : e === window ? 0 : a(e, i, function() {
+                    return !e || "object" !== n && "function" !== n ? -1 : e === window ? 0 : a(e, i, function () {
                         return o++
                     })
                 }
@@ -229,13 +232,13 @@
                     a = e("gos");
                 n.exports = r
             }, {}],
-            loader: [function(e, n, t) {
+            loader: [function (e, n, t) {
                 function r() {
                     if (!E++) {
                         var e = x.info = NREUM.info,
                             n = l.getElementsByTagName("script")[0];
                         if (setTimeout(s.abort, 3e4), !(e && e.licenseKey && e.applicationID && n)) return s.abort();
-                        c(y, function(n, t) {
+                        c(y, function (n, t) {
                             e[n] || (e[n] = t)
                         }), f("mark", ["onload", a() + x.offset], null, "api");
                         var t = l.createElement("script");
@@ -387,14 +390,15 @@
 
 <body class="path-node page-node-type-page has-glyphicons path-node-986">
     <a href="#main-content" class="visually-hidden focusable skip-link">
-      Skip to main content
+        Skip to main content
     </a>
     <noscript>
-                                    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WNRD5G" height="0" width="0"></iframe>
-                                </noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WNRD5G" height="0" width="0"></iframe>
+    </noscript>
     <div class="alert-region">
         <div class="region region-alert">
-            <section id="block-sitealert" data-block-plugin-id="kwall_site_alert_block" class="block block-kwall-site-alert block-kwall-site-alert-block clearfix">
+            <section id="block-sitealert" data-block-plugin-id="kwall_site_alert_block"
+                class="block block-kwall-site-alert block-kwall-site-alert-block clearfix">
                 <div id="kwall-alerts-wrapper">
                     <div id="kwall-alerts"></div>
                 </div>
@@ -427,25 +431,36 @@
     <div role="main" class="main-container container-fluid js-quickedit-main-content">
         <div class="row">
             <div class="region region-above-content">
-                <section class="views-element-container block block-views block-views-blockabove-content-block-1 clearfix" id="block-views-block-above-content-block-1" data-block-plugin-id="views_block:above_content-block_1">
+                <section
+                    class="views-element-container block block-views block-views-blockabove-content-block-1 clearfix"
+                    id="block-views-block-above-content-block-1"
+                    data-block-plugin-id="views_block:above_content-block_1">
                     <div class="form-group">
-                        <div class="view view-above-content view-id-above_content view-display-id-block_1 js-view-dom-id-cef650317e97cf184b00e538bd012dee521bcc357a6860f7528b629034bdd562">
+                        <div
+                            class="view view-above-content view-id-above_content view-display-id-block_1 js-view-dom-id-cef650317e97cf184b00e538bd012dee521bcc357a6860f7528b629034bdd562">
                             <div class="view-content">
                                 <div class="col-sm-12">
-                                    <article role="article" about="/paragraphs-sidebar" class="page above-content clearfix">
+                                    <article role="article" about="/paragraphs-sidebar"
+                                        class="page above-content clearfix">
                                         <div class="content">
-                                            <div class="field field--name-field-alternate-page-title field--type-viewfield field--label-hidden">
+                                            <div
+                                                class="field field--name-field-alternate-page-title field--type-viewfield field--label-hidden">
                                                 <div class="field__item field__item-label-hidden">
                                                     <div class="views-element-container form-group">
-                                                        <div class="view view-duplicate-of-center-page-title view-id-duplicate_of_center_page_title view-display-id-default js-view-dom-id-d4afda0f0c4662cf00ba1f3350f8cdaf0ce125b12bfe038a85c1fbed2a20002d">
+                                                        <div
+                                                            class="view view-duplicate-of-center-page-title view-id-duplicate_of_center_page_title view-display-id-default js-view-dom-id-d4afda0f0c4662cf00ba1f3350f8cdaf0ce125b12bfe038a85c1fbed2a20002d">
                                                             <div class="view-content">
                                                                 <div class="views-row">
                                                                     <div class="views-field views-field-title">
-                                                                        <h1 class="field-content">RISE 2019 Conference - CURRENT EFFORTS</h1>
+                                                                        <h1 class="field-content">RISE 2019 Conference -
+                                                                            CURRENT EFFORTS</h1>
                                                                     </div>
-                                                                    <div class="views-field views-field-field-page-subtitle">
+                                                                    <div
+                                                                        class="views-field views-field-field-page-subtitle">
                                                                         <div class="field-content">
-                                                                            <p>Transforming University Engagement In Pre- and Post-Disaster Environments: Lessons from Puerto Rico</p>
+                                                                            <p>Transforming University Engagement In
+                                                                                Pre- and Post-Disaster Environments:
+                                                                                Lessons from Puerto Rico</p>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -467,18 +482,24 @@
                     <div class="row">
                         <aside class="col-sm-4 sidebar-first" role="complementary">
                             <div class="region region-sidebar-first">
-                                <nav role="navigation" aria-labelledby="block-megamenumainnavigation-menu" id="block-megamenumainnavigation" class="sidebar-menu-block" data-block-plugin-id="menu_block:main">
-                                    <h2 class="visually-hidden" id="block-megamenumainnavigation-menu">Mega Menu - Main navigation</h2>
+                                <nav role="navigation" aria-labelledby="block-megamenumainnavigation-menu"
+                                    id="block-megamenumainnavigation" class="sidebar-menu-block"
+                                    data-block-plugin-id="menu_block:main">
+                                    <h2 class="visually-hidden" id="block-megamenumainnavigation-menu">Mega Menu - Main
+                                        navigation</h2>
                                     <ul class="menu menu--rise-conference nav">
                                         <li class="first">
-                                            <a href="home.html" target="_self" rel="" data-drupal-link-system-path="node/47081">RISE CONFERENCE HOME</a>
+                                            <a href="home.html" target="_self" rel=""
+                                                data-drupal-link-system-path="node/47081">RISE CONFERENCE HOME</a>
                                         </li>
                                         <li>
-                                            <a href="registration.html" data-drupal-link-system-path="node/47681">REGISTRATION & SPONSORSHIP</a>
+                                            <a href="registration.html"
+                                                data-drupal-link-system-path="node/47681">REGISTRATION & SPONSORSHIP</a>
 
                                         </li>
                                         <li>
-                                            <a href="welcome.html" target="_self" rel="" data-drupal-link-system-path="node/47181">WELCOME</a>
+                                            <a href="welcome.html" target="_self" rel=""
+                                                data-drupal-link-system-path="node/47181">WELCOME</a>
                                         </li>
                                         <li>
                                             <a href="about.html" data-drupal-link-system-path="node/47671">ABOUT</a>
@@ -487,54 +508,75 @@
                                             <a href="agenda.html" data-drupal-link-system-path="node/47136">AGENDA</a>
                                         </li>
                                         <li>
-                                            <a href="honorary-committee.html" data-drupal-link-system-path="node/47356">LEADERSHIP & PARTICIPANTS</a>
+                                            <a href="honorary-committee.html"
+                                                data-drupal-link-system-path="node/47356">LEADERSHIP & PARTICIPANTS</a>
                                         </li>
                                         <li>
-                                            <a href="poster-winners.html" data-drupal-link-system-path="node/47761">STUDENT POSTERS</a>
+                                            <a href="poster-winners.html"
+                                                data-drupal-link-system-path="node/47761">STUDENT POSTERS</a>
                                         </li>
                                         <li>
-                                            <a href="resources.html" data-drupal-link-system-path="node/47586">CONFERENCE RESOURCES</a>
+                                            <a href="resources.html"
+                                                data-drupal-link-system-path="node/47586">CONFERENCE RESOURCES</a>
                                         </li>
                                         <li>
-                                            <a href="current-efforts.html" data-drupal-link-system-path="node/47161" class="is-active">CURRENT EFFORTS</a>
+                                            <a href="current-efforts.html" data-drupal-link-system-path="node/47161"
+                                                class="is-active">CURRENT EFFORTS</a>
                                         </li>
                                         <li class="">
-                                            <a href="news-communications.html" data-drupal-link-system-path="node/47586">NEWS & COMMUNICATIONS</a>
+                                            <a href="news-communications.html"
+                                                data-drupal-link-system-path="node/47586">NEWS & COMMUNICATIONS</a>
                                         </li>
                                         <li class="expanded dropdown">
-                                            <a href="directions-and-parking.html" class="dropdown-toggle" data-toggle="" data-drupal-link-system-path="node/47681" target="#" data-target="#" aria-expanded="false">ATTENDEE INFORMATION<span class="caret"></span></a>
+                                            <a href="directions-and-parking.html" class="dropdown-toggle" data-toggle=""
+                                                data-drupal-link-system-path="node/47681" target="#" data-target="#"
+                                                aria-expanded="false">ATTENDEE INFORMATION<span
+                                                    class="caret"></span></a>
                                             <ul class="dropdown-menu">
                                                 <li class="first">
-                                                    <a href="directions-and-parking.html" data-drupal-link-system-path="node/47681">Directions &amp; Parking</a>
+                                                    <a href="directions-and-parking.html"
+                                                        data-drupal-link-system-path="node/47681">Directions &amp;
+                                                        Parking</a>
                                                 </li>
                                                 <li class="second">
-                                                    <a href="hotel-accommodations.html" target="_self" rel="" data-drupal-link-system-path="node/47171">Hotel Accommodations</a>
+                                                    <a href="hotel-accommodations.html" target="_self" rel=""
+                                                        data-drupal-link-system-path="node/47171">Hotel
+                                                        Accommodations</a>
                                                 </li>
                                                 <li class="second">
-                                                    <a href="venue.html" data-drupal-link-system-path="node/47591">Venue</a>
+                                                    <a href="venue.html"
+                                                        data-drupal-link-system-path="node/47591">Venue</a>
                                                 </li>
                                                 <li class="last">
-                                                    <a href="anti-harassment-anti-discrimination-policy.html" data-drupal-link-system-path="node/47591">Anti-Harassment & Discrimination Policy</a>
+                                                    <a href="anti-harassment-anti-discrimination-policy.html"
+                                                        data-drupal-link-system-path="node/47591">Anti-Harassment &
+                                                        Discrimination Policy</a>
                                                 </li>
                                             </ul>
                                         </li>
                                         <li class="">
                                             <a href="get-involved.html">GET INVOLVED</a>
                                         </li>
-                                        <li class = "expanded dropdown first last open2 open">
-                                            <a href="relive-rise.html" id = "relive-rise" data-drupal-link-system-path="node/47356">RELIVE RISE 2019</a>
+                                        <li class="expanded dropdown first last open2 open">
+                                            <a href="relive-rise.html" id="relive-rise"
+                                                data-drupal-link-system-path="node/47356">RELIVE RISE 2019</a>
                                             <ul class="dropdown-menu">
                                                 <li class="first">
-                                                    <a href="relive-rise.html" data-drupal-link-system-path="node/47681">RISE 2019 Videos</a>
+                                                    <a href="relive-rise.html"
+                                                        data-drupal-link-system-path="node/47681">RISE 2019 Videos</a>
                                                 </li>
                                                 <li>
-                                                    <a href="rise-audio.html" data-drupal-link-system-path="node/47591">RISE 2019 Audios</a>
+                                                    <a href="rise-audio.html"
+                                                        data-drupal-link-system-path="node/47591">RISE 2019 Audios</a>
                                                 </li>
                                                 <li>
-                                                    <a href="rise-photos.html" data-drupal-link-system-path="node/47591">RISE 2019 Photos</a>
+                                                    <a href="rise-photos.html"
+                                                        data-drupal-link-system-path="node/47591">RISE 2019 Photos</a>
                                                 </li>
                                                 <li class="last">
-                                                    <a href="rise-transcript.html" class = "is-active" data-drupal-link-system-path="node/47591">RISE 2019 Transcripts</a>
+                                                    <a href="rise-transcript.html" class="is-active"
+                                                        data-drupal-link-system-path="node/47591">RISE 2019
+                                                        Transcripts</a>
                                                 </li>
                                             </ul>
                                         </li>
@@ -552,16 +594,23 @@
                                 <article role="article" about="/paragraphs-sidebar" class="page full clearfix">
                                     <div class="content">
 
-                                        <div class="field field--name-field-paragraphs-inline field--type-entity-reference-revisions field--label-hidden field--items">
+                                        <div
+                                            class="field field--name-field-paragraphs-inline field--type-entity-reference-revisions field--label-hidden field--items">
                                             <div class="field--item">
-                                                <div class="paragraph paragraph--type--generic-text-paragraph paragraph--view-mode--default" id="">
+                                                <div class="paragraph paragraph--type--generic-text-paragraph paragraph--view-mode--default"
+                                                    id="">
 
-                                                    <div class="field field--name-field-generic-content-area field--type-text-long field--label-hidden field--item">
-                                                        <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item">
-                                                            <div class="field field--name-field-generic-content-area field--type-text-long field--label-hidden field--item">
+                                                    <div
+                                                        class="field field--name-field-generic-content-area field--type-text-long field--label-hidden field--item">
+                                                        <div
+                                                            class="field field--name-body field--type-text-with-summary field--label-hidden field--item">
+                                                            <div
+                                                                class="field field--name-field-generic-content-area field--type-text-long field--label-hidden field--item">
                                                                 <style type="text/css">
-                                                                        <!--
-                                                                    /*--><![CDATA[/* ><!--*/
+                                                                    <!--
+                                                                    /*
+                                                                    -->
+                                                                <![CDATA[/* ><!--*/
                                                                     
                                                                     <!--
                                                                     /*--><![CDATA[/* ><!--*/
@@ -585,159 +634,380 @@
                                                                     
                                                                     #priorities a {
                                                                         color: #46166B; /*background: url('/themes/albany_bootstrap_theme/images/arrow1p.png') no-repeat right center; padding-right:35px; text-decoration:none; } #priorities h3 a{ font-size: 2.4rem; } #priorities h3 a:after{ content: "\f054"; font-size: 1.5rem; line-height: 2.0rem; font-family: FontAwesome; display: inline-block; vertical-align: middle; } #priorities h3 a:hover{ text-decoration:underline; transition: all .5s; } //#priorities h3 a:hover:after { // margin-left: 5px; //transition: all .5s; //} @media (min-width: 992px) and (max-width: 1210px) { .card-body { height: 320px; } }
-                                                                        /*--><!]]]]]]><![CDATA[><![CDATA[>*/
-                                                                        /*--><!]]]]><![CDATA[>*/
+                                                                        /*--><!]]]]]]>
+                                                                <![CDATA[><![CDATA[>*/
+                                                                        /*--><!]]]]>
+                                                                <![CDATA[>*/
                                                                         /*--><!]]>*/
                                                                 </style>
                                                                 <!--  <h2> Current Efforts</h2><br> -->
                                                                 <div class="row">
                                                                     <div id="priorities">
                                                                         <div class="card col-md-4 col-sm-6">
-                                                                            <img alt="NY Stands with Puerto Rico " data-entity-type="file" data-entity-uuid="" src="https://www.ncseglobal.org/sites/default/files/styles/title_and_slider_background/public/slide_images/EnvironMentors%20Fair%20Photo.jpg">
+                                                                            <img alt="NY Stands with Puerto Rico "
+                                                                                data-entity-type="file"
+                                                                                data-entity-uuid=""
+                                                                                src="https://www.ncseglobal.org/sites/default/files/styles/title_and_slider_background/public/slide_images/EnvironMentors%20Fair%20Photo.jpg">
                                                                             <div class="card-body">
-                                                                                <h3 class="card-title"><a href="https://www.ncseglobal.org/">National Council for Science and the Environment (NCSE)</a></h3>
-                                                                                <p class="card-text">The NCSE advances informed environmental policy and decision-making through science. </p>
+                                                                                <h3 class="card-title"><a
+                                                                                        href="https://www.ncseglobal.org/">National
+                                                                                        Council for Science and the
+                                                                                        Environment (NCSE)</a></h3>
+                                                                                <p class="card-text">The NCSE advances
+                                                                                    informed environmental policy and
+                                                                                    decision-making through science.
+                                                                                </p>
                                                                             </div>
                                                                         </div>
                                                                         <div class="card col-md-4 col-sm-6">
-                                                                            <img alt="NY Stands with Puerto Rico " data-entity-type="file" data-entity-uuid="" src="https://www.ny.gov/sites/ny.gov/files/styles/one_stop_bannercustom_user_desktop_1x/public/thumbnails/image/puertoricodamage.jpg?itok=fgMIYJaR">
+                                                                            <img alt="NY Stands with Puerto Rico "
+                                                                                data-entity-type="file"
+                                                                                data-entity-uuid=""
+                                                                                src="https://www.ny.gov/sites/ny.gov/files/styles/one_stop_bannercustom_user_desktop_1x/public/thumbnails/image/puertoricodamage.jpg?itok=fgMIYJaR">
                                                                             <div class="card-body">
-                                                                                <h3 class="card-title"><a href="https://www.ny.gov/programs/new-york-stands-puerto-rico">New York Stands with Puerto Rico </a></h3>
-                                                                                <p class="card-text">The Empire State Relief and Recovery Effort for Puerto Rico and the U.S. Virgin Islands.</p>
+                                                                                <h3 class="card-title"><a
+                                                                                        href="https://www.ny.gov/programs/new-york-stands-puerto-rico">New
+                                                                                        York Stands with Puerto Rico
+                                                                                    </a></h3>
+                                                                                <p class="card-text">The Empire State
+                                                                                    Relief and Recovery Effort for
+                                                                                    Puerto Rico and the U.S. Virgin
+                                                                                    Islands.</p>
                                                                             </div>
                                                                         </div>
                                                                         <div class="card col-md-4 col-sm-6">
-                                                                            <img alt="NY Stands with Puerto Rico " data-entity-type="file" data-entity-uuid="" src="https://www.suny.edu/media/suny/content-assets/images/global/puertorico/Puerto-rico-volunteer-paint-roof.jpg">
+                                                                            <img alt="NY Stands with Puerto Rico "
+                                                                                data-entity-type="file"
+                                                                                data-entity-uuid=""
+                                                                                src="https://www.suny.edu/media/suny/content-assets/images/global/puertorico/Puerto-rico-volunteer-paint-roof.jpg">
                                                                             <div class="card-body">
-                                                                                <h3 class="card-title"><a href="https://www.suny.edu/puerto-rico/">SUNY Stands with Puerto Rico</a></h3>
-                                                                                <p class="card-text">We\'re proud to offer assistance to help the displaced students and families in Puerto Rico.</p>
+                                                                                <h3 class="card-title"><a
+                                                                                        href="https://www.suny.edu/puerto-rico/">SUNY
+                                                                                        Stands with Puerto Rico</a></h3>
+                                                                                <p class="card-text">We\'re proud to
+                                                                                    offer assistance to help the
+                                                                                    displaced students and families in
+                                                                                    Puerto Rico.</p>
                                                                             </div>
                                                                         </div>
 
                                                                         <div class="card col-md-4 col-sm-6">
-                                                                            <div id="video-holder"><video autoplay="" class="video-large" id="bgvid" loop="" muted="" playsinline="" style="width: 100%;" poster="https://albany.edu/communicationsmarketing/assets/video/Puerto-Rico/header-img.jpg"><source src="https://albany.edu/communicationsmarketing/assets/video/Puerto-Rico/Puerto_Rico_Opening Shot_Adjusted.mp4" type="video/mp4"></video></div>
-                                                                            <div class="card-body" style="margin-top: -4px;height: 229px;">
-                                                                                <h3 class="card-title"><a href="https://www.albany.edu/magazine/rebuilding">UAlbany Working to Rebuild Puerto Rico</a></h3>
-                                                                                <p class="card-text">After Hurricane Maria hit Puerto Rico, and I began to see the extent of the damage, all I wanted to do was find a way to help.</p>
+                                                                            <div id="video-holder"><video autoplay=""
+                                                                                    class="video-large" id="bgvid"
+                                                                                    loop="" muted="" playsinline=""
+                                                                                    style="width: 100%;"
+                                                                                    poster="https://albany.edu/communicationsmarketing/assets/video/Puerto-Rico/header-img.jpg">
+                                                                                    <source
+                                                                                        src="https://albany.edu/communicationsmarketing/assets/video/Puerto-Rico/Puerto_Rico_Opening Shot_Adjusted.mp4"
+                                                                                        type="video/mp4">
+                                                                                </video></div>
+                                                                            <div class="card-body"
+                                                                                style="margin-top: -4px;height: 229px;">
+                                                                                <h3 class="card-title"><a
+                                                                                        href="https://www.albany.edu/magazine/rebuilding">UAlbany
+                                                                                        Working to Rebuild Puerto
+                                                                                        Rico</a></h3>
+                                                                                <p class="card-text">After Hurricane
+                                                                                    Maria hit Puerto Rico, and I began
+                                                                                    to see the extent of the damage, all
+                                                                                    I wanted to do was find a way to
+                                                                                    help.</p>
                                                                             </div>
                                                                         </div>
                                                                         <div class="card col-md-4 col-sm-6">
-                                                                            <img alt="13th International Conference" data-entity-type="file" data-entity-uuid="" src="https://www.hacu.net/images/hacu/international/13thIC/13thIC_Banner1-ENG.jpg">
-                                                                            <div class="card-body" style="height: 309px;">
-                                                                                <h3 class="card-title"><a href="https://www.hacu.net/hacu/International_Conference.asp">13th International Conference at the Hispanic Association of Colleges and Universities (HACU)</a></h3>
-                                                                                <p class="card-text">The two-day conference program includes eighteen concurrent workshops and plenary presentations.</p>
+                                                                            <img alt="13th International Conference"
+                                                                                data-entity-type="file"
+                                                                                data-entity-uuid=""
+                                                                                src="https://www.hacu.net/images/hacu/international/13thIC/13thIC_Banner1-ENG.jpg">
+                                                                            <div class="card-body"
+                                                                                style="height: 309px;">
+                                                                                <h3 class="card-title"><a
+                                                                                        href="https://www.hacu.net/hacu/International_Conference.asp">13th
+                                                                                        International Conference at the
+                                                                                        Hispanic Association of Colleges
+                                                                                        and Universities (HACU)</a></h3>
+                                                                                <p class="card-text">The two-day
+                                                                                    conference program includes eighteen
+                                                                                    concurrent workshops and plenary
+                                                                                    presentations.</p>
                                                                             </div>
                                                                         </div>
                                                                         <div class="card col-md-4 col-sm-6">
-                                                                            <img alt="ARC-X" data-entity-type="file" data-entity-uuid="" src="https://www.epa.gov/sites/production/files/styles/microsite_banner/public/2016-05/epa-banner-images/join_listserv.jpg">
-                                                                            <div class="card-body" style="height: 256px;">
-                                                                                <h3 class="card-title"><a href="https://www.epa.gov/arc-x">Climate Change Adaptation Resource Center (ARC-X)</a></h3>
-                                                                                <p class="card-text">EPA’s ARC-X is an interactive resource to help local governments effectively deliver services to their communities.</p>
+                                                                            <img alt="ARC-X" data-entity-type="file"
+                                                                                data-entity-uuid=""
+                                                                                src="https://www.epa.gov/sites/production/files/styles/microsite_banner/public/2016-05/epa-banner-images/join_listserv.jpg">
+                                                                            <div class="card-body"
+                                                                                style="height: 256px;">
+                                                                                <h3 class="card-title"><a
+                                                                                        href="https://www.epa.gov/arc-x">Climate
+                                                                                        Change Adaptation Resource
+                                                                                        Center (ARC-X)</a></h3>
+                                                                                <p class="card-text">EPA’s ARC-X is an
+                                                                                    interactive resource to help local
+                                                                                    governments effectively deliver
+                                                                                    services to their communities.</p>
                                                                             </div>
                                                                         </div>
                                                                         <div class="card col-md-4 col-sm-6">
-                                                                            <div id="video-holder"> <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FINESIUPR%2Fvideos%2F2028563530692514%2F&show_text=0" width="100%" style="border:none;overflow:hidden;"
-                                                                                    scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe></div>
-                                                                            <div class="card-body" style="margin-top: -9px;">
-                                                                                <h3 class="card-title"><a href="https://www.facebook.com/watch/?v=2028563530692514">Work done at INESI</a></h3>
-                                                                                <p class="card-text">Profesores y estudiantes del Recinto Universitario de Mayaguez de la Universidad de Puerto Rico, trabajan junto a comunidades en la montaña que 5 meses luego del huracán María
+                                                                            <div id="video-holder"> <iframe
+                                                                                    src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FINESIUPR%2Fvideos%2F2028563530692514%2F&show_text=0"
+                                                                                    width="100%"
+                                                                                    style="border:none;overflow:hidden;"
+                                                                                    scrolling="no" frameborder="0"
+                                                                                    allowTransparency="true"
+                                                                                    allowFullScreen="true"></iframe>
+                                                                            </div>
+                                                                            <div class="card-body"
+                                                                                style="margin-top: -9px;">
+                                                                                <h3 class="card-title"><a
+                                                                                        href="https://www.facebook.com/watch/?v=2028563530692514">Work
+                                                                                        done at INESI</a></h3>
+                                                                                <p class="card-text">Profesores y
+                                                                                    estudiantes del Recinto
+                                                                                    Universitario de Mayaguez de la
+                                                                                    Universidad de Puerto Rico, trabajan
+                                                                                    junto a comunidades en la montaña
+                                                                                    que 5 meses luego del huracán María
                                                                                     aún no tienen electricidad.</p>
                                                                             </div>
                                                                         </div>
                                                                         <div class="card col-md-4 col-sm-6">
-                                                                            <div id="video-holder"> <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FINESIUPR%2Fvideos%2F2023875441161323%2F&show_text=0&width=560" width="100%" style="border:none;overflow:hidden"
-                                                                                    scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe></div>
-                                                                            <div class="card-body" style="margin-top: -9px;">
-                                                                                <h3 class="card-title"><a href="https://www.facebook.com/watch/?v=2023875441161323">Work done at INESI</a></h3>
-                                                                                <p class="card-text">Estudiantes universitarios de Puerto Rico ingresaron a la Universidad Estatal de Arizona tras una iniciativa del Instituto Nacional de Energía y Sostenibilidad Isleña (INESI)
+                                                                            <div id="video-holder"> <iframe
+                                                                                    src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FINESIUPR%2Fvideos%2F2023875441161323%2F&show_text=0&width=560"
+                                                                                    width="100%"
+                                                                                    style="border:none;overflow:hidden"
+                                                                                    scrolling="no" frameborder="0"
+                                                                                    allowTransparency="true"
+                                                                                    allowFullScreen="true"></iframe>
+                                                                            </div>
+                                                                            <div class="card-body"
+                                                                                style="margin-top: -9px;">
+                                                                                <h3 class="card-title"><a
+                                                                                        href="https://www.facebook.com/watch/?v=2023875441161323">Work
+                                                                                        done at INESI</a></h3>
+                                                                                <p class="card-text">Estudiantes
+                                                                                    universitarios de Puerto Rico
+                                                                                    ingresaron a la Universidad Estatal
+                                                                                    de Arizona tras una iniciativa del
+                                                                                    Instituto Nacional de Energía y
+                                                                                    Sostenibilidad Isleña (INESI)
                                                                                     en Puerto Rico.
                                                                                 </p>
                                                                             </div>
                                                                         </div>
                                                                         <div class="card col-md-4 col-sm-6">
-                                                                            <img alt="The 2018 Puerto Rico RISE(ING)" data-entity-type="file" data-entity-uuid="" src="https://images.squarespace-cdn.com/content/v1/5c360555b27e39cac0d09f64/1547117915793-QL4U7AQV2GP4AT9PP6T2/ke17ZwdGBToddI8pDm48kBWD0B0wZOACFG1pxTsKCnwUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKchaBxzSUrW68aYkB9Fdok0VHeSOr4dGswja7g08PV3FD0EYDv7EjQifkMYFk9ws2U/pages-from-2018-pr_riseing_report-e1546687552998.jpg?format=1500w">
-                                                                            <div class="card-body" style="height: 274px;">
-                                                                                <h3 class="card-title"><a href="https://www.umnconvergencepuertorico.org/about-rise">The 2018 Puerto Rico RISE(ING) work held in Mayaguez</a></h3>
-                                                                                <p class="card-text">RISE platform seeks to re-envision how universities interact with communities, NGOs, private sector partners, and local governments.</p>
+                                                                            <img alt="The 2018 Puerto Rico RISE(ING)"
+                                                                                data-entity-type="file"
+                                                                                data-entity-uuid=""
+                                                                                src="https://images.squarespace-cdn.com/content/v1/5c360555b27e39cac0d09f64/1547117915793-QL4U7AQV2GP4AT9PP6T2/ke17ZwdGBToddI8pDm48kBWD0B0wZOACFG1pxTsKCnwUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKchaBxzSUrW68aYkB9Fdok0VHeSOr4dGswja7g08PV3FD0EYDv7EjQifkMYFk9ws2U/pages-from-2018-pr_riseing_report-e1546687552998.jpg?format=1500w">
+                                                                            <div class="card-body"
+                                                                                style="height: 274px;">
+                                                                                <h3 class="card-title"><a
+                                                                                        href="https://www.umnconvergencepuertorico.org/about-rise">The
+                                                                                        2018 Puerto Rico RISE(ING) work
+                                                                                        held in Mayaguez</a></h3>
+                                                                                <p class="card-text">RISE platform seeks
+                                                                                    to re-envision how universities
+                                                                                    interact with communities, NGOs,
+                                                                                    private sector partners, and local
+                                                                                    governments.</p>
                                                                             </div>
                                                                         </div>
                                                                         <div class="card col-md-4 col-sm-6">
-                                                                            <img alt="UMN Global Convergence Lab" data-entity-type="file" data-entity-uuid="" src="https://images.squarespace-cdn.com/content/v1/5c360555b27e39cac0d09f64/1547044264040-ARBVXVP7Q86WKSJSMG1I/ke17ZwdGBToddI8pDm48kDHPSfPanjkWqhH6pl6g5ph7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0mwONMR1ELp49Lyc52iWr5dNb1QJw9casjKdtTg1_-y4jz4ptJBmI9gQmbjSQnNGng/209.JPG?format=2500w">
+                                                                            <img alt="UMN Global Convergence Lab"
+                                                                                data-entity-type="file"
+                                                                                data-entity-uuid=""
+                                                                                src="https://images.squarespace-cdn.com/content/v1/5c360555b27e39cac0d09f64/1547044264040-ARBVXVP7Q86WKSJSMG1I/ke17ZwdGBToddI8pDm48kDHPSfPanjkWqhH6pl6g5ph7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0mwONMR1ELp49Lyc52iWr5dNb1QJw9casjKdtTg1_-y4jz4ptJBmI9gQmbjSQnNGng/209.JPG?format=2500w">
                                                                             <div class="card-body">
-                                                                                <h3 class="card-title"><a href="https://www.umnconvergencepuertorico.org/">UMN Global Convergence Lab - Puerto Rico</a></h3>
-                                                                                <p class="card-text">The University of Minnesota (UMN) is undertaking a global convergence lab in January 2019 in Puerto Rico...</p>
+                                                                                <h3 class="card-title"><a
+                                                                                        href="https://www.umnconvergencepuertorico.org/">UMN
+                                                                                        Global Convergence Lab - Puerto
+                                                                                        Rico</a></h3>
+                                                                                <p class="card-text">The University of
+                                                                                    Minnesota (UMN) is undertaking a
+                                                                                    global convergence lab in January
+                                                                                    2019 in Puerto Rico...</p>
                                                                             </div>
                                                                         </div>
                                                                         <div class="card col-md-4 col-sm-6">
-                                                                            <img alt="To Puerto Rico with love—and medical expertise" data-entity-type="file" data-entity-uuid="" src="https://twin-cities.umn.edu/sites/twin-cities.umn.edu/files/medical-puerto-rico648x432.jpg">
-                                                                            <div class="card-body" style="height: 274px;">
-                                                                                <h3 class="card-title"><a href="https://twin-cities.umn.edu/news-events/puerto-rico-loveand-medical-expertise">To Puerto Rico with love and medical expertise</a></h3>
-                                                                                <p class="card-text">Studies indicate that 30-40 percent of people who survive a natural disaster will develop PTSD...</p>
+                                                                            <img alt="To Puerto Rico with love—and medical expertise"
+                                                                                data-entity-type="file"
+                                                                                data-entity-uuid=""
+                                                                                src="https://github.com/sdat-dev/RISE/raw/master/img/medical-puerto-rico.jpg">
+                                                                            <div class="card-body"
+                                                                                style="height: 274px;">
+                                                                                <h3 class="card-title"><a
+                                                                                        href="https://twin-cities.umn.edu/news-events/puerto-rico-love-and-medical-expertise">To
+                                                                                        Puerto Rico with love and
+                                                                                        medical expertise</a></h3>
+                                                                                <p class="card-text">Studies indicate
+                                                                                    that 30-40 percent of people who
+                                                                                    survive a natural disaster will
+                                                                                    develop PTSD...</p>
                                                                             </div>
                                                                         </div>
                                                                         <div class="card col-md-4 col-sm-6">
-                                                                            <img alt="To Puerto Rico with love—and medical expertise" data-entity-type="file" data-entity-uuid="" src="https://med.umn.edu/sites/med.umn.edu/files/miguel_fiol_puerto_rico.jpg">
-                                                                            <div class="card-body" style="height: 274px;">
-                                                                                <h3 class="card-title"><a href="https://med.umn.edu/news-events/umn-med-school-launches-crowdfunding-campaign-support-relief-efforts-puerto-rico">UMN Med School Launches Crowdfunding Campaign</a></h3>
-                                                                                <p class="card-text">The crowdfunding goal has been increased to $15,000. A team from Minnesota, including four doctors and one nurse, are currently...</p>
+                                                                            <img alt="To Puerto Rico with love—and medical expertise"
+                                                                                data-entity-type="file"
+                                                                                data-entity-uuid=""
+                                                                                src="https://med.umn.edu/sites/med.umn.edu/files/miguel_fiol_puerto_rico.jpg">
+                                                                            <div class="card-body"
+                                                                                style="height: 274px;">
+                                                                                <h3 class="card-title"><a
+                                                                                        href="https://med.umn.edu/news-events/umn-med-school-launches-crowdfunding-campaign-support-relief-efforts-puerto-rico">UMN
+                                                                                        Med School Launches Crowdfunding
+                                                                                        Campaign</a></h3>
+                                                                                <p class="card-text">The crowdfunding
+                                                                                    goal has been increased to $15,000.
+                                                                                    A team from Minnesota, including
+                                                                                    four doctors and one nurse, are
+                                                                                    currently...</p>
                                                                             </div>
                                                                         </div>
                                                                         <div class="card col-md-4 col-sm-6">
-                                                                            <img alt="To Puerto Rico with love—and medical expertise" data-entity-type="file" data-entity-uuid="" src="https://snworksceo.imgix.net/mnd/b4f9c88c-8866-4eb2-af37-8799de62115f.sized-1000x1000.jpg?w=1000">
-                                                                            <div class="card-body" style="height: 248px;">
-                                                                                <h3 class="card-title"><a href="https://www.mndaily.com/article/2019/01/n-umn-collaborates-with-puerto-rico-to-explore-sustainable-energy">UMN collaborates with Puerto Rico to explore sustainable energy</a></h3>
-                                                                                <p class="card-text">University students went to Puerto Rico this month through the University’s Global Convergence Lab.</p>
+                                                                            <img alt="To Puerto Rico with love—and medical expertise"
+                                                                                data-entity-type="file"
+                                                                                data-entity-uuid=""
+                                                                                src="https://snworksceo.imgix.net/mnd/b4f9c88c-8866-4eb2-af37-8799de62115f.sized-1000x1000.jpg?w=1000">
+                                                                            <div class="card-body"
+                                                                                style="height: 248px;">
+                                                                                <h3 class="card-title"><a
+                                                                                        href="https://www.mndaily.com/article/2019/01/n-umn-collaborates-with-puerto-rico-to-explore-sustainable-energy">UMN
+                                                                                        collaborates with Puerto Rico to
+                                                                                        explore sustainable energy</a>
+                                                                                </h3>
+                                                                                <p class="card-text">University students
+                                                                                    went to Puerto Rico this month
+                                                                                    through the University’s Global
+                                                                                    Convergence Lab.</p>
                                                                             </div>
                                                                         </div>
                                                                         <div class="card col-md-4 col-sm-6">
-                                                                            <img alt="To Puerto Rico with love—and medical expertise" data-entity-type="file" data-entity-uuid="" src="https://stmedia.stimg.co/Puerto1.JPG?auto=compress&crop=faces&dpr=1&w=525">
-                                                                            <div class="card-body" style="height: 266px;">
-                                                                                <h3 class="card-title"><a href="http://www.startribune.com/university-of-minnesota-puerto-rico-groups-explore-energy/504940092/">University of Minnesota, Puerto Rico groups explore energy</a></h3>
-                                                                                <p class="card-text">The University of Minnesota is working with partners in Puerto Rico to explore more resilient energy sources after Hurricane Maria...</p>
+                                                                            <img alt="To Puerto Rico with love—and medical expertise"
+                                                                                data-entity-type="file"
+                                                                                data-entity-uuid=""
+                                                                                src="https://stmedia.stimg.co/Puerto1.JPG?auto=compress&crop=faces&dpr=1&w=525">
+                                                                            <div class="card-body"
+                                                                                style="height: 266px;">
+                                                                                <h3 class="card-title"><a
+                                                                                        href="http://www.startribune.com/university-of-minnesota-puerto-rico-groups-explore-energy/504940092/">University
+                                                                                        of Minnesota, Puerto Rico groups
+                                                                                        explore energy</a></h3>
+                                                                                <p class="card-text">The University of
+                                                                                    Minnesota is working with partners
+                                                                                    in Puerto Rico to explore more
+                                                                                    resilient energy sources after
+                                                                                    Hurricane Maria...</p>
                                                                             </div>
                                                                         </div>
                                                                         <div class="card col-md-4 col-sm-6">
-                                                                            <img alt="Relief for Puerto Rico" data-entity-type="file" data-entity-uuid="" src="https://www2.cuny.edu/wp-content/uploads/sites/4/page-assets/about/university-resources/emergency-preparedness/puerto-rico/Relief_Efforts_for_Puerto_Rico.jpg">
-                                                                            <div class="card-body" style="height: 278px;">
-                                                                                <h3 class="card-title"><a href="https://www2.cuny.edu/about/university-resources/emergency-preparedness/puerto-rico/">CUNY - Relief for Puerto Rico</a></h3>
-                                                                                <p class="card-text">At campuses across CUNY, students, faculty and staff are working with community partners, offering recovery aid, disaster relief, volunteer support and financial contributions.</p>
+                                                                            <img alt="Relief for Puerto Rico"
+                                                                                data-entity-type="file"
+                                                                                data-entity-uuid=""
+                                                                                src="https://www2.cuny.edu/wp-content/uploads/sites/4/page-assets/about/university-resources/emergency-preparedness/puerto-rico/Relief_Efforts_for_Puerto_Rico.jpg">
+                                                                            <div class="card-body"
+                                                                                style="height: 278px;">
+                                                                                <h3 class="card-title"><a
+                                                                                        href="https://www2.cuny.edu/about/university-resources/emergency-preparedness/puerto-rico/">CUNY
+                                                                                        - Relief for Puerto Rico</a>
+                                                                                </h3>
+                                                                                <p class="card-text">At campuses across
+                                                                                    CUNY, students, faculty and staff
+                                                                                    are working with community partners,
+                                                                                    offering recovery aid, disaster
+                                                                                    relief, volunteer support and
+                                                                                    financial contributions.</p>
                                                                             </div>
                                                                         </div>
                                                                         <div class="card col-md-4 col-sm-6">
-                                                                            <img alt="UCF Extends In-State" data-entity-type="file" data-entity-uuid="" src="https://www.ucf.edu/news/files/2018/09/ucf_37974369_Medium-1200x800.jpg">
-                                                                            <div class="card-body" style="height: 233px;">
-                                                                                <h3 class="card-title"><a href="https://www.ucf.edu/news/ucf-extends-state-tuition-rate-puerto-rican-students-2023/">UCF Extends In-State Tuition Rate</a></h3>
-                                                                                <p class="card-text">UCF has one of the biggest cohorts at a U.S. university of students displaced by Hurricane Maria.</p>
+                                                                            <img alt="UCF Extends In-State"
+                                                                                data-entity-type="file"
+                                                                                data-entity-uuid=""
+                                                                                src="https://www.ucf.edu/news/files/2018/09/ucf_37974369_Medium-1200x800.jpg">
+                                                                            <div class="card-body"
+                                                                                style="height: 233px;">
+                                                                                <h3 class="card-title"><a
+                                                                                        href="https://www.ucf.edu/news/ucf-extends-state-tuition-rate-puerto-rican-students-2023/">UCF
+                                                                                        Extends In-State Tuition
+                                                                                        Rate</a></h3>
+                                                                                <p class="card-text">UCF has one of the
+                                                                                    biggest cohorts at a U.S. university
+                                                                                    of students displaced by Hurricane
+                                                                                    Maria.</p>
                                                                             </div>
                                                                         </div>
                                                                         <div class="card col-md-4 col-sm-6">
-                                                                            <img alt="UCF Extends In-State" data-entity-type="file" data-entity-uuid="" src="https://sciences.ucf.edu/puerto-rico-hub/wp-content/uploads/sites/218/2018/06/PRH-Header-Image.jpg">
-                                                                            <div class="card-body" style="height: 340px;">
-                                                                                <h3 class="card-title"><a href="https://www.ucf.edu/admissions/undergraduate/hurricanes/">PUERTO RICO RESEARCH HUB</a></h3>
-                                                                                <p class="card-text">For years Puerto Ricans have moved to the state of Florida and contributed to its economic and social well-being, as well as the continental United States. The population
-                                                                                    movement accelerated after Hurricane Maria hit in September 2017. It was a game changer for the small island. </p>
+                                                                            <img alt="UCF Extends In-State"
+                                                                                data-entity-type="file"
+                                                                                data-entity-uuid=""
+                                                                                src="https://sciences.ucf.edu/puerto-rico-hub/wp-content/uploads/sites/218/2018/06/PRH-Header-Image.jpg">
+                                                                            <div class="card-body"
+                                                                                style="height: 340px;">
+                                                                                <h3 class="card-title"><a
+                                                                                        href="https://www.ucf.edu/admissions/undergraduate/hurricanes/">PUERTO
+                                                                                        RICO RESEARCH HUB</a></h3>
+                                                                                <p class="card-text">For years Puerto
+                                                                                    Ricans have moved to the state of
+                                                                                    Florida and contributed to its
+                                                                                    economic and social well-being, as
+                                                                                    well as the continental United
+                                                                                    States. The population
+                                                                                    movement accelerated after Hurricane
+                                                                                    Maria hit in September 2017. It was
+                                                                                    a game changer for the small island.
+                                                                                </p>
                                                                             </div>
                                                                         </div>
                                                                         <div class="card col-md-4 col-sm-6">
-                                                                            <img alt="UCF Extends In-State" data-entity-type="file" data-entity-uuid="" src="https://www.ucf.edu/news/files/2019/04/UCF-Arecibo-aerial.jpg">
-                                                                            <div class="card-body" style="height:  233px;">
-                                                                                <h3 class="card-title"><a href="https://www.ucf.edu/news/ucf-marks-1st-year-arecibo-observatory-puerto-rico/">UCF Marks 1st Year at Arecibo Observatory</a></h3>
-                                                                                <p class="card-text">Facility’s staff has helped international scientists do their work in planetary science, space and atmospheric science, and radio astronomy.</p>
+                                                                            <img alt="UCF Extends In-State"
+                                                                                data-entity-type="file"
+                                                                                data-entity-uuid=""
+                                                                                src="https://www.ucf.edu/news/files/2019/04/UCF-Arecibo-aerial.jpg">
+                                                                            <div class="card-body"
+                                                                                style="height:  233px;">
+                                                                                <h3 class="card-title"><a
+                                                                                        href="https://www.ucf.edu/news/ucf-marks-1st-year-arecibo-observatory-puerto-rico/">UCF
+                                                                                        Marks 1st Year at Arecibo
+                                                                                        Observatory</a></h3>
+                                                                                <p class="card-text">Facility’s staff
+                                                                                    has helped international scientists
+                                                                                    do their work in planetary science,
+                                                                                    space and atmospheric science, and
+                                                                                    radio astronomy.</p>
                                                                             </div>
                                                                         </div>
                                                                         <div class="card col-md-4 col-sm-6">
                                                                             <!-- <img alt="UCF Extends In-State" data-entity-type="file" data-entity-uuid="" src="https://www.ucf.edu/news/files/2019/04/UCF-Arecibo-aerial.jpg"> -->
-                                                                            <div class="card-body" style="height: 340px;">
-                                                                                <h3 class="card-title"><a href="https://www.ucf.edu/admissions/undergraduate/maria-next-steps/">Admitted Students Affected by Hurricane Maria</a></h3>
-                                                                                <p class="card-text">Welcome to UCF. Our thoughts are with the families and communities in Puerto Rico and the US Virgin Islands who experienced loss from Hurricane Maria. As a newly admitted
+                                                                            <div class="card-body"
+                                                                                style="height: 340px;">
+                                                                                <h3 class="card-title"><a
+                                                                                        href="https://www.ucf.edu/admissions/undergraduate/maria-next-steps/">Admitted
+                                                                                        Students Affected by Hurricane
+                                                                                        Maria</a></h3>
+                                                                                <p class="card-text">Welcome to UCF. Our
+                                                                                    thoughts are with the families and
+                                                                                    communities in Puerto Rico and the
+                                                                                    US Virgin Islands who experienced
+                                                                                    loss from Hurricane Maria. As a
+                                                                                    newly admitted
                                                                                     student, we have established...</p>
                                                                             </div>
                                                                         </div>
                                                                         <div class="card col-md-4 col-sm-6">
                                                                             <!-- <img alt="UCF Extends In-State" data-entity-type="file" data-entity-uuid="" src="https://www.ucf.edu/news/files/2019/04/UCF-Arecibo-aerial.jpg"> -->
-                                                                            <div class="card-body" style="height: 340px;">
-                                                                                <h3 class="card-title"><a href="https://www.ucf.edu/admissions/undergraduate/hurricanes/">Information for prospective students affected by Hurricanes</a></h3>
-                                                                                <p class="card-text"><strong>Is UCF giving students from PR and USVI Florida resident tuition?</strong> UCF is offering a waiver of the out-of-state fees for spring 2019 for newly enrolled students
+                                                                            <div class="card-body"
+                                                                                style="height: 340px;">
+                                                                                <h3 class="card-title"><a
+                                                                                        href="https://www.ucf.edu/admissions/undergraduate/hurricanes/">Information
+                                                                                        for prospective students
+                                                                                        affected by Hurricanes</a></h3>
+                                                                                <p class="card-text"><strong>Is UCF
+                                                                                        giving students from PR and USVI
+                                                                                        Florida resident
+                                                                                        tuition?</strong> UCF is
+                                                                                    offering a waiver of the
+                                                                                    out-of-state fees for spring 2019
+                                                                                    for newly enrolled students
                                                                                     from PR and the USVI...</p>
                                                                             </div>
                                                                         </div>
@@ -753,7 +1023,8 @@
                                                         </div>
                                                     </div>
 
-                                                    <div class="field field--name-field-view field--type-viewfield field--label-">
+                                                    <div
+                                                        class="field field--name-field-view field--type-viewfield field--label-">
 
                                                         <div class="field__label"></div>
 
@@ -786,27 +1057,35 @@
     </div>
     <div class="container-fluid">
         <div class="region region-below-content">
-            <section class="views-element-container block block-views block-views-blockbelow-content-block-1 clearfix" id="block-views-block-below-content-block-1" data-block-plugin-id="views_block:below_content-block_1">
+            <section class="views-element-container block block-views block-views-blockbelow-content-block-1 clearfix"
+                id="block-views-block-below-content-block-1" data-block-plugin-id="views_block:below_content-block_1">
                 <div class="form-group">
-                    <div class="view view-below-content view-id-below_content view-display-id-block_1 js-view-dom-id-cc6d4778fa595020fdfe4c5e6e721bc6bf14412d9eb171517285c156771df1bc"></div>
+                    <div
+                        class="view view-below-content view-id-below_content view-display-id-block_1 js-view-dom-id-cc6d4778fa595020fdfe4c5e6e721bc6bf14412d9eb171517285c156771df1bc">
+                    </div>
                 </div>
             </section>
         </div>
     </div>
     <footer class="footer container-fluid" role="contentinfo">
         <div class="region region-footer">
-            <section id="block-addressandlogoforthefooter" class="footer-address block block-block-content block-block-contentde2c4b9b-bfb1-4b18-8ca4-5ca199e568a5 clearfix" data-block-plugin-id="block_content:de2c4b9b-bfb1-4b18-8ca4-5ca199e568a5">
+            <section id="block-addressandlogoforthefooter"
+                class="footer-address block block-block-content block-block-contentde2c4b9b-bfb1-4b18-8ca4-5ca199e568a5 clearfix"
+                data-block-plugin-id="block_content:de2c4b9b-bfb1-4b18-8ca4-5ca199e568a5">
                 <div class="field field--name-field-logo field--type-image field--label-hidden field--item">
                     <a href="https://www.ncseglobal.org/">
-                        <img src="https://www.albany.edu/rise2019/img/logos/NCSE.png" width="315" height="39" alt="University at Albany Logo" typeof="Image" class="img-responsive" style="position: relative; left: -7px;">
+                        <img src="https://www.albany.edu/rise2019/img/logos/NCSE.png" width="315" height="39"
+                            alt="University at Albany Logo" typeof="Image" class="img-responsive"
+                            style="position: relative; left: -7px;">
                     </a>
                 </div>
                 <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item">
                     <p>
-                        <a href="https://www.google.com/maps/place/740+15th+St+NW+%23900,+Washington,+DC+20005/@38.8997545,-77.0360236,17z/data=!3m1!4b1!4m5!3m4!1s0x89b7b7bdf3712bdf:0x6228835860ed5caa!8m2!3d38.8997503!4d-77.0338349" target="_blank">740 15th Street, 
-                                NW Suite 900<br>
-                                Washington, DC 20005 
-                            </a>
+                        <a href="https://www.google.com/maps/place/740+15th+St+NW+%23900,+Washington,+DC+20005/@38.8997545,-77.0360236,17z/data=!3m1!4b1!4m5!3m4!1s0x89b7b7bdf3712bdf:0x6228835860ed5caa!8m2!3d38.8997503!4d-77.0338349"
+                            target="_blank">740 15th Street,
+                            NW Suite 900<br>
+                            Washington, DC 20005
+                        </a>
                         <br> Contact Email:
                         <a href="mailto:NCSE@NCSEGlobal.org">NCSE@NCSEGlobal.org</a>
                     </p>
@@ -814,18 +1093,22 @@
             </section>
 
 
-            <section id="block-addressandlogofortheUAlbanyfooter" class="footer-address block block-block-content block-block-contentde2c4b9b-bfb1-4b18-8ca4-5ca199e568a5 clearfix" data-block-plugin-id="block_content:de2c4b9b-bfb1-4b18-8ca4-5ca199e568a5">
+            <section id="block-addressandlogofortheUAlbanyfooter"
+                class="footer-address block block-block-content block-block-contentde2c4b9b-bfb1-4b18-8ca4-5ca199e568a5 clearfix"
+                data-block-plugin-id="block_content:de2c4b9b-bfb1-4b18-8ca4-5ca199e568a5">
                 <div class="field field--name-field-logo field--type-image field--label-hidden field--item">
                     <a href="https://www.albany.edu/">
-                        <img src="sites/default/files/logo_1.png" width="315" height="39" alt="University at Albany Logo" typeof="Image" class="img-responsive">
+                        <img src="sites/default/files/logo_1.png" width="315" height="39"
+                            alt="University at Albany Logo" typeof="Image" class="img-responsive">
                     </a>
                 </div>
                 <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item">
                     <p>
-                        <a href="https://www.google.com/maps/place/1400+Washington+Ave,+Albany,+NY+12222/@42.6859115,-73.8287166,17z/data=!3m1!4b1!4m5!3m4!1s0x89de0b3ce5c93e45:0x4cdbe8d7b52fa412!8m2!3d42.6859115!4d-73.8265279" target="_blank">1400 Washington Avenue
-                                                                <br>
-        Albany, NY 12222
-                                                            </a>
+                        <a href="https://www.google.com/maps/place/1400+Washington+Ave,+Albany,+NY+12222/@42.6859115,-73.8287166,17z/data=!3m1!4b1!4m5!3m4!1s0x89de0b3ce5c93e45:0x4cdbe8d7b52fa412!8m2!3d42.6859115!4d-73.8265279"
+                            target="_blank">1400 Washington Avenue
+                            <br>
+                            Albany, NY 12222
+                        </a>
                         <br> Undergraduate Admissions:
                         <a href="tel:5184425435">(518) 442-5435</a>
                         <br> Graduate Admissions:
