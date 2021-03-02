@@ -16365,3 +16365,8 @@ li.active a#day3-tab {
  .novisitlink:visited {
     color: #46166b;
   }
+
+.speakers {
+    display: inline-block;
+    width: 100%;
+}
